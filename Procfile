@@ -1,0 +1,1 @@
+web: gunicorn hidden_gems.wsgi:application
