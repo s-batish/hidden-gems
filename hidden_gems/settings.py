@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-sbatish-hiddengems-h8x3g1qo708.ws-eu105.gitpod.io', 'hidden-gems-pp5-759b1d35f1d9.herokuapp.com']
 
