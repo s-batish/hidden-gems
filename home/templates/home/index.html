@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-<h1 class="display-6 text-success">Success!!</h1>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col">
+            <h1>Affordable luxury for every occassion...</h1>
+            <h1 class="text-right">...so now's the time to find yourself some Hidden Gems</h1>
+            <div>
+                <h2>
+                    <a href="" class="shop-now-btn btn btn-lg rounded-0">Shop Now!</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
