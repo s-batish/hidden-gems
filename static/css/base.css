@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--headings);
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 .buttons {
     color: var(--light-pink);
     border: solid 1px var(--dark-blue);
@@ -37,4 +41,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark-blue);
     background-color: var(--light-pink);
     border: solid 1px var(--light-pink);
+}
+
+/* Navbar */
+.logo {
+    width: 130px;
+}
+
+.navbar {
+    font-family: var(--headings);
+    font-size: 25px;
+    background-color: var(--light-pink);
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: right;
+    text-align: right;
 }
