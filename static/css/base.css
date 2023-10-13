@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    /* Fonts */
+    --headings: 'Courgette', sans-serif;
+    --main-font: 'Quattrocento Sans', sans-serif;
+
+    /* Colours */
+    --light-pink: #f6e8e8;
+    --light-purple: #d3c3c9;
+    --purple: #aea1ad;
+    --dark-purple: #858192;
+    --dark-blue: #2f4858;
+}
+
 html {
     height: 100%;
 }
@@ -5,4 +19,22 @@ html {
 body {
     background: url('/media/hero-image.webp') no-repeat center center fixed;
     background-size: cover;
+    font-family: var(--main-font);
+    background-color: var(--light-pink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings);
+}
+
+.buttons {
+    color: var(--light-pink);
+    border: solid 1px var(--dark-blue);
+    background-color: var(--dark-blue);
+}
+
+.buttons:hover {
+    color: var(--dark-blue);
+    background-color: var(--light-pink);
+    border: solid 1px var(--light-pink);
 }
