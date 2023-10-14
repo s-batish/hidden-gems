@@ -73,3 +73,7 @@ main {
     color: var(--dark-blue);
     font-style: italic;
 }
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
