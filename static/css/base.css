@@ -19,6 +19,7 @@ html {
 body {
     background: url('/media/hero-image.webp') no-repeat center center fixed;
     background-size: cover;
+    height: calc(100vh - 164px);
     font-family: var(--main-font);
     background-color: var(--light-pink);
 }
@@ -76,4 +77,26 @@ main {
 
 .navbar-nav .dropdown-menu {
     position: absolute;
+}
+
+/* Hero image */
+.hero-text {
+    background-color: rgb(211, 195, 201, 0.6);
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+/* Media queries */
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media (min-width: 576px) {
+    .hero-text {
+        margin: 0;
+        text-align: center !important
+    }
 }
