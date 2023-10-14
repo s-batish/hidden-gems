@@ -34,7 +34,7 @@
     
         <title>Hidden Gems {% block extra_title %}{% endblock %}</title>
       </head>
-  <body>
+  <body class="d-flex flex-column">
     {% include 'includes/navbar.html' %}
 
     <div class="text-center">
@@ -54,6 +54,8 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
     {% endblock %}
