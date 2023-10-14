@@ -87,6 +87,11 @@ main {
     margin: 0 10px;
 }
 
+.delivery-banner {
+    background-color: var(--dark-blue);
+    color: var(--light-pink);
+}
+
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {

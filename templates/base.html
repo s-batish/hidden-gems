@@ -37,6 +37,12 @@
   <body>
     {% include 'includes/navbar.html' %}
 
+    <div class="text-center">
+        <div class="col delivery-banner py-1">
+            <h4>Free delivery on orders over £{{ free_shipping_threshold }}</h4>
+        </div>
+    </div>
+
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
