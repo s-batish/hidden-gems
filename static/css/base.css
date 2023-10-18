@@ -21,7 +21,6 @@ body {
     background-size: cover;
     /* height: calc(100vh - 164px); */
     font-family: var(--main-font);
-    background-color: var(--light-pink);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -130,6 +129,13 @@ footer {
 .link:hover {
     color: var(--dark-blue);
     font-size: 17px;
+}
+
+/* Overlay */
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: #ede7eb;
 }
 
 /* Media queries */
