@@ -41,7 +41,7 @@ main {
 .buttons:hover {
     color: var(--dark-blue);
     background-color: var(--light-pink);
-    border: solid 1px var(--light-pink);
+    border: solid 1px var(--dark-blue);
 }
 
 /* Navbar */
@@ -111,6 +111,25 @@ footer {
 .social-icon {
     color: var(--light-pink);
     font-size: 30px;
+}
+
+/* Allauth forms */
+.all-auth-form {
+    background-color: rgb(246, 232, 232, 0.95);
+    border-radius: 5px;
+    margin: 4rem;
+    color: var(--dark-blue);
+}
+
+.link {
+    color: var(--dark-blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--dark-blue);
+    font-size: 17px;
 }
 
 /* Media queries */
