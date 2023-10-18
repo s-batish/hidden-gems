@@ -1,0 +1,613 @@
+[
+ {
+   "pk": 1,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR1234",
+      "name": "Gold Wave Ring",
+      "description": "Diamond encrusted gold ring in a wave-like design",
+      "materials": "9ct Gold, Round-cut Diamonds",
+      "price": 38.99,
+      "image": "faseeh-fawaz-66D6YWDSK58-unsplash.webp"
+   }
+},
+ {
+   "pk": 2,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE1234",
+      "name": "Gold Hoop Teardrop Earrings",
+      "description": "Small gold hoops in a slight teardrop shape",
+      "materials": "9ct Gold",
+      "price": 25.99,
+      "image": "jocelyn-morales-1pP4erq_nbo-unsplash.webp"
+   }
+},
+ {
+   "pk": 3,
+   "model": "products.product",
+   "fields": {
+      "category": 1,
+      "sku": "GB0111",
+      "name": "Dainty Gold Chain Bracelet",
+      "description": "Dainty gold chain bracelet with clasp attachment",
+      "materials": "9ct Gold",
+      "price": 22.99,
+      "image": "sama-hosseini-h_ssRPj8UZo-unsplash.webp"
+   }
+},
+ {
+   "pk": 4,
+   "model": "products.product",
+   "fields": {
+      "category": 1,
+      "sku": "GB0112",
+      "name": "Gold Friendship Bracelet",
+      "description": "Delicate gold friendship bracelet with blue and turquoise beading",
+      "materials": "9ct Gold",
+      "price": 15.99,
+      "image": "sandi-benedicta-BYq2uAzpRak-unsplash.webp"
+   }
+},
+ {
+   "pk": 5,
+   "model": "products.product",
+   "fields": {
+      "category": 1,
+      "sku": "GB0113",
+      "name": "Gold Chain Bracelet",
+      "description": "Bold gold chain bracelet with clasp attachment",
+      "materials": "9ct Gold",
+      "price": 18.99,
+      "image": "nataliya-melnychuk-oO0JAOJhquk-unsplash.webp"
+   }
+},
+ {
+   "pk": 6,
+   "model": "products.product",
+   "fields": {
+      "category": 1,
+      "sku": "GB0114",
+      "name": "Gold Bangle",
+      "description": "Simple, elegant gold bangle style bracelet with rectangular detailing",
+      "materials": "9ct Gold",
+      "price": 23.5,
+      "image": "sama-hosseini-bjKzcsvBDOo-unsplash.webp"
+   }
+},
+ {
+   "pk": 7,
+   "model": "products.product",
+   "fields": {
+      "category": 1,
+      "sku": "GB0115",
+      "name": "Chunky Gold Bracelet",
+      "description": "Dusty gold coloured chunky bracelet with gold bead detailing",
+      "materials": "9ct Gold",
+      "price": 21.5,
+      "image": "albina-white-qILRFVJmsBc-unsplash.webp"
+   }
+},
+ {
+   "pk": 8,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0111",
+      "name": "Silver Chain Bracelet",
+      "description": "Bold silver chain bracelet with clasp attachment",
+      "materials": "Sterling Silver",
+      "price": 18.99,
+      "image": "maxim-mox-aW6unMK5l2E-unsplash.webp"
+   }
+},
+ {
+   "pk": 9,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0112",
+      "name": "Silver Friendship Bracelet",
+      "description": "Dainty silver friendship bracelet with hearts and red jewelled detailing",
+      "materials": "Sterling Silver",
+      "price": 15.99,
+      "image": "ian-talmacs-mkqraXkMPSE-unsplash.webp"
+   }
+},
+ {
+   "pk": 10,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0113",
+      "name": "Silver and Blue Bracelet",
+      "description": "Delicate silver bracelet with blue beading and a clasp attachment",
+      "materials": "Sterling Silver",
+      "price": 15.99,
+      "image": "pexels-alexey-demidov-10640630.webp"
+   }
+},
+ {
+   "pk": 11,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0114",
+      "name": "Dainty Silver Statement Bracelet",
+      "description": "Fine silver chain bracelet with a statement square diamond detailing",
+      "materials": "Sterling Silver, Square-cut Diamonds",
+      "price": 35.99,
+      "image": "pexels-esra-af?ar-14509640.webp"
+   }
+},
+ {
+   "pk": 12,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0115",
+      "name": "Elegant Silver Cuff Bracelet",
+      "description": "Elegant silver statement cuff style bracelet",
+      "materials": "Sterling Silver",
+      "price": 32.99,
+      "image": "pexels-ron-lach-9145355.webp"
+   }
+},
+ {
+   "pk": 13,
+   "model": "products.product",
+   "fields": {
+      "category": 2,
+      "sku": "SB0116",
+      "name": "Dainty Silver Friendship Bracelet",
+      "description": "Delicate silver friendship bracelet with black beading and a statement diamond rectangular design ",
+      "materials": "Sterling Silver, Square-cut Diamonds",
+      "price": 36.5,
+      "image": "pexels-arif-khan-16438675.webp"
+   }
+},
+ {
+   "pk": 14,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0111",
+      "name": "Elegant Gold Necklace with Circular Pendant",
+      "description": "Stunning thin chained gold necklace with gold, circular, textured pendant",
+      "materials": "9ct Gold",
+      "price": 31.99,
+      "image": "anastasia-anastasia-nlQFycTD04M-unsplash.webp"
+   }
+},
+ {
+   "pk": 15,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0112",
+      "name": "Dainty Gold Beaded Necklace",
+      "description": "Simple but elegant gold necklace with beaded detailing and small circular pendants throughout",
+      "materials": "9ct Gold",
+      "price": 28.99,
+      "image": "mathilde-langevin-QgK0yj6kc6k-unsplash.webp"
+   }
+},
+ {
+   "pk": 16,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0113",
+      "name": "Gold Double Hooped Necklace",
+      "description": "Long chained gold necklace with two different sized hoops and an adjustable clasp attachment",
+      "materials": "9ct Gold",
+      "price": 25.5,
+      "image": "hanna-balan-diLY227UOvg-unsplash.webp"
+   }
+},
+ {
+   "pk": 17,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0114",
+      "name": "Set of 3 Delicate Gold Necklaces",
+      "description": "3 gold necklaces of different lengths to fit perfectly on your neck. The smallest has a dainty chain with a diamond star pendant, the middle one is a simple design with a circular gold pendant, and the largest one has intermittent beadwork and a moon shaped pendant.",
+      "materials": "9ct Gold",
+      "price": 51.99,
+      "image": "max-ducourneau-6uv43p1ePrk-unsplash.webp"
+   }
+},
+ {
+   "pk": 18,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0115",
+      "name": "Dainty Gold Chain Necklace",
+      "description": "Dainty gold chain necklace with adjustable clasp attachment",
+      "materials": "9ct Gold",
+      "price": 25.99,
+      "image": "sama-hosseini-GtOo17K-vTg-unsplash.webp"
+   }
+},
+ {
+   "pk": 19,
+   "model": "products.product",
+   "fields": {
+      "category": 3,
+      "sku": "GN0116",
+      "name": "Gold Necklace with 4 Pendants",
+      "description": "Delicate gold necklace with a simple chain and 4 circular pendants",
+      "materials": "9ct Gold",
+      "price": 22.99,
+      "image": "natalie-sysko-0IOY1_3d-r0-unsplash.webp"
+   }
+},
+ {
+   "pk": 20,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0111",
+      "name": "Silver Necklace with Pendant",
+      "description": "Delicate silver necklace with circular patterned pendant",
+      "materials": "Sterling Silver",
+      "price": 22.99,
+      "image": "ernest-tarasov-lH4eZhwEReM-unsplash.webp"
+   }
+},
+ {
+   "pk": 21,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0112",
+      "name": "Silver Necklace with Tree Pendant",
+      "description": "Dainty silver necklace with circular tree design pendant",
+      "materials": "Sterling Silver",
+      "price": 22.99,
+      "image": "fanqi-VLy8wPYpV9s-unsplash.webp"
+   }
+},
+ {
+   "pk": 22,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0113",
+      "name": "Delicate Silver Necklace with Star Pendant",
+      "description": "Simple but elegant silver necklace with a dainty star shaped pendant",
+      "materials": "Sterling Silver",
+      "price": 19.99,
+      "image": "pexels-rdne-stock-project-9241475.webp"
+   }
+},
+ {
+   "pk": 23,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0114",
+      "name": "Silver Necklace with Hoops",
+      "description": "Dainty silver necklace with two interlocking hoops and an adjustable clasp attachment",
+      "materials": "Sterling Silver",
+      "price": 19.99,
+      "image": "pexels-lena-shekhovtsova-4019460.webp"
+   }
+},
+ {
+   "pk": 24,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0115",
+      "name": "Silver Necklace with Triangle Detailing",
+      "description": "Elegant long silver necklace with triangle detailing attached to the chain and an adjustable clasp attachment",
+      "materials": "Sterling Silver",
+      "price": 24.5,
+      "image": "pexels-natalie-bond-12581241.webp"
+   }
+},
+ {
+   "pk": 25,
+   "model": "products.product",
+   "fields": {
+      "category": 4,
+      "sku": "SN0116",
+      "name": "Silver Flower Necklace",
+      "description": "Simple silver chain with a blue and diamond flower pendant and an adjustable clasp attachment",
+      "materials": "Sterling Silver, Round-cut Diamonds",
+      "price": 23.99,
+      "image": "pexels-feyza-tu?ba-11444926.webp"
+   }
+},
+ {
+   "pk": 26,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0111",
+      "name": "Gold Hoop Style Drop Earrings",
+      "description": "Elegant gold drop earrings consisting of 5 small interlocking hoops",
+      "materials": "9ct Gold",
+      "price": 31.5,
+      "image": "stacysuxx-403Cm2I21A8-unsplash.webp"
+   }
+},
+ {
+   "pk": 27,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0112",
+      "name": "Gold Spiral Studs",
+      "description": "Rich gold studs in a spiral design ",
+      "materials": "9ct Gold",
+      "price": 29.99,
+      "image": "stacysuxx-KaU2g_WC7MA-unsplash.webp"
+   }
+},
+ {
+   "pk": 28,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0113",
+      "name": "Dainty Gold and Pearl Drop Earrings",
+      "description": "Simple elegant gold drop half-hoop shaped earrings with a pearl bead dangling of the end",
+      "materials": "9ct Gold, Pearls",
+      "price": 33.99,
+      "image": "daihana-monares-rQWoa1en9N0-unsplash.webp"
+   }
+},
+ {
+   "pk": 29,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0114",
+      "name": "Solid Gold Hoops",
+      "description": "Classic pair of small gold hoop earrings",
+      "materials": "9ct Gold",
+      "price": 22.99,
+      "image": "jesus-eca-DRbPrVTyTyA-unsplash.webp"
+   }
+},
+ {
+   "pk": 30,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0115",
+      "name": "Delicate Gold Flower Drop Earrings",
+      "description": "Dainty pair of gold drop half-hoop shaped earrings with a pearl flower decoration dangling at the end",
+      "materials": "9ct Gold, Pearls",
+      "price": 35.99,
+      "image": "daihana-monares-I2yLm45_rXk-unsplash.webp"
+   }
+},
+ {
+   "pk": 31,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0116",
+      "name": "Ribbed Gold Hoop Earrings",
+      "description": "Small elegant gold ribbed hoop earrings",
+      "materials": "9ct Gold",
+      "price": 28.99,
+      "image": "nataliya-melnychuk-Ki7TPcA9204-unsplash.webp"
+   }
+},
+ {
+   "pk": 32,
+   "model": "products.product",
+   "fields": {
+      "category": 5,
+      "sku": "GE0117",
+      "name": "Simple Gold Hoop Earrings",
+      "description": "Classic pair of medium sized gold hoop earrings",
+      "materials": "9ct Gold",
+      "price": 25.99,
+      "image": "jesus-eca-NgJfAcaKfc0-unsplash.webp"
+   }
+},
+ {
+   "pk": 33,
+   "model": "products.product",
+   "fields": {
+      "category": 6,
+      "sku": "SE0001",
+      "name": "Solid Silver Hoops",
+      "description": "Classic pair of small silver hoop earrings",
+      "materials": "Sterling Silver",
+      "price": 22.99,
+      "image": "jasmin-chew-UBeNYvk6ED0-unsplash.webp"
+   }
+},
+ {
+   "pk": 34,
+   "model": "products.product",
+   "fields": {
+      "category": 6,
+      "sku": "SE0002",
+      "name": "Silver and Diamond Flower Studs",
+      "description": "Silver flower shaped stud earrings with diamond detailing",
+      "materials": "Sterling Silver, Round-cut Diamonds",
+      "price": 38.99,
+      "image": "mares-stefan-raFVu3MLap8-unsplash.webp"
+   }
+},
+ {
+   "pk": 35,
+   "model": "products.product",
+   "fields": {
+      "category": 6,
+      "sku": "SE0003",
+      "name": "Silver and Diamond Teardrop Earrings",
+      "description": "Silver drop earrings with diamond detailing in a teardrop shape",
+      "materials": "Sterling Silver, Round-cut Diamonds",
+      "price": 27.5,
+      "image": "klara-kulikova-lOPIBfJ_L38-unsplash.webp"
+   }
+},
+ {
+   "pk": 36,
+   "model": "products.product",
+   "fields": {
+      "category": 6,
+      "sku": "SE0004",
+      "name": "Delicate Silver Flower Drop Earrings",
+      "description": "Dainty silver drop earrings with small flowers dangling down",
+      "materials": "Sterling Silver",
+      "price": 21.99,
+      "image": "sarah-dao-ajQCs8RMBgA-unsplash.webp"
+   }
+},
+ {
+   "pk": 37,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0001",
+      "name": "Elegant Gold Flower Ring",
+      "description": "Statement solid gold ring with gold beading around a diamond encrusted flower",
+      "materials": "10ct Gold, Round-cut diamons",
+      "price": 45.99,
+      "image": "priyanka-k-WMjCxa8wVhs-unsplash.webp"
+   }
+},
+ {
+   "pk": 38,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0002",
+      "name": "Minimalist Gold Ring",
+      "description": "Minimalistic gold ring in a unique curved design",
+      "materials": "9ct Gold",
+      "price": 32.5,
+      "image": "reuben-kim-Q02hAjTTnKg-unsplash.webp"
+   }
+},
+ {
+   "pk": 39,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0003",
+      "name": "Dainty Gold Heart Ring",
+      "description": "Elegant gold ring with 3 diamond encrusted hearts",
+      "materials": "9ct Gold, Round-cut Diamonds",
+      "price": 33.99,
+      "image": "jesus-eca-q3XlqdHb-fg-unsplash.webp"
+   }
+},
+ {
+   "pk": 40,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0004",
+      "name": "Leaf Design Gold Ring",
+      "description": "Wide gold ring designed in the shape of a leaf pattern",
+      "materials": "9ct Gold",
+      "price": 23.99,
+      "image": "sabrianna-5vzRegjuBP4-unsplash.webp"
+   }
+},
+ {
+   "pk": 41,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0005",
+      "name": "Gold and Diamond Patterned Ring",
+      "description": "Patterned gold ring with a hexagonal design and silver border around a diamond centre piece",
+      "materials": "9ct Gold, Sterling Silver, Round-cut Diamond",
+      "price": 34.99,
+      "image": "kapil-bansal-JMm0XYzbPRA-unsplash.webp"
+   }
+},
+ {
+   "pk": 42,
+   "model": "products.product",
+   "fields": {
+      "category": 7,
+      "sku": "GR0006",
+      "name": "Gold Heart Shaped Ring",
+      "description": "Dainty gold ring with a diamond encrusted heart shaped centre piece",
+      "materials": "9ct Gold, Round-cut Diamonds",
+      "price": 21.99,
+      "image": "louana-rose-wSAvqnz29RA-unsplash.webp"
+   }
+},
+ {
+   "pk": 43,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0001",
+      "name": "Solid Silver Ring",
+      "description": "Solid silver ring with a cut out pattern around the central diameter",
+      "materials": "Sterling Silver",
+      "price": 21.99,
+      "image": "ronan-furuta-B9Jo-V2kpOg-unsplash.webp"
+   }
+},
+ {
+   "pk": 44,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0002",
+      "name": "Diamond Encrusted Silver Ring",
+      "description": "Minimalist silver ring embedded with diamonds",
+      "materials": "Sterling Silver, Round-cut Diamonds",
+      "price": 38.99,
+      "image": "sabrianna-A8y6R0rFWT0-unsplash.webp"
+   }
+},
+ {
+   "pk": 45,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0003",
+      "name": "Silver Ring with Turquoise Gem",
+      "description": "Rustic silver ring with a patterned border surrounding an elegant turquoise oval gemstone",
+      "materials": "Sterling Silver, Turquoise gem",
+      "price": 42.5,
+      "image": "angele-kamp-u5IBQmxveNc-unsplash.webp"
+   }
+},
+ {
+   "pk": 46,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0004",
+      "name": "Diamond and Pearl Silver Ring",
+      "description": "Elegant silver ring with a timeless pearl centre piece and diamond detail",
+      "materials": "Sterling Silver, Round-cut Diamond, Pearl",
+      "price": 44.99,
+      "image": "paige-johnson-CMzAphfb4c8-unsplash.webp"
+   }
+},
+ {
+   "pk": 47,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0005",
+      "name": "Statement Silver Ring",
+      "description": "Statement bold silver ring with textured detailing all the way around",
+      "materials": "Sterling Silver",
+      "price": 23.99,
+      "image": "alina-rubo-KMo_YITF1Rs-unsplash.webp"
+   }
+}
+]

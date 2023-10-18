@@ -1,0 +1,66 @@
+[
+ {
+   "pk": 1,
+   "model": "products.category",
+   "fields": {
+      "name": "gold_bracelets",
+      "friendly_name": "Gold Bracelets"
+   }
+},
+ {
+   "pk": 2,
+   "model": "products.category",
+   "fields": {
+      "name": "silver_bracelets",
+      "friendly_name": "Silver Bracelets"
+   }
+},
+ {
+   "pk": 3,
+   "model": "products.category",
+   "fields": {
+      "name": "gold_necklaces",
+      "friendly_name": "Gold Necklaces"
+   }
+},
+ {
+   "pk": 4,
+   "model": "products.category",
+   "fields": {
+      "name": "silver_necklaces",
+      "friendly_name": "Silver Necklaces"
+   }
+},
+ {
+   "pk": 5,
+   "model": "products.category",
+   "fields": {
+      "name": "gold_earrings",
+      "friendly_name": "Gold Earrings"
+   }
+},
+ {
+   "pk": 6,
+   "model": "products.category",
+   "fields": {
+      "name": "silver_earrings",
+      "friendly_name": "Silver Earrings"
+   }
+},
+ {
+   "pk": 7,
+   "model": "products.category",
+   "fields": {
+      "name": "gold_rings",
+      "friendly_name": "Gold Rings"
+   }
+},
+ {
+   "pk": 8,
+   "model": "products.category",
+   "fields": {
+      "name": "silver_rings",
+      "friendly_name": "Silver Rings"
+   }
+}
+]
