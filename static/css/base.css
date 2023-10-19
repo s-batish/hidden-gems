@@ -144,6 +144,11 @@ footer {
     background-color: var(--off-white);
 }
 
+.products-hr {
+    border-top: 3px solid var(--dark-purple);
+    width: 80%;
+}
+
 /* Wishlist */
 .wishlist-icon {
     font-size: 22px;
