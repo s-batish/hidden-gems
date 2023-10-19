@@ -609,5 +609,18 @@
       "price": 23.99,
       "image": "alina-rubo-KMo_YITF1Rs-unsplash.webp"
    }
+},
+{
+   "pk": 48,
+   "model": "products.product",
+   "fields": {
+      "category": 8,
+      "sku": "SR0006",
+      "name": "Silver Floral Ring",
+      "description": "Dainty silver ring with a white flower centred on a branch style circumference",
+      "materials": "Sterling Silver",
+      "price": 21.99,
+      "image": "pexels-valeriia-miller-3080207.webp"
+   }
 }
 ]

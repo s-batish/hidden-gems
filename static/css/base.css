@@ -138,6 +138,11 @@ footer {
     background: #ede7eb;
 }
 
+/* Wishlist */
+.wishlist-icon {
+    font-size: 22px;
+}
+
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {
