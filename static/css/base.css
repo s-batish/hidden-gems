@@ -149,6 +149,25 @@ footer {
     width: 80%;
 }
 
+.category-btn:hover {
+    color: var(--dark-blue);
+    background-color: #ede7eb;
+    border: solid 1px var(--dark-blue);
+}
+
+.products-link {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.products-link:hover {
+    text-decoration: none;
+}
+
+.border-info {
+    border: none!important;
+}
+
 /* Wishlist */
 .wishlist-icon {
     font-size: 22px;
