@@ -5,6 +5,7 @@
     --main-font: 'Quattrocento Sans', sans-serif;
 
     /* Colours */
+    --off-white: #FAF9F6;
     --light-pink: #f6e8e8;
     --light-purple: #d3c3c9;
     --purple: #aea1ad;
@@ -136,6 +137,11 @@ footer {
     height: 100%;
     width: 100%;
     background: #ede7eb;
+}
+
+/* Products */
+.card-body, .card-footer {
+    background-color: var(--off-white);
 }
 
 /* Wishlist */
