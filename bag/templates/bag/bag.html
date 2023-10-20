@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- <div class="container">
+    <div class="row">
+        <div class="col mt-3 text-center">
+            <h2>Your Basket</h2>
+            <hr class="w-50 mb-3">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <div class="table-responsive"></div>
+            {% else %}
+            <p>Your basket is empty</p>
+            <a href="{% url 'products' %}" class="buttons btn btn-lg rounded"><i class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
+            {% endif %}
+        </div>
+    </div>
+</div> -->
+
+<div class="container text-center">
+    <div class="row d-flex justify-content-center mx-2">
+      <div class="col-12 col-md-8 col-lg-6 content-container shadow">
+        <div class="row">
+            <div class="col mt-3 text-center">
+                <h2>Your Basket</h2>
+                <hr class="w-50 mb-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                <div class="table-responsive"></div>
+                {% else %}
+                <p>Your basket is empty</p>
+                <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2"><i class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

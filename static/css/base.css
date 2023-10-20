@@ -118,11 +118,11 @@ footer {
     font-size: 30px;
 }
 
-/* Allauth forms */
-.all-auth-form {
+/* Containers */
+.content-container {
     background-color: rgb(246, 232, 232, 0.95);
     border-radius: 5px;
-    margin: 4rem;
+    margin: 3rem;
     color: var(--dark-blue);
 }
 
