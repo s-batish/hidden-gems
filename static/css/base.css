@@ -18,9 +18,7 @@ html, body {
 }
 
 body {
-    background: url('/media/hero-image.webp') no-repeat center center fixed;
-    background-size: cover;
-    /* height: calc(100vh - 164px); */
+    background: #ede7eb;
     font-family: var(--main-font);
 }
 
@@ -80,6 +78,13 @@ main {
 }
 
 /* Hero image */
+.overlay {
+    background: url('/media/hero-image.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .hero-text {
     background-color: rgb(211, 195, 201, 0.6);
     padding: 2px;
@@ -132,13 +137,6 @@ footer {
     font-size: 17px;
 }
 
-/* Overlay */
-.overlay {
-    height: 100%;
-    width: 100%;
-    background: #ede7eb;
-}
-
 /* Products */
 .card-body, .card-footer {
     background-color: var(--off-white);
@@ -168,6 +166,14 @@ footer {
     border: none!important;
 }
 
+.back-to-top {
+    font-size: 28px;
+}
+
+.back-to-top-link:hover {
+    text-decoration: none;
+}
+
 /* Wishlist */
 .wishlist-icon {
     font-size: 22px;
@@ -177,6 +183,10 @@ footer {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 100px;
+    }
+
+    .back-to-top {
+        font-size: 34px;
     }
 }
 
