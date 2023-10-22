@@ -44,7 +44,7 @@ main {
 
 /* Navbar */
 .logo {
-    width: 130px;
+    width: 90px;
 }
 
 .navbar {
@@ -75,6 +75,22 @@ main {
 
 .navbar-nav .dropdown-menu {
     position: absolute;
+}
+
+.total-price {
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--dark-blue);
+}
+
+.product-count {
+    /* right: 11px;
+    top: 32px; */
+    position: absolute;
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--dark-blue);
+    background-color: var(--off-white);
 }
 
 /* Hero image */
@@ -194,5 +210,9 @@ footer {
     .hero-text {
         margin: 0;
         text-align: center !important
+    }
+
+    .logo {
+        width: 130px;
     }
 }

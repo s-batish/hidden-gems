@@ -9,12 +9,13 @@
 
         <!-- Icons for mobile view -->
         <li class="list-inline-item navbar-nav">
-            <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+            <a class="text-black nav-link d-block d-lg-none pb-0" href="#" id="mobile-search" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <div>
                     <div><i class="fa-solid fa-magnifying-glass"></i></div>
                 </div>
             </a>
+            <p></p>
             <div class="d-flex flex-wrap align-content-end">
                 <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0 " aria-labelledby="mobile-search">
                     <form class="form" method="GET" action="{% url 'products' %}">
@@ -35,12 +36,23 @@
             </div>
         </li>
         <li class="list-inline-item navbar-nav">
-            <a class="nav-link d-block d-lg-none {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
+            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
                     class="fa-regular fa-heart"></i></a>
+            <p></p>
         </li>
         <li class="list-inline-item navbar-nav">
-            <a class="nav-link d-block d-lg-none {% if url_name == 'bag' %}active{% endif %}" href="{% url 'view_bag' %}"><i
-                    class="fa-solid fa-bag-shopping"></i></a>
+            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'bag' %}active{% endif %}"
+                href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
+                    class="product-count badge rounded-circle">{{ product_count }}</span>
+                <span class="sr-only">Product count</span></a>
+            <span class="total-price font-weight-bold d-block d-lg-none">
+                {% if grand_total %}
+                £{{ grand_total|floatformat:2 }}
+                {% else %}
+                £0.00
+                {% endif %}
+            </span>
+
         </li>
 
         <!-- Hamburger menu -->
@@ -74,9 +86,11 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{% url 'products' %}?category=gold_earrings">Gold Earrings</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_earrings">Silver Earrings</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_earrings">Silver
+                            Earrings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_earrings,silver_earrings">All Earrings</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_earrings,silver_earrings">All
+                            Earrings</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -86,9 +100,11 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{% url 'products' %}?category=gold_bracelets">Gold Bracelets</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_bracelets">Silver Bracelets</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_bracelets">Silver
+                            Bracelets</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_bracelets,silver_bracelets">All Bracelets</a>
+                        <a class="dropdown-item"
+                            href="{% url 'products' %}?category=gold_bracelets,silver_bracelets">All Bracelets</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -98,9 +114,11 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{% url 'products' %}?category=gold_necklaces">Gold Necklaces</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_necklaces">Silver Necklaces</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=silver_necklaces">Silver
+                            Necklaces</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_necklaces,silver_necklaces">All Necklaces</a>
+                        <a class="dropdown-item"
+                            href="{% url 'products' %}?category=gold_necklaces,silver_necklaces">All Necklaces</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -112,7 +130,8 @@
                         <a class="dropdown-item" href="{% url 'products' %}?category=gold_rings">Gold Rings</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=silver_rings">Silver Rings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_rings,silver_rings">All Rings</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=gold_rings,silver_rings">All
+                            Rings</a>
                     </div>
                 </li>
             </ul>
@@ -184,10 +203,21 @@
                     <a class="nav-link {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
                             class="fa-regular fa-heart"></i></a>
                 </li>
-                <li class="nav-item d-none d-lg-inline-block">
-                    <a class="nav-link {% if url_name == 'bag' %}active{% endif %}" href="{% url 'view_bag' %}"><i
-                            class="fa-solid fa-bag-shopping"></i></a>
-                </li>
+                <div class="text-center">
+                    <li class="nav-item d-none d-lg-inline-block">
+                        <a class="nav-link pb-0 {% if url_name == 'bag' %}active{% endif %}"
+                            href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
+                                class="product-count badge rounded-circle">{{ product_count }}</span>
+                            <span class="sr-only">Product count</span></a>
+                        <p class="total-price font-weight-bold">
+                            {% if grand_total %}
+                            £{{ grand_total|floatformat:2 }}
+                            {% else %}
+                            £0.00
+                            {% endif %}
+                        </p>
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>
