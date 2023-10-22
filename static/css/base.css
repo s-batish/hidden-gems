@@ -49,7 +49,7 @@ main {
 
 .navbar {
     font-family: var(--headings);
-    font-size: 25px;
+    font-size: 22px;
     background-color: var(--light-pink);
 }
 

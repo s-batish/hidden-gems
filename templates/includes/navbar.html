@@ -137,7 +137,8 @@
             </ul>
             <ul class="navbar-nav ml-auto justify-content-end">
                 {% if request.user.is_staff %}
-                <li class="nav-item dropdown d-flex justify-content-end">
+                <li class="nav-item dropdown">
+                    <p></p>
                     <a class="nav-link dropdown-toggle {% if url_name == 'product_management' or url_name == 'account_logout' %}active-link{% endif %}"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
@@ -150,6 +151,7 @@
                 </li>
                 {% elif request.user.is_authenticated %}
                 <li class="nav-item dropdown">
+                    <p></p>
                     <a class="nav-link dropdown-toggle {% if url_name == 'profile' or url_name == 'account_logout' %}active-link{% endif %}"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
@@ -162,6 +164,7 @@
                 </li>
                 {% else %}
                 <li class="nav-item dropdown">
+                    <p></p>
                     <a class="nav-link dropdown-toggle {% if url_name == 'account_signup' or url_name == 'account_login' %}active-link{% endif %}"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
@@ -173,6 +176,7 @@
                 </li>
                 {% endif %}
                 <li class="list-inline-item d-none d-lg-inline-block">
+                    <p></p>
                     <a class="text-black nav-link d-block" href="#" id="mobile-search" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <div>
@@ -200,11 +204,13 @@
                     </div>
                 </li>
                 <li class="nav-item d-none d-lg-inline-block">
+                    <p></p>
                     <a class="nav-link {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
                             class="fa-regular fa-heart"></i></a>
                 </li>
                 <div class="text-center">
                     <li class="nav-item d-none d-lg-inline-block">
+                        <p></p>
                         <a class="nav-link pb-0 {% if url_name == 'bag' %}active{% endif %}"
                             href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
                                 class="product-count badge rounded-circle">{{ product_count }}</span>
