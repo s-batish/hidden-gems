@@ -190,6 +190,11 @@ footer {
     text-decoration: none;
 }
 
+/* Basket */
+.table {
+    color: var(--dark-blue);
+}
+
 /* Wishlist */
 .wishlist-icon {
     font-size: 22px;
