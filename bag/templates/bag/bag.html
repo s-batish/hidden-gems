@@ -4,29 +4,71 @@
 {% block content %}
 <div class="container text-center">
     <div class="row d-flex justify-content-center mx-2">
-      <div class="col-12 col-md-8 col-lg-6 content-container shadow">
-        <div class="row">
-            <div class="col mt-3 text-center">
-                <h2>Your Basket</h2>
-                <hr class="w-50 mb-3">
+        <div class="col-12 col-md-8 col-lg-6 content-container shadow">
+            <div class="row">
+                <div class="col mt-3 text-center">
+                    <h2>Your Basket</h2>
+                    <hr class="w-50 mb-3">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                {% if bag_items %}
-                <div class="table-responsive">
-                    <table class="table table-sm ">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product Info</th>
-                                <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
-                            </tr>
-                        </thead>
-
+            <div class="row">
+                <div class="col">
+                    {% if bag_items %}
+                    <div class="d-block d-sm-none">
                         {% for item in bag_items %}
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mb-2">
+                                {% if item.product.image %}
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                    alt="{{ item.product.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{% static 'images/logo.webp' %}"
+                                    alt="{{ item.product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </div>
+                            <div class="col-12 col-sm-6 order-sm-last">
+                                <p class="my-0">Price Each: £{{ item.product.price }}</p>
+                                <p><strong>Subtotal: </strong>£{{ item.product.price }}
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-6">
+
+                            </div>
+                        </div>
+                        <hr>
+                        {% endfor %}
+                        <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                        <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                        {% if free_delivery_delta > 0 %}
+                        <p class="mb-1 text-danger">
+                            You could get free delivery by spending just
+                            <strong>£{{ free_delivery_delta }}</strong> more!
+                        </p>
+                        {% endif %}
+                        <a href="{% url 'products' %}" class="buttons btn  rounded mb-2"><i
+                                class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
+                        <a href="{% url 'products' %}" class="buttons btn  rounded mb-2">Secure
+                            Checkout <i class="fas fa-lock"></i></a>
+                    </div>
+
+                    <div class="table-responsive d-none d-sm-block">
+                        <table class="table table-sm ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in bag_items %}
                             <tr>
                                 <td class="p-3 w-25">
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
@@ -45,34 +87,38 @@
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
                             </tr>
-                        {% endfor %}
-                        <tr>
-                            <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                {% if free_delivery_delta > 0 %}
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                                        You could get free delivery by spending just
+                                        <strong>£{{ free_delivery_delta }}</strong> more!
                                     </p>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2"><i class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
-                                <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2">Secure Checkout <i class="fas fa-lock"></i></a>
-                            </td>
-                        </tr>
-                    </table>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2"><i
+                                            class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
+                                    <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2">Secure
+                                        Checkout <i class="fas fa-lock"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p>Your basket is empty</p>
+                    <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2"><i
+                            class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
+                    {% endif %}
                 </div>
-                {% else %}
-                <p>Your basket is empty</p>
-                <a href="{% url 'products' %}" class="buttons btn btn-lg rounded mb-2"><i class="fa-solid fa-chevron-left"></i> Keep shopping!</a>
-                {% endif %}
             </div>
         </div>
-      </div>
     </div>
 </div>
 {% endblock %}
