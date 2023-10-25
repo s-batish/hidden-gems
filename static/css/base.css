@@ -30,7 +30,7 @@ main {
     flex: 1 0 auto;
 }
 
-.buttons {
+.buttons, .decrement-quantity-btn, .increment-quantity-btn {
     color: var(--light-pink);
     border: solid 1px var(--dark-blue);
     background-color: var(--dark-blue);
@@ -188,6 +188,10 @@ footer {
 
 .back-to-top-link:hover {
     text-decoration: none;
+}
+
+.quantity-icon:hover {
+    font-size: 18px;
 }
 
 /* Basket */
