@@ -194,6 +194,10 @@ footer {
     font-size: 18px;
 }
 
+.update-link, .remove-item {
+    cursor: pointer;
+}
+
 /* Basket */
 .table {
     color: var(--dark-blue);
