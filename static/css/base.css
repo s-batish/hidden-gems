@@ -11,6 +11,7 @@
     --purple: #aea1ad;
     --dark-purple: #858192;
     --dark-blue: #2f4858;
+    --faded-dark-blue: #485A73;
 }
 
 html, body {
@@ -190,8 +191,10 @@ footer {
     text-decoration: none;
 }
 
-.quantity-icon:hover {
-    font-size: 18px;
+.btn:hover {
+    color: var(--light-pink);
+    border: solid 1px var(--faded-dark-blue);
+    background-color: var(--faded-dark-blue);
 }
 
 .update-link, .remove-item {
