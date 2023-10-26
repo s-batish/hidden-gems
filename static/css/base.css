@@ -211,6 +211,27 @@ footer {
     font-size: 22px;
 }
 
+/* Toasts */
+.message-container {
+    position: fixed;
+    top: 105px;
+    right: 15px;
+    z-index: 999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.toast-header, .toast-body {
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {
