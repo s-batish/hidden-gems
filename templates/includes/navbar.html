@@ -1,6 +1,6 @@
 {% load static %}
 
-<header>
+<header class="fixed-top">
     {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg navbar-light">
         <!-- Logo -->
@@ -227,4 +227,9 @@
         </div>
     </nav>
     {% endwith %}
+    <div class="text-center">
+        <div class="col delivery-banner py-1">
+            <h4>Free delivery on orders over £{{ free_delivery_threshold }}</h4>
+        </div>
+    </div>
 </header>
