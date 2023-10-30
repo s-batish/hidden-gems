@@ -15,6 +15,8 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    # Determines whether the user has the save info box checked and returns
+    # this to the webhook
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
