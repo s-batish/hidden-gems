@@ -32,6 +32,14 @@
     margin-right: 1px;
 }
 
+select, select option {
+  color: #495057;
+}
+
+select:invalid, select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
