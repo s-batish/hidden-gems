@@ -45,10 +45,6 @@ main {
     border: solid 1px var(--dark-blue);
 }
 
-.header-container {
-    padding-top: 180px;
-}
-
 /* Navbar */
 .logo {
     width: 90px;
@@ -143,12 +139,18 @@ footer {
 }
 
 /* Containers */
+.header-container {
+    padding-top: 180px;
+}
+
 .content-container {
     background-color: rgb(246, 232, 232, 0.95);
     border-radius: 5px;
     margin: 3rem;
     color: var(--dark-blue);
 }
+
+/* Links */
 
 .link {
     color: var(--dark-blue);
@@ -206,6 +208,31 @@ footer {
 
 .update-link, .remove-item {
     cursor: pointer;
+}
+
+/* Edit product form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /* Basket */
