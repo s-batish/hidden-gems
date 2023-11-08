@@ -4,7 +4,7 @@
     {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg navbar-light">
         <!-- Logo -->
-        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.webp' %}"
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{{ MEDIA_URL}}logo.webp"
                 alt="Hidden Gems logo" class="logo"></a>
 
         <!-- Icons for mobile view -->
@@ -143,7 +143,7 @@
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Product Management</a>
+                        <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/accounts/logout/">Logout</a>
                     </div>
