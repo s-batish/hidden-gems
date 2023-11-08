@@ -31,13 +31,15 @@ main {
     flex: 1 0 auto;
 }
 
-.buttons, .decrement-quantity-btn, .increment-quantity-btn {
+/* Buttons */
+
+.buttons, .decrement-quantity-btn, .increment-quantity-btn, .edit-btns:hover {
     color: var(--light-pink);
     border: solid 1px var(--dark-blue);
     background-color: var(--dark-blue);
 }
 
-.buttons:hover {
+.buttons:hover, .edit-btns {
     color: var(--dark-blue);
     background-color: var(--light-pink);
     border: solid 1px var(--dark-blue);

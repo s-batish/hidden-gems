@@ -101,6 +101,14 @@
                                 </div>
                                 {% endif %}
                             </div>
+                            <div class="row d-flex justify-content-center">
+                                {% if request.user.is_superuser %}
+                                <small>
+                                    <a href="{% url 'edit_product' product.id %}" class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
+                                    <a href="{% url 'delete_product' product.id %}" class="edit-btns btn rounded mb-1 px-2 py-1 font-weight-bold">DELETE</a>
+                                </small>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>

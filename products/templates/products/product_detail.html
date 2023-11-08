@@ -52,14 +52,16 @@
                             <div class="form-group">
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-quantity-btn btn decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}">
+                                        <button class="decrement-quantity-btn btn decrement-qty_{{ product.id }}"
+                                            data-item_id="{{ product.id }}">
                                             <i class="quantity-icon fa-solid fa-minus"></i>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ product.id }}">
+                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
+                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-quantity-btn btn increment-qty_{{ product.id }}" data-item_id="{{ product.id }}">
+                                        <button class="increment-quantity-btn btn increment-qty_{{ product.id }}"
+                                            data-item_id="{{ product.id }}">
                                             <i class="quantity-icon fa-solid fa-plus"></i>
                                         </button>
                                     </div>
@@ -80,6 +82,16 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                {% if request.user.is_superuser %}
+                <div class="d-flex justify-content-center">
+                <small>
+                    <a href="{% url 'edit_product' product.id %}"
+                        class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
+                    <a href="{% url 'delete_product' product.id %}"
+                        class="edit-btns btn rounded mb-1 px-2 py-1 font-weight-bold">DELETE</a>
+                </small>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
