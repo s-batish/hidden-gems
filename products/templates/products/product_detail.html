@@ -84,15 +84,22 @@
                 </form>
                 {% if request.user.is_superuser %}
                 <div class="d-flex justify-content-center">
-                <small>
-                    <a href="{% url 'edit_product' product.id %}"
-                        class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
-                    <a href="{% url 'delete_product' product.id %}"
-                        class="edit-btns btn rounded mb-1 px-2 py-1 font-weight-bold">DELETE</a>
-                </small>
+                    <small>
+                        <a href="{% url 'edit_product' product.id %}"
+                            class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
+                        <a href="{% url 'delete_product' product.id %}"
+                            class="edit-btns btn rounded mb-1 px-2 py-1 font-weight-bold">DELETE</a>
+                    </small>
                 </div>
                 {% endif %}
             </div>
+        </div>
+    </div>
+    <hr class="my-4">
+    <!-- Reviews -->
+    <div class="row">
+        <div class="col offset-lg-2">
+            <h3>Reviews</h3>
         </div>
     </div>
 </div>
