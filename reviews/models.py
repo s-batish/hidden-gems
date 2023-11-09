@@ -5,7 +5,7 @@ from products.models import Product
 
 class Review(models.Model):
     """
-    Model to add reviews about the lessons
+    Model to add reviews on products
     """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="author")
