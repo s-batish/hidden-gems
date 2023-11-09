@@ -221,6 +221,10 @@ footer {
     cursor: pointer;
 }
 
+.card-img-top {
+    max-width: 480px;
+}
+
 /* Edit product form */
 .btn-file {
     position: relative;
