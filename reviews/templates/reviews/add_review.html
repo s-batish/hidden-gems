@@ -1,5 +1,5 @@
 <hr class="my-4">
-<!-- Reviews -->
+<!-- Add Reviews -->
 <div class="row">
     <div class="col-5 col-lg-4 offset-lg-2">
         <h3>Reviews</h3>
@@ -29,7 +29,8 @@
         </div>
         <div class="modal-body">
             <p>Posting as: {{ user.username }}</p>
-          <form method="POST">
+          <form method="POST" action="{% url 'product_detail' product.id %}">
+            {% csrf_token %}
             {{ reviews | crispy }}
           </form>
         </div>
