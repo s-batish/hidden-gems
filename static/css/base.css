@@ -385,5 +385,10 @@ footer {
     .back-to-top {
         font-size: 34px;
     }
+
+    .review-login {
+        display: flex;
+        justify-content: center;
+    }
 }
 

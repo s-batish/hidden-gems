@@ -95,18 +95,7 @@
             </div>
         </div>
     </div>
-    <hr class="my-4">
-    <!-- Reviews -->
-    <div class="row">
-        <div class="col-4 offset-lg-2">
-            <h3>Reviews</h3>
-        </div>
-        {% if request.user.is_authenticated %}
-        <div class="col-4 offset-lg-2">
-            <a href="{% url 'add_review' %}" class="buttons btn rounded mb-2 mx-1">Leave a review</a>
-        </div>
-        {% endif %}
-    </div>
+    {% include 'reviews/add_review.html' %}
 </div>
 {% endblock %}
 

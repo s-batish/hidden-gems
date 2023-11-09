@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Category
 from .forms import ProductForm
 
+from reviews.forms import ReviewForm
 from reviews.models import Review
 
 
@@ -72,7 +73,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'reviews': reviews,
+        'reviews': ReviewForm(),
     }
 
     return render(request, 'products/product_detail.html', context)

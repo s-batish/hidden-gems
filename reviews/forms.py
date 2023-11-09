@@ -8,7 +8,7 @@ class ReviewForm(forms.ModelForm):
     """
     class Meta:
         model = Review
-        fields = ['product', 'body']
+        fields = ('body',)
         labels = {
             'body': 'Please write your review here'
         }
