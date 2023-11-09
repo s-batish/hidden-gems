@@ -78,6 +78,8 @@ main {
 
 .navbar-nav .dropdown-menu {
     position: absolute;
+    top: 90%;
+    right: 45%;
 }
 
 .total-price {
@@ -110,11 +112,20 @@ main {
     padding: 2px;
     border-radius: 5px;
     margin: 0 10px;
+    font-size: 36px;
+}
+
+.hero-text > h1 {
+    font-size: 36px;
 }
 
 .delivery-banner {
     background-color: var(--dark-blue);
     color: var(--light-pink);
+}
+
+.delivery-banner > h4 {
+    font-size: 16px;
 }
 
 /* Footer */
@@ -140,7 +151,7 @@ footer {
 
 /* Containers */
 .header-container {
-    padding-top: 180px;
+    padding-top: 140px;
 }
 
 .content-container {
@@ -321,7 +332,11 @@ footer {
 /* Media queries */
 @media (min-width: 379px) {
     .header-container {
-        padding-top: 160px;
+        padding-top: 150px;
+    }
+
+    .delivery-banner > h4 {
+        font-size: 20px;
     }
 }
 
@@ -330,17 +345,35 @@ footer {
         padding-top: 190px;
     }
 
+    .hero-container {
+        padding-top: 1.5rem;
+    }
+
     .hero-text {
         margin: 0;
-        text-align: center !important
+        text-align: center !important;
+        font-size: 40px;
+    }
+
+    .hero-text > h1 {
+        font-size: 40px;
     }
 
     .logo {
         width: 130px;
     }
+
+    .delivery-banner > h4 {
+        font-size: 24px;
+    }
 }
 
 @media (min-width: 992px) {
+    .navbar-nav .dropdown-menu {
+        top: 70%;
+        left: -25%;
+    }
+
     .overlay {
         padding-top: 280px;
     }
