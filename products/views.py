@@ -70,13 +70,16 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
+    form = ReviewForm()
+    template = 'products/product_detail.html'
 
     context = {
         'product': product,
-        'reviews': ReviewForm(),
+        'form': form,
+        'reviews': reviews,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, template, context)
 
 @login_required
 def add_product(request):

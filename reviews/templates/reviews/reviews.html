@@ -1,4 +1,16 @@
 <hr class="my-4">
 <!-- Reviews -->
-<div class="row">
+{% for review in reviews %}
+<div class="row px-3">
+    <div class="col-6 col-md-4 offset-md-2 px-lg-5">
+        <small>{{ review.author }}</small>
+    </div>
+    <div class="col-6  col-md-4 offset-md-2 ">
+        <small>{{ review.created_on}}</small>
+    </div>
+    <div class="col-12  offset-md-2">
+        <p>{{ review.body }}</p>
+    </div>
+    <hr class="w-100">
 </div>
+{% endfor %}

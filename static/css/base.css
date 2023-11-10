@@ -221,9 +221,7 @@ footer {
     cursor: pointer;
 }
 
-.card-img-top {
-    max-width: 480px;
-}
+
 
 /* Edit product form */
 .btn-file {
@@ -369,6 +367,12 @@ footer {
 
     .delivery-banner > h4 {
         font-size: 24px;
+    }
+}
+
+@media (min-width:768px) {
+    .card-img-top {
+        max-width: 480px;
     }
 }
 

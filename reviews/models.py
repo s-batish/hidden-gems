@@ -17,4 +17,4 @@ class Review(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"Review by {self.name}: {self.body}"
+        return f"Review by {self.author}: {self.body}"
