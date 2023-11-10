@@ -221,8 +221,6 @@ footer {
     cursor: pointer;
 }
 
-
-
 /* Edit product form */
 .btn-file {
     position: relative;
@@ -331,6 +329,22 @@ footer {
     overflow-y: auto;
 }
 
+/* Reviews */
+.card {
+    border-radius: 5px;
+}
+
+.reviews {
+    width: 80%;
+    border: 3px solid var(--faded-dark-blue);
+}
+
+.card-header {
+    background-color: #ede7eb;
+    border: 3px solid var(--dark-blue);
+}
+
+
 /* Media queries */
 @media (min-width: 379px) {
     .header-container {
@@ -368,12 +382,16 @@ footer {
     .delivery-banner > h4 {
         font-size: 24px;
     }
+
+
 }
 
 @media (min-width:768px) {
     .card-img-top {
         max-width: 480px;
     }
+
+
 }
 
 @media (min-width: 992px) {
@@ -393,6 +411,10 @@ footer {
     .review-login {
         display: flex;
         justify-content: center;
+    }
+
+    .reviews {
+        width: 60%;
     }
 }
 

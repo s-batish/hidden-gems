@@ -1,21 +1,56 @@
+<div class="container pb-3">
 <hr class="my-4">
 <!-- Add Reviews -->
-<div class="row">
-  <div class="col-5 col-lg-4 offset-lg-2">
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+              <h3>Reviews</h3>
+            </div>
+            {% if request.user.is_authenticated %}
+            <div class="col-6">
+              <button type="button" class="buttons btn rounded mb-2 mx-1" data-toggle="modal" data-target="#staticBackdrop">
+                Leave a review
+              </button>
+            </div>
+            {% else %}
+            <div class="col-6 text-right review-login">
+              <a href="{% url 'account_login' %}" class="link small">Sign in to leave a review</a>
+            </div>
+            {% endif %}
+          </div>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        {% include 'reviews/reviews.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-6 d-flex justify-content-end">
     <h3>Reviews</h3>
   </div>
   {% if request.user.is_authenticated %}
-  <div class="col-7 col-lg-4 offset-lg-2">
+  <div class="col-6">
     <button type="button" class="buttons btn rounded mb-2 mx-1" data-toggle="modal" data-target="#staticBackdrop">
       Leave a review
     </button>
   </div>
   {% else %}
-  <div class="col-7 col-lg-4 offset-lg-2 text-right review-login">
+  <div class="col-6 text-right review-login">
     <a href="{% url 'account_login' %}" class="link small">Sign in to leave a review</a>
   </div>
   {% endif %}
-</div>
+</div> -->
 
 <!-- Modal to leave a review-->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -41,4 +76,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
