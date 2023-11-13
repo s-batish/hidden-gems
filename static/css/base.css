@@ -358,7 +358,7 @@ footer {
     text-decoration: none !important;
 }
 
-.card-body {
+.reviews > .card-body, .reviews-card-body {
     background-color: #ede7eb;
 }
 

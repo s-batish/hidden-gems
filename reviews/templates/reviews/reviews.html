@@ -1,5 +1,5 @@
 <!-- Reviews -->
-<div class="d-flex flex-column align-items-center w-100">
+<div class="d-flex flex-column align-items-center w-100 pt-2">
     {% if reviews.count > 0 %}
         {% for review in reviews %}
             <div class="card reviews mb-3">
@@ -13,7 +13,7 @@
             </div>
         {% endfor %}
     {% else %}
-        <p>There are no reviews for this item yet. Login to leave one!</p>
+        <p>There are no reviews for this item yet. Please leave one below!</p>
     {% endif %}
     {% if request.user.is_authenticated %}
     <div>
