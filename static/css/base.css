@@ -358,13 +358,14 @@ footer {
     text-decoration: none !important;
 }
 
-.reviews > .card-body, .reviews-card-body {
+.reviews > .card-body, .reviews-card-body, .reviews-div {
     background-color: #ede7eb;
 }
 
 .accordion>.card>.card-header {
     border-radius: 5px;
 }
+
 
 /* Media queries */
 @media (min-width: 379px) {
