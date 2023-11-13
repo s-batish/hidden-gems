@@ -345,6 +345,22 @@ footer {
     border: 3px solid var(--dark-blue);
 }
 
+.review-login {
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+.reviews-heading {
+    color: var(--dark-blue);
+}
+
+.btn-link {
+    text-decoration: none !important;
+}
+
+.card-body {
+    background-color: #ede7eb;
+}
 
 /* Media queries */
 @media (min-width: 379px) {
