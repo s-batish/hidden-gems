@@ -5,58 +5,27 @@
   <div class="accordion" id="accordionExample">
     <div class="card">
       <div class="card-header" id="headingOne">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <div class="row reviews-heading">
-              <div class="col-2"></div>
-              <div class="col-8 d-flex justify-content-center">
-                <h3>Reviews</h3>
-              </div>
-              <div class="col-2">
-                <h3><i class="fa-solid fa-plus"></i></h3>
-              </div>
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          <div class="row reviews-heading">
+            <div class="col-2"></div>
+            <div class="col-8 d-flex justify-content-center">
+              <h3>Reviews</h3>
             </div>
-            {% if request.user.is_authenticated %}
-            <div>
-              <button type="button" class="buttons btn rounded mb-2 mx-1" data-toggle="modal"
-                data-target="#staticBackdrop">
-                Leave a review
-              </button>
+            <div class="col-2">
+              <h3><i class="fa-solid fa-plus"></i></h3>
             </div>
-            {% else %}
-            <div class="row">
-              <div class="col-12 d-flex justify-content-center">
-                <a href="{% url 'account_login' %}" class="link small review-login">Sign in to leave a review</a>
-              </div>
-            </div>
-            {% endif %}
-          </button>
+          </div>
+        </button>
       </div>
 
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
+        <div class="card-body px-0">
           {% include 'reviews/reviews.html' %}
         </div>
       </div>
     </div>
   </div>
-
-  <!-- <div class="row">
-  <div class="col-6 d-flex justify-content-end">
-    <h3>Reviews</h3>
-  </div>
-  {% if request.user.is_authenticated %}
-  <div class="col-6">
-    <button type="button" class="buttons btn rounded mb-2 mx-1" data-toggle="modal" data-target="#staticBackdrop">
-      Leave a review
-    </button>
-  </div>
-  {% else %}
-  <div class="col-6 text-right review-login">
-    <a href="{% url 'account_login' %}" class="link small">Sign in to leave a review</a>
-  </div>
-  {% endif %}
-</div> -->
 
   <!-- Modal to leave a review-->
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -83,4 +52,5 @@
       </div>
     </div>
   </div>
+  <hr class="mx-3 mt-3">
 </div>

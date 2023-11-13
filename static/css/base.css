@@ -362,6 +362,10 @@ footer {
     background-color: #ede7eb;
 }
 
+.accordion>.card>.card-header {
+    border-radius: 5px;
+}
+
 /* Media queries */
 @media (min-width: 379px) {
     .header-container {
