@@ -99,6 +99,7 @@ main {
     background-color: var(--off-white);
 }
 
+
 /* Hero image */
 .overlay {
     background: url('/media/hero-image.webp') no-repeat center center fixed;
@@ -417,7 +418,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-    .navbar-nav .dropdown-menu {
+    .navbar-nav .login-dropdown {
         top: 80%;
         left: -25%;
     }

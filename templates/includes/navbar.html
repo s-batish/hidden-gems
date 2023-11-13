@@ -142,7 +142,7 @@
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu login-dropdown">
                         <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/accounts/logout/">Logout</a>
@@ -155,7 +155,7 @@
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left">
+                    <div class="dropdown-menu login-dropdown dropdown-menu-left">
                         <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/accounts/logout/">Logout</a>
@@ -168,7 +168,7 @@
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left">
+                    <div class="dropdown-menu login-dropdown dropdown-menu-left">
                         <a class="dropdown-item" href="/accounts/signup/">Register</a>
                         <a class="dropdown-item" href="/accounts/login/">Login</a>
                     </div>
