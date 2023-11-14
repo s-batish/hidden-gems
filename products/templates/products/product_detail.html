@@ -24,7 +24,12 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 px-xl-1">
             <div>
-                <h4 class="mt-2">{{ product.name }}</h4>
+                <div class="col d-flex justify-content-between px-0">
+                    <h4 class="mt-2">{{ product.name }}</h4>
+                    <div class="d-flex flex-wrap align-content-center">
+                        <a href="#"><i class="fa-regular fa-heart wishlist-icon"></i></a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <p class="lead font-weight-bold mb-0">£{{ product.price }}</p>

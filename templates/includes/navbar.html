@@ -36,7 +36,7 @@
             </div>
         </li>
         <li class="list-inline-item navbar-nav">
-            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
+            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'wishlist' %}active{% endif %}" href="{% url 'wishlist' %}"><i
                     class="fa-regular fa-heart"></i></a>
             <p></p>
         </li>
@@ -204,7 +204,7 @@
                 </li>
                 <li class="nav-item d-none d-lg-inline-block">
                     <p></p>
-                    <a class="nav-link {% if url_name == 'wishlist' %}active{% endif %}" href="#"><i
+                    <a class="nav-link {% if url_name == 'wishlist' %}active{% endif %}" href="{% url 'wishlist' %}"><i
                             class="fa-regular fa-heart"></i></a>
                 </li>
                 <div class="text-center">
