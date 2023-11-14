@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+var deleteButtons = document.getElementsByClassName("delete-btn");
+var deleteConfirm = document.getElementById("deleteConfirm");
+
+
+// Shows the delete modal when a delete review button is clicked
+for (let button of deleteButtons) {
+    button.addEventListener("click", (e) => {
+        let reviewId = e.target.getAttribute("review_id");
+        deleteConfirm.href = `delete_review/${reviewId}`;
+        deleteModal.show();
+    });
+}
+
+</script>
