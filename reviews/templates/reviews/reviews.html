@@ -8,11 +8,14 @@
         <h5 class="pr-2">{{ review.author }}</h5>
         <small class="text-muted">{{ review.created_on|date:"d.m.y"}}</small>
       </div>
-      <p class="card-text">{{ review.body }}</p>
+      <div id="review{{ review.id }}">
+        <p class="card-text">{{ review.body }}</p>
+      </div>
     </div>
-    {% if request.user == review.author or request.user.is_staff %}
+    {% if request.user == review.author %}
     <div class="reviews-div text-center">
-      <a class="btn buttons py-0 my-1 mb-sm-2" href="#">Edit</a>
+      <button class="btn buttons edit-btn py-0 my-1 mb-sm-2" review_id="{{ review.id }}"  data-toggle="modal"
+      data-target="#addReviewModal">Edit</button>
       <button class="btn buttons delete-btn py-0 my-1 mb-sm-2" review_id="{{ review.id }}">Delete</button>
     </div>
     {% endif %}
@@ -60,6 +63,3 @@
   </div>
 </div>
 
-{% block postloadjs %}
-{% include 'reviews/includes/reviews_script.html' %}
-{% endblock %}

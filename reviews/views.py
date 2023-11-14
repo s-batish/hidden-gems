@@ -66,3 +66,23 @@ def delete_review(request, product_id, review_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return redirect(reverse('product_detail', args=[product.id]))
+
+
+def edit_review(request, product_id, review_id):
+    """Edit a review"""
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == "POST":
+        review = Review.objects.filter(product=product).first()
+
+        review_form = ReviewForm(request.POST, instance=review)
+
+        if review_form.is_valid() and request.user == review.author:
+                review = review_form.save()
+                review.product = product
+                review.save()
+                reviews = Review.objects.filter(product=product)
+                messages.success(request, "Your review has been successfully updated!")
+                return redirect(reverse("product_detail", args=[product.id]))
+        else:
+            messages.error(request, "Your review has not been updated.")
+    return redirect(reverse('product_detail', args=[product.id]))
