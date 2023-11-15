@@ -81,7 +81,7 @@
                                 </div>
                                 {% if product in wishedProductsList %}
                                 <div class="col-2">
-                                    <a href="{% url 'add_wishlist' product.id %}"><i class="fa-solid fa-heart wishlist-icon"></i></a>
+                                    <a href="{% url 'delete_wishlist' product.id %}"><i class="fa-solid fa-heart wishlist-icon"></i></a>
                                 </div>
                                 {% else %}
                                 <div class="col-2">

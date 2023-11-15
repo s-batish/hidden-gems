@@ -32,3 +32,12 @@ def add_wishlist(request, product_id):
         messages.success(request, f"{product.name} has been successfully added to your wishlist.")
 
     return redirect('wishlist')
+
+@login_required
+def delete_wishlist(request, product_id):
+    """View to delete a product from the wishlist"""
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = Wishlist.objects.filter(user=request.user, product=product)
+    wishlist.delete()
+    messages.success(request, f"{product.name} has been removed from your wishlist.")
+    return redirect('wishlist')
