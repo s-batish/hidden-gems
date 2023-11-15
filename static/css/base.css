@@ -259,6 +259,15 @@ footer {
     color: var(--dark-blue);
 }
 
+.wishlist-count {
+    position: absolute;
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--dark-blue);
+    background-color: var(--off-white);
+    top: 31px;
+}
+
 /* Toasts */
 .message-container {
     position: fixed;
@@ -405,6 +414,10 @@ footer {
 
     .delivery-banner > h4 {
         font-size: 24px;
+    }
+
+    .wishlist-count {
+        top: 51px;
     }
 
 
