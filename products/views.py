@@ -9,6 +9,7 @@ from .forms import ProductForm
 
 from reviews.forms import ReviewForm
 from reviews.models import Review
+from wishlist.models import Wishlist
 
 
 def all_products(request):
@@ -19,6 +20,18 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+
+    # Code from https://stackoverflow.com/questions/71248375/filter-in-the-template-if-the-product-is-in-wishlist-or-no-django-ecommerce-web
+    if request.user.is_authenticated:
+        user=request.user
+        wishlist = Wishlist.objects.filter(user=user)
+        wishedProductsList = []
+        for i in wishlist:
+            wishedProductsList.append(i.product)
+        count = Wishlist.objects.filter(user=request.user).count()
+    else:
+        wishlist = {}
+        wishedProductsList = {}
 
     if request.GET:
         # Sorts the order of the products
@@ -60,6 +73,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishedProductsList': wishedProductsList
     }
 
     return render(request, 'products/products.html', context)
@@ -73,13 +87,23 @@ def product_detail(request, product_id):
     form = ReviewForm()
     template = 'products/product_detail.html'
 
-    context = {
+    if request.user.is_authenticated:
+        wishlist = Wishlist.objects.filter(user=request.user, product=product).exists()
+        context = {
         'product': product,
         'form': form,
         'reviews': reviews,
-    }
+        'wishlist': wishlist,
+        }
+        return render(request, template, context)
 
-    return render(request, template, context)
+    else:
+        context = {
+        'product': product,
+        'form': form,
+        'reviews': reviews,
+        }
+        return render(request, template, context)
 
 @login_required
 def add_product(request):
