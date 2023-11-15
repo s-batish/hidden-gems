@@ -1,29 +1,34 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Wishlist
 from products.models import Product
 
+
+@login_required
 def view_wishlist(request):
-    wishlist_items = Wishlist.objects.filter(user=request.user)
+    """View to display the user's wishlist"""
+    wishlist = Wishlist.objects.filter(user=request.user)
     template = 'wishlist/wishlist.html'
     context = {
-        'wishlist_items': wishlist_items,
+        'wishlist': wishlist,
     }
     return render(request, template, context)
 
 
-# def add_wishlist(request, product_id):
-#     """View to add a product to the wishlist"""
-#     product = get_object_or_404(Product, pk=product_id)
-#     wishlist = get_object_or_404(Wishlist, user=request.user.id)
-    
-#     if wishlist.product.filter(id=request.user.id).exists():
-#         wishlist.product.remove(request.user)
-#     else:
-#         wishlist.product.add(request.user)
-#     return redirect(reverse('product_detail', args=[product.id]))
+@login_required
+def add_wishlist(request, product_id):
+    """View to add a product to the wishlist"""
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = Wishlist(user=request.user, product=product)
 
-#     # if product in wishlist.products.all():
-#     #     messages.info(request, f"{product.title} is already on your Wishlist!")
-#     # else:
-#     #     wishlist.products.add(product)
-#     #     messages.info(request, f"{product.title} has been added to your Wishlist!")
+    # Checks if the item is already in the user's wishlist
+    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).exists()
+
+    if wishlist_item:
+        messages.warning(request, f"{product.name} is already in your wishlist.")
+    else:
+        wishlist.save()
+        messages.success(request, f"{product.name} has been successfully added to your wishlist.")
+
+    return redirect('wishlist')

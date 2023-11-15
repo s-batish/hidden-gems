@@ -12,12 +12,97 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col mt-3 text-center">
+        <div class="col mt-4 text-center">
             <h2>Wishlist</h2>
-            <hr class="w-50 mb-3">
+            <hr class="w-50 mb-4">
         </div>
     </div>
-    <div class="row">
+    <div class="container col-10 offset-1">
+        <div class="row">
+            {% if wishlist.count > 1%}
+            {% for item in wishlist %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 border-0">
+                    <!-- Product Image -->
+                    {% if item.product.image %}
+                    <a href="#">
+                        <img class="card-img-top img-fluid" src="{{ item.product.image.url }}"
+                            alt="{{ item.product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="#">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL}}logo.webp" alt="{{ item.product.name }}">
+                    </a>
+                    {% endif %}
+                    <!-- Product Info -->
+                    <div class="card-body pb-0">
+                        <div class="row">
+                            <div class="col-10">
+                                <p class="mb-0">{{ item.product.name }}</p>
+                            </div>
+                            <div class="col-2">
+                                <a href="#"><i class="fa-regular fa-heart d-flex justify-content-end wishlist-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead mb-0 text-left font-weight-bold">£{{ item.product.price }}</p>
+                            </div>
+                            {% if item.product.category %}
+                            <div class="col">
+                                <p class="small">
+                                    <a class="text-muted"
+                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ item.product.category.friendly_name }}
+                                    </a>
+                                </p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horizontal rule under products on different screen sizes -->
+            {% if forloop.counter|divisibleby:1%}
+            <div class="col-12 d-sm-none my-3">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2%}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none my-3">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3%}
+            <div class="col-12 d-none d-lg-block d-xl-none my-3">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4%}
+            <div class="col-12 d-none d-xl-block my-3">
+                <hr>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <div class="col-12 d-flex justify-content-center">
+                <p class="text-center">There are no items in your wishlist at the moment.</p>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a href="{% url 'products' %}" class="buttons btn rounded mb-2 mx-1">
+                    <span>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <span>Keep Shopping</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
     </div>
+    <hr class="products-hr mt-5 py-3">
 </div>
 {% endblock %}
