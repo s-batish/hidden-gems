@@ -7,6 +7,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'email',
+        'subject',
         'message',
         'date_sent'
     )

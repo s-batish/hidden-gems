@@ -8,9 +8,10 @@ class ContactForm(forms.ModelForm):
     """
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'message',)
+        fields = ('name', 'email', 'subject', 'message',)
         labels = {
             'name': 'Full Name',
-            'email': 'Email',
+            'email': 'Email Address',
+            'subject': 'Subject',
             'messsage': 'Please leave your query here',
         }
