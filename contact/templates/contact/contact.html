@@ -11,13 +11,23 @@
 
 {% block content %}
 <div class="container">
-    <div class="row checkout-container d-flex justify-content-center">
-        <div class="col-12 content-container mx-0 shadow px-3">
-            <div class="row">
-                <div class="col mt-3 text-center">
-                    <h2>Contact Us</h2>
-                    <hr class="w-50 mb-3">
-                </div>
+    <div class="content-container mx-0 mx-md-5 shadow px-3">
+        <div class="row">
+            <div class="col mt-3 text-center">
+                <h2>Contact Us</h2>
+                <hr class="w-50 mb-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="d-flex justify-content-center">
+                        <a href="{% url 'products' %}" class="buttons btn rounded mb-3 mx-1">Cancel</a>
+                        <button class="buttons btn rounded mb-3 mx-1" type="submit">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
