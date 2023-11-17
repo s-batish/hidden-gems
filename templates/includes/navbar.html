@@ -36,14 +36,14 @@
             </div>
         </li>
         <li class="list-inline-item navbar-nav pr-2">
-            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'wishlist' %}active{% endif %}" href="{% url 'wishlist' %}"><i
+            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'wishlist' %}"><i
                     class="fa-regular fa-heart"></i><span
                     class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                 <span class="sr-only">Wishlist count</span></a>
             <p></p>
         </li>
         <li class="list-inline-item navbar-nav px-1">
-            <a class="nav-link d-block d-lg-none pb-0 {% if url_name == 'bag' %}active{% endif %}"
+            <a class="nav-link d-block d-lg-none pb-0"
                 href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
                     class="product-count badge rounded-circle">{{ product_count }}</span>
                 <span class="sr-only">Product count</span></a>
@@ -66,10 +66,10 @@
         <div class="collapse navbar-collapse text-left" id="navbarNav">
             <ul class="navbar-nav d-flex justify-content-lg-center">
                 <li class="nav-item">
-                    <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if url_name == 'products' %}active-link{% endif %}" href="#" role="button"
+                    <a class="nav-link" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         All
                     </a>
@@ -81,7 +81,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if url_name == 'earrings' %}active-link{% endif %}" href="#" role="button"
+                    <a class="nav-link" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Earrings
                     </a>
@@ -95,7 +95,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if url_name == 'bracelets' %}active-link{% endif %}" href="#" role="button"
+                    <a class="nav-link" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Bracelets
                     </a>
@@ -109,7 +109,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if url_name == 'necklaces' %}active-link{% endif %}" href="#" role="button"
+                    <a class="nav-link" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Necklaces
                     </a>
@@ -123,7 +123,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if url_name == 'rings' %}active-link{% endif %}" href="#" role="button"
+                    <a class="nav-link" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Rings
                     </a>
@@ -140,7 +140,7 @@
                 {% if request.user.is_staff %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle {% if url_name == 'product_management' or url_name == 'account_logout' %}active-link{% endif %}"
+                    <a class="nav-link dropdown-toggle"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
@@ -153,7 +153,7 @@
                 {% elif request.user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle {% if url_name == 'profile' or url_name == 'account_logout' %}active-link{% endif %}"
+                    <a class="nav-link dropdown-toggle"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
@@ -166,7 +166,7 @@
                 {% else %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle {% if url_name == 'account_signup' or url_name == 'account_login' %}active-link{% endif %}"
+                    <a class="nav-link dropdown-toggle"
                         href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
@@ -206,7 +206,7 @@
                 </li>
                 <li class="nav-item d-none d-lg-inline-block pr-2">
                     <p></p>
-                    <a class="nav-link {% if url_name == 'wishlist' %}active{% endif %}" href="{% url 'wishlist' %}"><i
+                    <a class="nav-link" href="{% url 'wishlist' %}"><i
                             class="fa-regular fa-heart"></i><span
                             class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                         <span class="sr-only">Wishlist count</span></a>
@@ -214,7 +214,7 @@
                 <div class="text-center">
                     <li class="nav-item d-none d-lg-inline-block">
                         <p></p>
-                        <a class="nav-link pb-0 {% if url_name == 'bag' %}active{% endif %}"
+                        <a class="nav-link pb-0"
                             href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
                                 class="product-count badge rounded-circle">{{ product_count }}</span>
                             <span class="sr-only">Product count</span></a>
