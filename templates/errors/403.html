@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}| 405{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content-container mx-0 mx-md-5 shadow px-3">
+        <div class="text-center form shadow p-3">
+            <h1>403 - Access Forbidden</h1>
+            <p>You are not authorised to perform this action!</p>
+            <a href="{% url 'home' %}" class="buttons btn btn-lg rounded">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

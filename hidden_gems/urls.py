@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import handler404, handler403, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +31,8 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Error Handlers
+handler404 = 'hidden_gems.views.handler404'
+handler403 = 'hidden_gems.views.handler403'
+handler500 = 'hidden_gems.views.handler500'
