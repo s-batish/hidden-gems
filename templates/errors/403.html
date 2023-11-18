@@ -12,11 +12,13 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mx-0 mx-md-5 shadow px-3">
-    <div class="text-center form shadow p-3">
-        <h1>403 - Access Forbidden</h1>
-        <p>You are not authorised to perform this action!</p>
-        <a href="{% url 'home' %}" class="buttons btn btn-lg rounded">Return Home</a>
+<div class="container text-center">
+    <div class="row d-flex justify-content-center mx-2">
+        <div class="col-12 col-md-8 col-lg-6 content-container shadow">
+            <h1>403 - Access Forbidden</h1>
+            <p>You are not authorised to perform this action!</p>
+            <a href="{% url 'home' %}" class="buttons btn btn-lg rounded">Return Home</a>
+        </div>
     </div>
 </div>
 {% endblock %}
