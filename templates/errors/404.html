@@ -12,13 +12,11 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="content-container mx-0 mx-md-5 shadow px-3">
-        <div class="text-center form shadow p-3">
-            <h1>404 - Page not found</h1>
-            <p>Uh oh, we can't find the page you were looking for</p>
-            <a href="{% url 'home' %}" class="buttons btn btn-lg rounded">Return Home</a>
-        </div>
+<div class="container mx-0 mx-md-5 shadow px-3">
+    <div class="text-center form shadow p-3">
+        <h1>404 - Page not found</h1>
+        <p>Uh oh, we can't find the page you were looking for</p>
+        <a href="{% url 'home' %}" class="buttons btn btn-lg rounded">Return Home</a>
     </div>
 </div>
 {% endblock %}
