@@ -92,8 +92,89 @@ EPIC: Administrative managing of the store
 
 ### Development Planes
 #### Strategy Plan
+The Strategy Plane deals with who this site is built for and addresses their goals and needs.
+
+The webiste will focus on the following target audiences:
+- **Roles:**
+    - Individuals wanting to purchase jewellery
+    - New customers (non-registered)
+    - Returning customers (registered)
+- **Demographics:**
+    - Passion for jewellery
+    - Those wanting to buy a gift for someone
+    - Those wanting to buy jewellery for themselves
+    - Upscale but not expensive so accessible to most people
+- **Psychographics:**
+    - Personality & Attitudes:
+        - Interest in jewellery
+        - Desire to purchase a unique, well made item
+        - Keen to support a growing new business that focuses on quality over mass production
+    - Values:
+        - Thoughtful
+        - Elegant
+        - Good taste
+    - Lifestyles:
+        - Fashionable
+        - Ability to buy nice pieces of jewellery but not targeting just wealthy individuals
+        - Likes to treat themselves or treat others to a thoughtful, unique gift
+
+The website needs to enable the **user** to:
+    - Register/login to account
+    - View the different items of jewellery by searching or using the categories provided
+    - Purchase an item of jewellery
+    - Edit/delete the items in their shopping bag
+    - Edit/delete their delivery information
+    - View their current and past orders
+    - Get in contact
+    - Leave reviews on products
+    - Add items to a wishlist
+    - Subscribe for newsletters/offers
+
+The website needs to enable the **client** to:
+- Login to admin account
+- Edit and update items on the website
+- Provide informative information about each item (description, image, size)
+- Provide a way for users to get in contact
+- Have the ability to delete any reviews if they are inappropriate
+
 #### Scope Plane
+The Scope Plane details what needs to be included in the site to correspond with the strategised features listed above.
+
+**Content Requirements:**
+- The user will be looking for:
+    - Informative and detailed product information:
+        - Name
+        - Description
+        - Image
+        - Price
+        - Materials
+        - Any reviews
+    - Easy to navigate website
+    - Aesthetic theme (colour palette, typography, images)
+    - Contact information
+    - Ability to login/register
+    - Ability to view their shopping bag
+    - Ability to view their current and past orders
+    - Ability to leave reviews
+    - Ability to add items to a wishlist
+    - Ability to subscribe to a newsletter
+
+**Functionality Requirements:**
+- The user will be able to:
+    - Access the website on a range of devices (from 320px upwards)
+    - Search for items by:
+        - Typing into the search bar
+        - Browsing through the categories provided
+    - Ability to make purchases, view them in their shopping bag, and edit or delete items in their bag
+    - Register/login to account
+    - Get in contact
+    - Favourite items to add to a wishlist
+    - Subscribe to a newsletter
+    - Add reviews for products
+
 #### Structure Plane
+The Skeleton Plane shows what the site will look like. Balsamic wireframes have been used to demonstrate this.
+
 #### Skeleton Plane
 #### Surface Plane
 ## Business Model
