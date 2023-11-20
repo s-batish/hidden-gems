@@ -173,10 +173,118 @@ The Scope Plane details what needs to be included in the site to correspond with
     - Add reviews for products
 
 #### Structure Plane
-The Skeleton Plane shows what the site will look like. Balsamic wireframes have been used to demonstrate this.
+The Structure Plane demonstrates how the information on the site will be structured.
+- The following flowchart illustrates the information architecture for an unregistered user navigating the site:
+![Flowchart for an unregistered user](docs/images/unregistered_user_flowchart.png)
+- The following flowchart illustrates the information architecture for a registered user navigating the site:
+![Flowchart for registered user](docs/images/registered_user_flowchart.png)
+- The following flowchart illustrates the information architecture for an admin member adding, editing and deleting products:
+![Flowchart for an admin member](docs/images/admin_flowchart.png)
 
 #### Skeleton Plane
+The Skeleton Plane shows what the site will look like. Balsamic wireframes have been used to demonstrate this.
+
+<details><summary>Home page</summary>
+
+![Home page](docs/wireframes/homepage.png)
+</details>
+
+<details><summary>View Products page</summary>
+
+![Home page](docs/wireframes/products_page.png)
+</details>
+
+<details><summary>Product Detail page</summary>
+
+![Home page](docs/wireframes/product_detail_page.png)
+</details>
+
+<details><summary>Search Products page</summary>
+
+![Home page](docs/wireframes/search_product_page.png)
+</details>
+
+<details><summary>Login page</summary>
+
+![Home page](docs/wireframes/login_page.png)
+</details>
+
+<details><summary>Sign Up page</summary>
+
+![Home page](docs/wireframes/sign_up_page.png)
+</details>
+
+<details><summary>Shopping Bag page</summary>
+
+![Home page](docs/wireframes/shopping_bag_page.png)
+</details>
+
+<details><summary>Checkout page</summary>
+
+![Home page](docs/wireframes/checkout_page.png)
+</details>
+
+<details><summary>Profile page</summary>
+
+![Home page](docs/wireframes/profile_page.png)
+</details>
+
+<details><summary>Leave a Review page</summary>
+
+![Home page](docs/wireframes/leave_review_page.png)
+</details>
+
+<details><summary>Wishlist page</summary>
+
+![Home page](docs/wireframes/wishlist_page.png)
+</details>
+
+<details><summary>Contact Us page</summary>
+
+![Home page](docs/wireframes/contact_page.png)
+</details>
+
+<details><summary>FAQs page</summary>
+
+![Home page](docs/wireframes/faqs_page.png)
+</details>
+
+<br/>
+
+- **Database Design**
+
+An Entity Relationship Diagram has been created with Lucidchart to show the various models created for this website and how they are connected.
+- The two principle models used throughout this site are the User Profile model and the Products model as they connect to almost all of the other models through primary/foreign key relationships.
+- The User Profile model uses Django All-Auth to create personalised user profile areas and is used whenever a user signs in to use the site.
+    - The User Profile model allows connects to the order model, the wishlist model and the reviews model to allow signed in users to save their delivery details in their profiles (through the Order model), add items to their personal wishlist (through the Wishlist model), and add and edit reviews (through the Reviews model).
+- The Product Model is used for the creation of products on the site and is connected to the Wishlist model, so that users can add a specific product to their wishlist, the Order Line Item model, so that users can place orders for specific products, and the Reviews model, so that users can leave reviews for specific products.
+- The Category model is used within the Product model to determine which category a product is in.
+- The Contact model and the FAQ model are two stand alone models that do not have foreign keys to any other models as a user does not need to be a signed in user to use these features.
+
+![ERD](docs/images/erd.png)
+
 #### Surface Plane
+The Surface Plane demonstrates what the site will look like in greater depth by focusing on the finer details, such as the colour scheme and typography.
+
+- **Colour Scheme**
+
+The colour scheme for this project is as follows:
+![Colour scheme](docs/images/colour_scheme.png)
+It is based on a pastel pink and purple colour scheme and has been chosen because they are gentle welcoming colours that correspond with the imagery associated with a jewellery store.
+
+![Colour contrast grid](docs/images/colour_contrast.png)
+This colour contrast grid shows how these colours could be paired together to ensure there are no contrast issues.
+
+- **Typography**
+
+    - The font used for the headings on the site is 'Courgette'. This font was chosen because its slight italic and cursive design complements the logo font and adds to the delicate nature of a jewellery store.
+    - The font 'Quattrocento Sans' is used as the main font because it is clear to read and goes well with the headings font.
+    - These two fonts were paired together using Fontjoy.
+
+- **Imagery**
+    - The logo was created through Shopify's online logo maker.
+    - The hero image and the product images were all sourced from the free image sites 'Unsplash' and 'Pexels'.
+
 ## Business Model
 ### SEO
 ### Marketing
