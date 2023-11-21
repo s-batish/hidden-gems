@@ -288,6 +288,20 @@ This colour contrast grid shows how these colours could be paired together to en
 ## Business Model
 ### SEO
 ### Marketing
+#### Social Media Marketing
+- A Facebook page has been created for Hidden Gems to enable the store to benefit from organic social media marketing.
+- The profile picture is the logo for the site and the cover photo is the hero image.
+![Facebook introduction](docs/images/fb-intro.png)
+- The intro section gives some information about Hidden Gems, such as their website, email address and location. As it is an online store it will always be open.
+- There are also a couple of posts to encourage people to take a look at the store.
+![Facebook details](docs/images/fb-details.png)
+- At the end of the page you can see some photos that have been added as well as the profile picture for the site.
+![Facebook profile picture](docs/images/fb-profile-picture.png)
+
+#### Email Marketing
+- In the footer of the website there is a sign up form for users to input their email address to sign up to the Hidden Gems newsletter.
+- This is a form of email marketing as it allows Hidden Gems to directly promote themselves via users' emails.
+
 ## Features
 ### Site Features
 ***Header***
