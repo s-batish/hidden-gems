@@ -1,32 +1,3 @@
-# from django.shortcuts import render, reverse, get_object_or_404
-# from django.contrib import messages
-# from django.views import View
-# from .forms import ReviewForm
-# from .models import Review
-
-
-# # # def add_review(request):
-# # #     """Add a review for a product"""
-
-# # #     if request.method == 'POST':
-# # #         form = ReviewForm(request.POST)
-# # #         if form.is_valid():
-# # #             review = form.save()
-# # #             messages.success(request, 'Successfully added product!')
-# # #             return redirect(reverse('add_review', args=[product.id]))
-# # #         else:
-# # #             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
-# # #     else:
-# # #         form = ReviewForm()
-        
-# # #     template = 'reviews/reviews.html'
-# # #     context = {
-# # #         'form': form,
-# # #     }
-
-# # #     return render(request, template, context)
-
-
 from django.shortcuts import reverse, redirect, get_object_or_404, HttpResponseRedirect
 from django.contrib import messages
 from .forms import ReviewForm

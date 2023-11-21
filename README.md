@@ -290,6 +290,58 @@ This colour contrast grid shows how these colours could be paired together to en
 ### Marketing
 ## Features
 ### Site Features
+***Header***
+- Both the header and footer will be shown on every page of the website, regardless of whether the user is registered or not. 
+- The below headers show what a general unregistered or non-logged in user will see, whereas a signed in user will see their profile username next to the character icon.
+<details><summary>Desktop header</summary>
+
+![Desktop header](docs/features/header-desktop.png)
+</details>
+<details><summary>Mobile header</summary>
+
+![Mobile header](docs/features/header-mobile.png)
+</details>
+
+***Footer***
+
+***Home Page***
+- The home page has a simple design to draw users towards the 'Shop now' button which will take users to the products page.
+<details><summary>Desktop home page</summary>
+
+![Desktop home page](docs/features/homepage-desktop.png)
+</details>
+<details><summary>Mobile home page</summary>
+
+![Mobile home page](docs/features/homepage-mobile.png)
+</details>
+
+***Products***
+- The products page shows all of the products for sale on the site.
+- Users can sort the items by name, price or category or they can search for products.
+- The total number of products displayed will be shown and there is a back to top button at the bottom of the page to take the user to the top of the page.
+- On each product card the user can see the product name, image, the price, the category and they can also add the item to their wishlist by clicking on the heart icon.
+- If the user is not logged in, clicking the heart icon will take them to the login page, but if they are logged in, clicking this button will add the item to their wishlist.
+<details><summary>Desktop products page</summary>
+
+![Desktop products page](docs/features/products-desktop.png)
+</details>
+<details><summary>Mobile products page</summary>
+
+![Mobile products page](docs/features/products-mobile.png)
+</details>
+
+***Product Details***
+
+***Reviews***
+
+***Basket***
+
+***Checkout***
+
+***Wishlist***
+
+***Contact Us***
+
 ### Features Left to Implement
 ## Testing
 ## Deployment
