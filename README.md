@@ -331,18 +331,139 @@ This colour contrast grid shows how these colours could be paired together to en
 </details>
 
 ***Product Details***
+- The product detail page shows some further information about the product, including its description and the materials it is made from.
+- It also enables users to choose the quantity of the product that they would like to purchase (the user can only choose a quantity between 1 and 99, as the plus and minus buttons will become disabled outside of this range - as seen in the screenshot - and they will be presented with an error message to only select a value within this range).
+- The user can also add the item to their wishlist from this page.
+- The user has the option to continue shopping or to add the item to their bag.
+<details><summary>Desktop product details page</summary>
+
+![Desktop product details page](docs/features/product-detail-desktop.png)
+</details>
+<details><summary>Mobile product details page</summary>
+
+![Mobile product details page](docs/features/product-detail-mobile.png)
+</details>
+
+- Once the user has added an item to their bag they will be presented with a success message and the option to go straight to the checkout page.
+- This message will also inform the user of how much more they could spend to get free delivery.
+- Furthermore, once an item is added to the user's basket, the icon in the header will increment and the total price will be displayed below.
+<details><summary>Desktop basket success message</summary>
+
+![Desktop basket success message](docs/features/bag-success-desktop.png)
+</details>
+<details><summary>Mobile basket success message</summary>
+
+![Mobile basket success message](docs/features/bag-success-mobile.png)
+</details>
 
 ***Reviews***
+- For general users, clicking on the reviews accordion will reveal any reviews that have been left for a particular product.
+- If there are no reviews, there will be a message informing the user that there are currently no reviews, but they can login to leave one.
+- If the user is not signed in, there will be a link at the bottom to the login page so that users can login and then they will be redirected back to the reviews page to leave their review.
+- The review shows the user's profile name, the date they posted their review, and the content of their review.
+<details><summary>Desktop reviews (non-signed in users)</summary>
+
+![Desktop reviews (non-signed in users)](docs/features/reviews-anoymous-desktop.png)
+</details>
+<details><summary>Mobile reviews (non-signed in users)</summary>
+
+![Mobile reviews (non-signed in users)](docs/features/reviews-anoymous-mobile.png)
+</details>
+
+- For users who are signed in, they will be able to click the 'Leave a review' button to leave their review.
+- Also if the signed in user is the one who wrote the review, they will be able to edit or delete their review. This will only be available to the author of the review so that no other users can edit another user's review.
+- However, admin members will be presented with these buttons for all reviews so that they have the power to remove a review if it is inappropriate in any way.
+
+<details><summary>Desktop reviews (signed in users)</summary>
+
+![Desktop reviews (signed in users)](docs/features/reviews-signedin-desktop.png)
+</details>
+<details><summary>Mobile reviews (signed in users)</summary>
+
+![Mobile reviews (signed in users)](docs/features/reviews-signedin-mobile.png)
+</details>
+
+- When users click the 'Leave a review' button, a modal will pop up allowing users to write their review.
+- Clicking the 'Submit' button will post the user's review in the reviews section.
+
+<details><summary>Desktop review modal</summary>
+
+![Desktop review modal](docs/features/review-modal-desktop.png)
+</details>
+<details><summary>Mobile review modal</summary>
+
+![Mobile review modal](docs/features/review-modal-mobile.png)
+</details>
 
 ***Basket***
+- The basket page show all of the items that the user has chosen to purchase.
+- It also gives them the opportunity to update their basket or to remove an item from their basket.
+- It shows how much the items cost and how much delivery will cost.
+- It also provides a message to the user informing them of how much more they could spend to get free delivery.
+- Finally, there are buttons for the user to continue shopping or to head to the checkout page.
+<details><summary>Desktop basket</summary>
+
+![Desktop basket](docs/features/basket-desktop.png)
+</details>
+<details><summary>Mobile basket</summary>
+
+![Mobile basket](docs/features/basket-mobile.png)
+</details>
 
 ***Checkout***
+- The checkout page is where the user fills out all of their details, including their personal details, their delivery details and their payment details.
+- It also shows the user their order summary again.
+- On the mobile checkout page, the user will be presented with their order summary before they have to fill out their details.
+<details><summary>Desktop checkout page</summary>
+
+![Desktop checkout page](docs/features/checkout-desktop.png)
+</details>
+<details><summary>Mobile checkout page</summary>
+
+![Mobile checkout page](docs/features/checkout-mobile.png)
+</details>
+
+- Once the user has placed their order, they will be shown a success message and will be taken to the order confirmation page where they can see a summary of their order.
+- Their order summary will also be emailed to them.
+
+<details><summary>Desktop confirmation</summary>
+
+![Desktop confirmation](docs/features/confirmation-desktop.png)
+</details>
+<details><summary>Mobile confirmation</summary>
+
+![Mobile confirmation](docs/features/confirmation-mobile.png)
+</details>
 
 ***Wishlist***
+- Signed in users can access their wishlist by clicking on the heart icon in the header.
+- If a user is not signed in, clicking this button will take them to the login page.
+- In the wishlist page, users can see all of the items they have added, they can click on them to show the product details, and they can remove items from their wishlist by clicking on the heart icon again.
+<details><summary>Desktop wishlist</summary>
+
+![Desktop wishlist](docs/features/wishlist-desktop.png)
+</details>
+<details><summary>Mobile wishlist</summary>
+
+![Mobile wishlist](docs/features/wishlist-mobile.png)
+</details>
 
 ***Contact Us***
+- In the footer there is a link for the user to contact the Hidden Gems team.
+- Clicking this link will open up a form for the user to fill in where they can send an email directly to Hidden Gems.
+- Users do not need to be signed in to do this, so they are required to enter their full name and email address.
+- Once they submit their form, the user will receive a confirmation email showing what they had posted.
+<details><summary>Desktop contact us</summary>
+
+![Desktop contact us](docs/features/contact-desktop.png)
+</details>
+<details><summary>Mobile contact us</summary>
+
+![Mobile contact us](docs/features/contact-mobile.png)
+</details>
 
 ### Features Left to Implement
+- I would like to implement a FAQ section which would display as an accordion, so when a user clicks on a question the answer will pop out below. I think this will add an extra layer of functionality to users, but the reason I did not add this feature in at the moment is because I thought a Contact Us section was more of a priority than the FAQ section, and because of time constraints I was able to implement both.
 ## Testing
 ## Deployment
 ### Prerequisites
