@@ -33,7 +33,7 @@
   {% else %}
   <div class="row">
     <div class="col-12 d-flex justify-content-center">
-      <a href="{% url 'account_login' %}" class="link small review-login">Sign in to leave a review</a>
+      <a href="{% url 'account_login' %}?next={{request.path}}" class="link small review-login">Sign in to leave a review</a>
     </div>
   </div>
   {% endif %}
