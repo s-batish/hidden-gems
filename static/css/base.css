@@ -39,13 +39,13 @@ main {
     background-color: var(--dark-blue);
 }
 
-.buttons:hover, .edit-btns, #mc_embed_signup .button {
+.buttons:hover, .edit-btns, #mc_embed_signup .button, #mc_embedded-subscribe {
     color: var(--dark-blue);
     background-color: var(--light-pink);
     border: solid 1px var(--dark-blue);
 }
 
-#mc_embed_signup .button:hover {
+#mc_embed_signup .button:hover, #mc_embedded-subscribe:hover {
     color: var(--light-pink);
     border: solid 1px var(--light-pink);
     background-color: var(--dark-blue);

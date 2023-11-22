@@ -16,7 +16,7 @@ Your order will be delivered to:
 
 We've got your phone number on file as {{ order.phone_number }}.
 
-If you have any questions, feel free to contact us at {{ contact_email }}, or check out our FAQs page for more information.
+If you have any questions, feel free to contact us at {{ contact_email }}.
 
 See you again soon!
 Hidden Gems
