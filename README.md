@@ -287,6 +287,14 @@ This colour contrast grid shows how these colours could be paired together to en
 
 ## Business Model
 ### SEO
+#### Keywords
+ - Keyword research has been carried out to find the most relevant short-tail and long-tail keywords for this website.
+ - First a list of all possible keywords were written down, then, using Google search, this list was refined to only include the words that had the most relevance and authority.
+ - [Wordtracker](www.wordtracker.com) was then also used to ensure the chosen keywords had a high enough volume but not too much competition.
+ - These keywords have been included in the keywords meta tag in the base.html template.
+#### Sitemap and robots.txt
+- A sitemap.xml file was created in the root directory using [xml-sitemaps.com](xml-sitemaps.com) to ensure that search engines will crawl every essential page on the site.
+- A robots.txt file was also created in the root directory to inform search engines where they are not permitted to go on the website, such as accounts, admin and profiles.
 ### Marketing
 #### Social Media Marketing
 - A Facebook page has been created for Hidden Gems to enable the store to benefit from organic social media marketing.
@@ -301,6 +309,9 @@ This colour contrast grid shows how these colours could be paired together to en
 #### Email Marketing
 - In the footer of the website there is a sign up form for users to input their email address to sign up to the Hidden Gems newsletter.
 - This is a form of email marketing as it allows Hidden Gems to directly promote themselves via users' emails.
+
+#### Privacy Policy
+- In the footer of the website there is also a link to Hidden Gems' privacy policy, which informs users how their data is collected and processed.
 
 ## Features
 ### Site Features
@@ -317,6 +328,18 @@ This colour contrast grid shows how these colours could be paired together to en
 </details>
 
 ***Footer***
+- The footer is divided into 3 sections:
+    - A useful links section which has links to the home page, the contact us form, and the privacy policy (which opens in a separate tab).
+    - The Mailchimp sign up form so that users can subscribe to a Hidden Gems newsletter.
+    - Links to the three social media pages, whic open in separate tabs. The Facebook link takes the user to the customised Facebook page for Hidden Gems.
+<details><summary>Desktop footer</summary>
+
+![Desktop footer](docs/features/footer-desktop.png)
+</details>
+<details><summary>Mobile footer</summary>
+
+![Mobile footer](docs/features/footer-mobile.png)
+</details>
 
 ***Home Page***
 - The home page has a simple design to draw users towards the 'Shop now' button which will take users to the products page.
@@ -487,7 +510,73 @@ This colour contrast grid shows how these colours could be paired together to en
 ### AWS Bucket Creation
 ### Stripe Configuration
 ## Technologies Used
-### Technologies
-### Python Modules Used
-### External Python Modules
+### Languages
+- HTML
+    - Used to create the structure of the website
+- CSS
+    - Used to implement additional styling across the website
+- JavaScript
+    - Used for various bits of interactive functionality throughout the site, such as the review modals and the disabled quantity buttons
+- Python
+    - Used for the application of the Django framework
+### Tools
+- Django
+    - Main framework used to build the website
+- Gitpod
+    - Used to develop and edit the code
+- Git
+    - Used to add, commit and push the code
+- GitHub
+    - Used to store and deploy the code
+- [Stripe](https://stripe.com/gb)
+    - Used to handle the payments for purchases
+- [Balsamiq](https://balsamiq.com/)
+    - Used to create wireframes
+- [Lucidchart](https://www.lucidchart.com/)
+    - Used to make the ERD
+- [Draw.io](https://draw.io/)
+    - Used to create the flowcharts
+- [AWS](https://aws.amazon.com/)
+    - Used to store the static and media files used on the website
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import fonts
+- [Font Awesome](https://fontawesome.com/icons)
+    - Used icons from this website for the social media icons
+- [Fontjoy](https://fontjoy.com/)
+    - Used to create the font pairings used on the website
+- [TinyPNG](https://tinypng.com/)
+    - Used to reduce the size of the images used on the website
+- [Favicon](https://favicon.io/)
+    - Used to create a favicon
+### Libraries
+- Bootstrap
+    - Used to implement main styling across the website
+- jQuery
+    - Used to simplify the JavaScript code used in the project
+- Jinja
+    - Jinja templating language was used to connect the backend to the html templates
+### Main Packages
+- boto3==1.28.82
+    - Used to connect to the AWS S3 bucket
+- Django==3.2.22
+    - Main framework used for the website
+- django-allauth==0.41.0
+    - Used for site authentication for sign in, login and logout
+- django-countries==7.2.1
+    - Used to display the countries dropdown in the checkout form and ensure the correct country codes are displayed
+- dj-database-url==0.5.0
+    - Library needed for PostgreSQL
+- psycopg2==2.9.9
+    - Used to connect to PostgreSQL
+- stripe==7.1.0
+    - Used to connect to Stripe to take payments
 ## Credits
+- All images for the site were sourced from the free image websites [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/).
+- [Stack Overflow](https://stackoverflow.com/questions/7737146/how-can-i-change-the-default-django-date-template-format) for how to format the date display in Django templates.
+- [Stack Overflow](https://stackoverflow.com/questions/42336920/django-importing-a-view-from-another-app) for how to import and use a view from another app.
+- [Stack Overflow](https://stackoverflow.com/questions/71248375/filter-in-the-template-if-the-product-is-in-wishlist-or-no-django-ecommerce-web) for how to filter in the template whether an item is in the wishlist or not.
+- [Stack Overflow](https://stackoverflow.com/questions/63444550/how-to-delete-product-from-wishlist-in-django) for help with deleting a product from a wishlist.
+- [Very Academy](https://www.youtube.com/watch?v=H4QPHLmsZMU) for help in implementing the wishlist functionality.
+- [Code Institute's 'I think therefore I blog' walkthrough](https://www.youtube.com/watch?v=YH--VobIA8c) for help with adding the review functionality.
+- Code Institute's e-commerce site walkthrough for help in setting up the project.
+- [Django forum](https://forum.djangoproject.com/t/redirecting-user-to-page-after-login/14603/8) for how to redirect a user to a specific page after logging in.

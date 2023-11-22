@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /accounts/
 Disallow: /admin/
+Disallow: /profiles/
 Sitemap: https://hidden-gems-pp5-759b1d35f1d9.herokuapp.com/sitemap.xml
