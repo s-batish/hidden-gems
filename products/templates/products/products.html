@@ -112,7 +112,7 @@
                                 {% if request.user.is_superuser %}
                                 <small>
                                     <a href="{% url 'edit_product' product.id %}" class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
-                                    <a href="{% url 'delete_product' product.id %}" class="edit-btns btn rounded mb-1 px-2 py-1 font-weight-bold">DELETE</a>
+                                    <button class="edit-btns delete-button btn rounded mb-1 px-2 py-1 font-weight-bold" delete_id="{{ product.id }}">DELETE</button>
                                 </small>
                                 {% endif %}
                             </div>
@@ -160,6 +160,31 @@
         </div>
     </div>
 </div>
+
+<!-- Confirm delete product modal -->
+<div class="modal fade" id="deleteProductModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  aria-labelledby="deleteProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteProductModalLabel">Delete Review?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body">
+          Are you sure you want to delete your review? This action cannot be undone.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttons" data-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn buttons">DELETE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 <!-- JS for filter selector functionality -->
@@ -193,4 +218,22 @@
         }
     })
 </script>
+
+<!-- JS for confirm delete product modal -->
+<script type="text/javascript">
+    const deleteProductModal = new bootstrap.Modal(document.getElementById("deleteProductModal"));
+    var deleteButtons = document.getElementsByClassName("delete-button");
+    var deleteConfirm = document.getElementById("deleteConfirm");
+    
+    // Shows the delete modal when a delete review button is clicked
+    for (let button of deleteButtons) {
+        button.addEventListener("click", (e) => {
+            let deleteId = e.target.getAttribute("delete_id");
+            console.log(deleteId)
+            deleteConfirm.href = `delete/${deleteId}`;
+            deleteProductModal.show();
+        });
+    }
+</script>
+
 {% endblock %}

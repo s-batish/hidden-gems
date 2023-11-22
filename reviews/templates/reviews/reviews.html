@@ -19,6 +19,11 @@
       <button class="btn buttons delete-btn py-0 my-1 mb-sm-2" review_id="{{ review.id }}">Delete</button>
     </div>
     {% endif %}
+    {% if request.user.is_staff %}
+    <div class="reviews-div text-center">
+      <button class="btn buttons delete-btn py-0 my-1 mb-sm-2" review_id="{{ review.id }}">Delete</button>
+    </div>
+    {% endif %}
   </div>
   {% endfor %}
   {% else %}
