@@ -41,7 +41,7 @@
 | ---| ---| ---| ---|
 | Product image link | Clicking on a product image link takes the user to the product detail page for that product. | Clicked the product image. | Taken to the product detail page for that product. |
 | Category link | Link underlines when hovered over. Clicking on the category link displays all of the items within that category. | Hovered over the category 'Gold Rings' link. Clicked the link. | Link underlined when hovered over. Taken to the page displaying all of the 'Gold Rings'. |
-| Wishlist icon | Clicking the icon takes the user to the sign in page. | Clicked the icon. | Taken to the sign in page. |
+| Wishlist icon | Clicking the icon takes the user to the sign in page. After signing in the user is taken to the wishlist page where their added item will appear with a success message. | Clicked the icon. | Taken to the sign in page. Taken to the wishlist page after signing in where the added item appeared with a success message. |
 | Back to top arrow | Button changes colour when hovered over. Clicking the button takes the user to the top of the page. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking the button takes the user to the top of the page. |
 | Sorting - price low to high | Products are displayed in increasing price order. | Sorted the products from lowest price to highest. | Products displayed from lowest price to highest. |
 | Sorting - price high to low | Products are displayed in decreasing price order. | Sorted the products from highest price to lowest. | Products displayed from highest price to lowest. |
@@ -56,14 +56,37 @@
 | Wishlist icon | Clicking the icon adds the item to their wishlist and takes them to the wishlist page. | Clicked the icon. | Item added to the wishlist and taken to the wishlist page. Success message appears informing the user that the item has been successfully added. |
 | Solid wishlist icon | Clicking the icon removes the item from their wishlist and takes them to the wishlist page. | Clicked the icon. | Item removed from the wishlist and taken to the wishlist page. Success message appears informing the user that the item has been successfully removed. |
 
+#### Products page - Admin member
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+
 #### Product detail page - General User
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
-| Wishlist icon |  |  |  |
-| Categoory link |  |  |  |
-| Quantity (1-99) |  |  |  |
-| Keep Shopping button |  |  |  |
-| Add to Bag button |  |  |  |
+| Wishlist icon | Clicking the icon takes the user to the sign in page. After signing in the user is taken to the wishlist page where their added item will appear with a success message. | Clicked the icon. | Taken to the sign in page. Taken to the wishlist page after signing in where the added item appeared with a success message. |
+| Category link | Link underlines when hovered over. Clicking on the category link displays all of the items within that category. | Hovered over the category 'Gold Bracelets' link. Clicked the link. | Link underlined when hovered over. Taken to the page displaying all of the 'Gold Bracelets'. |
+| Quantity (1-99) | Increment and decrement buttons change colour when hovered over. Decrement button is disabled when the quantity is one and the increment button is disabled when the quantity is 99. Clicking the + or - buttons either increases or decreases the quantity. | Hovered over buttons then clicked them. | Quantity increased when clicking + and decreased when clicking -. Decrement button was disabled when the quantity was one and the increment button was disabled when the quantity was 99. |
+| Quantity (outside the range) | Inputting a quantity below 1 and then clicking Add to Bag results in a message informing that the value must be greater than or equal to 1. Inputting a quantity greater than 99 and then clicking Add to Bag results in a message informing that the value must be less than or equal to 99 | Inputted -5 then clicked Add to Bag. Then inputted 105 and clicked Add to Bag. | Received an error message that the value must be greater than or equal to or and then that the value must be less than or equal to 99. |
+| Keep Shopping button | Button changes colour when hovered over. Clicking it takes the user to the Products page. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it took the user to the Products page.
+| Add to Bag button | Button changes colour when hovered over. Clicking it adds the item to the basket. A success message appears stating that the item was added to the bag. The success message also shows what is in the basket, how much more the user could spend to get free delivery and what the total excluding delivery is. There is also an icon to go straight to the checkout. The bag icon in the header shows the grand total beneath it and the counter shows how many items are in the basket. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it added the item to the bag. The quantity on the bag icon in the header increased and the total price below the icon updated as well. A success message appeared stating that the item was added to the bag. The success message also showed what is in the basket, how much more to spend to get free delivery and what the total excluding delivery is. There was also a button to go straight to the checkout. |
+| Reviews accordion | Clicking the reviews section reveals the reviews left below. If there are no reviews there is a message stating this. If there are reviews these are displayed below. | Clicked the reviews section. | The accordion opened up revealing either the reviews where there were some, or the message that there aren't any yet. |
+| Sign in to leave a review link | Link size increases when hovered over. Clicking the link takes the user to the sign in page. After signing in the user is taken back to the product detail page. | Hovered over the link then clicked it. | Link size increased when hovered over. Taken to the sign in page after clicking the link. Taken back to the product detail page after signing in. |
+
+#### Product detail page - Signed in User
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Wishlist icon | Regular and solid icons function the same as on the products page. | Clicked the icon. | Regular and solid icons functioned the same as on the products page. |
+| Leave a review button | Button changes colour when hovered over. Clicking it opens up the Leave a review modal. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it opened up the Leave a review modal. |
+| Leave a review modal | Button changes colour when hovered over. Clicking it opens up the Leave a review modal. Modal is fixed so clicking outside the box will not close the modal. Cancel and submit buttons change colour when hovered over. Clicking cancel or the cross takes the user back to the reviews. Clicking submit after writing a review posts the review with the current date. Success message appears after posting the review. | Hovered over button then clicked it. Hovered over the cancel and submit buttons. Clicked cancel. Clicked the cross. Clicked submit after writing a review. | Button changed colour when hovered over. Clicking it opened up the Leave a review modal. Modal was fixed so clicking outside the box will not close the modal. Cancel and submit buttons changed colour when hovered over. Taken back to the reviews after clicking cancel. Taken back to the reviews after clicking the cross. Review posted in the accordion with the current date after typing 'Great!' and pressing submit. Success message appeared after posting the review. |
+| Leave a review - no input | Clicking submit with no content written will show a message to fill in the field. | Clicked submit with no content written. | Message shown to fill in the field. | 
+| Edit and delete buttons | Only shown to the author of the review. Buttons change colour when hovered over. | Hovered over buttons. | Buttons only shown below the reviews that the author wrote. Buttons changed colour when hovered over. |
+| Edit review | Modal appears again with the current review written. Clicking update will post the updated review with the reviews. Success message appears. | Clicked 'Edit'. Changed the text in the review. Clicked 'Update' | Current review was initially written in the text box. Edited the text, then clicked 'Update'. Updated review was posted with the reviews. Success message appeared. |
+| Delete review | Confirm deletion modal appears. Clicking 'Delete' deletes the review. Success message appears. | Clicked 'Delete'. | Confirm deletion modal appeared. Review was deleted after clicking 'Delete'. Success message appeared. | 
+
+#### Product detail page - Admin member
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
 
 ## Testing User Stories
 ## Responsiveness
