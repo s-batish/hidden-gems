@@ -502,6 +502,7 @@ This colour contrast grid shows how these colours could be paired together to en
 ### Features Left to Implement
 - I would like to implement a FAQ section which would display as an accordion, so when a user clicks on a question the answer will pop out below. I think this will add an extra layer of functionality to users, but the reason I did not add this feature in at the moment is because I thought a Contact Us section was more of a priority than the FAQ section, and because of time constraints I was able to implement both.
 ## Testing
+All testing information can be found in the [TESTING.md](TESTING.md) file.
 ## Deployment
 ### Prerequisites
 ### Heroku Deployment
