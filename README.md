@@ -1,4 +1,8 @@
 # Hidden Gems
+Hidden Gems is an e-commerce site for an online boutique jewellery store offering a range of unique products at reasonable prices. The site is a B2C application that offers shoppers the chance to browse the store, add items to their wishlist, leave reviews, contact the store, and most importantly, buy lots of jewellery items.
+![Site mockup](docs/images/site-mockup.png)
+
+[View the live site here](https://hidden-gems-pp5-759b1d35f1d9.herokuapp.com/)
 
 ## Table of Contents
 1. [UX](#ux)
