@@ -187,16 +187,18 @@
 
 {% endblock %}
 
-<!-- JS for filter selector functionality -->
+
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<!-- JS for back to top button -->
+<script>
     $('.back-to-top-link').click(function(e) {
         window.scrollTo(0,0);
     })
 </script>
 
-<script type="text/javascript">
+<!-- JS for filter selector functionality -->
+<script>
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
@@ -220,7 +222,7 @@
 </script>
 
 <!-- JS for confirm delete product modal -->
-<script type="text/javascript">
+<script>
     const deleteProductModal = new bootstrap.Modal(document.getElementById("deleteProductModal"));
     var deleteButtons = document.getElementsByClassName("delete-button");
     var deleteConfirm = document.getElementById("deleteConfirm");
@@ -235,5 +237,4 @@
         });
     }
 </script>
-
 {% endblock %}

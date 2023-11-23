@@ -8,7 +8,9 @@
                 <ul class="list-unstyled">
                     <li><a class="footer" href="{% url 'home' %}">Home</a></li>
                     <li><a class="footer" href="{% url 'contact' %}">Contact</a></li>
-                    <li><a class="footer" href="https://www.privacypolicygenerator.info/live.php?token=ozjXA6NCJbQiXZzYLS2p8iPKfCiDKBKm" target="_blank">Privacy Policy</a></li>
+                    <li><a class="footer"
+                            href="https://www.privacypolicygenerator.info/live.php?token=ozjXA6NCJbQiXZzYLS2p8iPKfCiDKBKm"
+                            target="_blank">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
@@ -19,7 +21,8 @@
                             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                             class="validate" target="_blank">
                             <div id="mc_embed_signup_scroll">
-                                <h5 class="text-center mb-0">Sign up to our newsletter for discounts and first looks at new items:</h5>
+                                <h5 class="text-center mb-0">Sign up to our newsletter for discounts and first looks at
+                                    new items:</h5>
                                 <div class="indicates-required"></div>
                                 <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                             class="asterisk">*</span></label><input type="email" name="EMAIL"
@@ -75,9 +78,8 @@
 </footer>
 
 {% block postloadjs %}
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
-</script>
-<script type="text/javascript">
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script>
     (function ($) {
         window.fnames = new Array();
         window.ftypes = new Array();
