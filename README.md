@@ -60,7 +60,7 @@ EPIC: Sorting and searching for products
 EPIC: Purchasing and checkout
 - As a shopper, I want to be able to add an item to my basket and choose how many of an item I want to buy, so that I can select the quantity I desire in case I want more than one of the item
 - As a shopper, I want to view the items in my basket, so that I can see what items I have chosen and the total cost
-- As a shopper, I want to adjust the quantity of an item from the checkout page, so that I can easily edit my purchase before the checkout
+- As a shopper, I want to adjust the quantity of an item from the basket page, so that I can easily edit my purchase before the checkout
 - As a shopper, I want to be able to remove an item from my basket, if I no longer want it
 - As a shopper, I want to receive feedback when adding, editing or deleting a product, so that I can clearly see what I have done
 - As a shopper, I want to view any delivery costs on the checkout page, so that I can see how much I am paying for delivery and if I'd rather purchase something extra to avoid this cost

@@ -175,6 +175,96 @@
 | Incorrect price - more than 4 digits before the decimal point | An error message appears that the form is not valid and to ensure there are no more than 4 digits before the decimal point. | Added the price 123456 | An error message appeared that the form is not valid and to ensure there are no more than 4 digits before the decimal point. |
 
 ## Testing User Stories
+EPIC: Navigating through the website
+- As a shopper, I want to be greeted with a clearly structured interface, so that I can navigate through the website with ease
+    - Result: Shoppers can navigate easily through all of the navbar links to find what they are looking for
+- As a shopper, I want the website to be responsive, so that I can access it on a range of devices
+    - Result: The website is responsive and so can be accessed on mobile devices, tablets, laptops and desktops
+- As a shopper, I want to view a list of products, so that I can browse the store to know what to buy
+    - Result: The Products page displays all of the products that can be purchased on the site
+- As a shopper, I want to view details about an individual product, so that I can see the product description, price, image, reviews, and be able to purchase the item
+    - Result: Clicking on the image of any product will display that item's product detail page, which shows the name, description, price, image, materials and reviews for the item, along with the functionality to purchase the item
+- As a shopper, I want to see how many items have been added to my basket, so that I can be aware of what I have selected
+    - Result: The bag icon in the navbar (which is visible on both desktop and mobile view) shows the number of items in the basket, as well as the total price
+
+EPIC: Registration and User Accounts
+- As a new user, I want to navigate to the sign up page, so that I can create an account
+    - Result: General users can create an account through the sign up page
+- As a registered user, I want to login to my account, so that I can make purchases
+    - Result: Registered users can login to their accounts
+- As a registered user, I want to log out of my account, so that I can protect my information from being accessed by others
+     - Result: Signed in users can log out of their accounts
+- As a registered user, I want to be able to edit my account details, so that I can make changes if needed
+    - Result: Signed in users can navigate to the My Profile page where they can update their delivery details
+- As a registered user, I want to have a personalised user profile, so that I can view my account details and any previous purchases I have made
+    - Result: The My Profile page displays the user's default delivery information, as well as all of their previous purchases
+- As a new user, I want to receive an email confirmation after signing up, so that I can confirm that my account is set up successfully
+    - Result: An email verifying the account is automatically sent out to users signing up to the site
+
+EPIC: Sorting and searching for products
+- As a shopper, I want to sort the list of available products, so that I can easily view the items alphabetically or by price
+    - Result: The products can be sorted alphabetically or by price (in both directions) through the sort selector on the Products page
+- As a shopper, I want to sort items by category, so that I can view just the items I am interested in buying
+    - Result: The products can be sorted in alphabetical category order through the sort selector on the Products page or directly through the navbar where users can choose which item, and whether they would rather gold or silver, they want to purchase
+- As a shopper, I want to search for a product, so that I can find exactly what I am looking for
+    - Result: The magnifying glass icon in the navbar makes it easy to search for any product, and if the searched term appears in either the name or the description of the product, it will be displayed
+- As a shopper, I want to view what I have searched for and the number of items I have searched for, so that I can see whether the product I want is available
+    - Result: When a shopper searches for an item, the searched term appears in bold at the top of the page along with the number of items that were found
+
+EPIC: Purchasing and checkout
+- As a shopper, I want to be able to add an item to my basket and choose how many of an item I want to buy, so that I can select the quantity I desire in case I want more than one of the item
+    - Result: Shoppers can choose the quantity of the item they want, either by using the +/- buttons or by directly typing in the quantity they want. They can do this directly from the product detail page or from the basket
+- As a shopper, I want to view the items in my basket, so that I can see what items I have chosen and the total cost
+    - Result: The basket can be viewed by clicking on the bag icon in the navbar, and this shows all of the items that have been added, along with the bag total, the delivery cost, the grand total and how much more could be spent to receive free delivery
+- As a shopper, I want to adjust the quantity of an item from the basket page, so that I can easily edit my purchase before the checkout
+    - Result: The quantity of an item can be adjusted from the basket page
+- As a shopper, I want to be able to remove an item from my basket, if I no longer want it
+    - Result: Clicking the Remove link on the basket page will remove the item from the basket
+- As a shopper, I want to receive feedback when adding, editing or deleting a product, so that I can clearly see what I have done
+    - Result: The user is always presented with feedback messages for actions that they carry out. These messages are colour coded whether they are success messages, error messages or alert messages
+- As a shopper, I want to view any delivery costs on the checkout page, so that I can see how much I am paying for delivery and if I'd rather purchase something extra to avoid this cost
+    - Result: The delivery cost is clearly stated on both the basket page and the checkout page under the order summary
+- As a registered user, I want to see my delivery details automatically filled in on the checkout page, so that I can save time when it comes to checking out
+    - Result: Signed in users who have updated their profile page with their delivery details will see these automatically completed on the checkout page if they are logged in
+- As a shopper, I want to receive an email confirmation after completing my payment, so that I can see exactly what I have purchased and the cost for future records
+    - Result: Confirmation emails are automatically sent out to shoppers after they complete a purchase
+- As a shopper, I want to be able to put in my card details, so that I can make a purchase
+    - Result: The payment details input field requires a card number, expiry date and security code. Error messages will be presented for any invalid inputs
+
+EPIC: Reviewing products
+- As a registered user, I want to be able to review a product, so that I can give feedback
+    - Result: Signed in users can leave reviews underneath products
+- As a shopper, I want to be able to see reviews for the products, so that I can see which are rated highly
+    - Result: All shoppers can see any reviews that have been left on the product detail page for the product
+- As a registered user, I want to be able to edit my reviews, so that I can make adjustments if needed
+    - Result: Signed in users who are the author of the written review can edit it
+- As a registered user, I want to be able to delete my reviews, if I no longer want to leave that review
+    - Result: Signed in users who are the author of the written review can delete it
+
+EPIC: Adding items to a wishlist
+- As a registered user, I want to be able to add a product that I like to a wishlist, so that I can save the item without having to add it to the checkout
+    - Result: Signed in users can add products to their wishlist by clicking on the blank heart icon next to each product
+- As a registered user, I want to be able to view my favourited items in my wishlist, so that I can see all of the items that I like before I buy them
+    - Result: Signed in users can click on the heart icon in the navbar to go to their wishlist where they can see all of the items they have favourited
+
+EPIC: Contacting the store
+- As a shopper, I want to be able to contact Hidden Gems directly, so that I can let them know about any queries I have
+    - Result: All shoppers can navigate to the Contact link in the footer to send a message directly to Hidden Gems
+
+EPIC: Frequently asked questions
+- *As a shopper, I want to see a list of FAQs, so that I can see common queries that other people have - **could have***
+    - Result: This user story has not been completed due to time constraints, however, it does not affect the usability of the website and has been added to the list of future features
+- *As a registered user, I want to be able to submit a question on the FAQ page, so that I can enquire about any general concerns - **could have***
+    - Result: This user story has not been completed due to time constraints, however, it does not affect the usability of the website and has been added to the list of future features
+
+EPIC: Administrative managing of the store
+- As a store owner, I want to be able to add new products to the store, so that I can update the items we sell
+    - Result: Store owners can navigate to the product management page where they can add new products to the store
+- As a store owner, I want to be able to edit items, so that I can update the price/description/image
+    - Result: Store owners can edit any item directly from the products page
+- As a store owner, I want to be able to delete items, so that I can remove items that are no longer on sale
+    - Result: Store owners can delete any item directly from the products page
+
 ## Responsiveness
 ## Browser Compatibility
 ## Accessiblity
