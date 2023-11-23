@@ -109,7 +109,6 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-
                             {% for item in bag_items %}
                             <tr>
                                 <td class="p-3 w-25">
@@ -157,8 +156,8 @@
                                         </div>
                                     </form>
                                     <a class="update-link text-info float-left"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right"
-                                        id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    <a class="remove-item-large text-danger float-right"
+                                        id="remove_large_{{ item.item_id }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -211,10 +210,25 @@
         form.submit();
     })
 
-    // Remove item and reload on click
+    // Remove item on mobile and reload on click
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+
+    // Remove item on larger screens and reload on click
+    $('.remove-item-large').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_large_')[1];
         var url = `/bag/remove/${itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
