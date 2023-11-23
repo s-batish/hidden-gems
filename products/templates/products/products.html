@@ -194,7 +194,7 @@
 <script>
     $('.back-to-top-link').click(function(e) {
         window.scrollTo(0,0);
-    })
+    });
 </script>
 
 <!-- JS for filter selector functionality -->
@@ -218,20 +218,19 @@
 
             window.location.replace(currentUrl);
         }
-    })
+    });
 </script>
 
 <!-- JS for confirm delete product modal -->
 <script>
     const deleteProductModal = new bootstrap.Modal(document.getElementById("deleteProductModal"));
     var deleteButtons = document.getElementsByClassName("delete-button");
-    var deleteConfirm = document.getElementById("deleteConfirm");
     
     // Shows the delete modal when a delete review button is clicked
     for (let button of deleteButtons) {
         button.addEventListener("click", (e) => {
             let deleteId = e.target.getAttribute("data-delete_id");
-            console.log(deleteId)
+            let deleteConfirm = document.getElementById("deleteConfirm");
             deleteConfirm.href = `delete/${deleteId}`;
             deleteProductModal.show();
         });

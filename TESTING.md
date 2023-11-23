@@ -278,8 +278,21 @@ EPIC: Administrative managing of the store
 ## Unit Tests
 ## Code Validation
 ### HTML
+- All pages were passed through the [W3C HTML Validator](https://validator.w3.org/) and any errors that were found were corrected so none of the pages, apart from the Add a Product and Edit a Product pages, are showing any warnings or errors.
+- These two pages are showing the following errors:
+![HTML errors](docs/testing/html-errors.png)
+- Because of Django's templating language, the files could not be copied and pasted into the validator. Instead, the code validation was checked by right clicking on the page, viewing the page source and copying this into the validator.
 ### CSS
+- The site was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.
+![CSS validator results](docs/testing/css-validation.png)
 ### JavaScript
+- JavaScript code was passed through [JSHint](https://jshint.com/) where the following warnings were noted:
+    - In the stripe_elements.js file, Stripe was referenced as an undefined variable:
+    ![stripe_elements.js warning](docs/testing/stripe_elements-error.png)
+    - In the products JS and in the reviews_script, bootstrap was noted as an undefined variable, but because the JavaScript here was actually referring to Bootstrap modals, and I was creating a new Bootstrap modal, I thought I could ignore this warning.
+    - In both of these files I also received warnings about confusing semantics with functions declared within loops referencing outer scoped variables, so I moved these variables inside the function, as per the warnings.
+        - ![Products JS](docs/testing/products-js-warning.png)
+        - ![reviews_script](docs/testing/reviews-js-warnings.png)
 ### Python
 ## Bugs
 ### Solved Bugs

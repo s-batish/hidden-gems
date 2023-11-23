@@ -208,7 +208,7 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item on mobile and reload on click
     $('.remove-item').click(function (e) {
@@ -223,7 +223,7 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 
     // Remove item on larger screens and reload on click
     $('.remove-item-large').click(function (e) {
@@ -238,6 +238,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}
