@@ -112,7 +112,7 @@
                                 {% if request.user.is_superuser %}
                                 <small>
                                     <a href="{% url 'edit_product' product.id %}" class="edit-btns btn rounded mb-1 mx-1 px-2 py-1">Edit</a>
-                                    <button class="edit-btns delete-button btn rounded mb-1 px-2 py-1 font-weight-bold" delete_id="{{ product.id }}">DELETE</button>
+                                    <button class="edit-btns delete-button btn rounded mb-1 px-2 py-1 font-weight-bold" data-delete_id="{{ product.id }}">DELETE</button>
                                 </small>
                                 {% endif %}
                             </div>
@@ -230,7 +230,7 @@
     // Shows the delete modal when a delete review button is clicked
     for (let button of deleteButtons) {
         button.addEventListener("click", (e) => {
-            let deleteId = e.target.getAttribute("delete_id");
+            let deleteId = e.target.getAttribute("data-delete_id");
             console.log(deleteId)
             deleteConfirm.href = `delete/${deleteId}`;
             deleteProductModal.show();
