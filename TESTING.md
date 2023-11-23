@@ -13,11 +13,16 @@
 | Bag icon | Clicking the icon takes the user to the bag page. | Clicked the icon. | Taken to the bag page. |
 | Mobile view | All links apart from the search, wishlist and bag icons appear in a hamburger menu. Clicking this menu displays all the other links which function as above. | Clicked the mobile hamburger menu. | The menu appeared with all of the other links. Clicking each of these links displayed the same dropdown menus as above. |
 
-#### Header - Sigend in User
+#### Header - Signed in User
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
 | Profile icon | User's profile name appears next to this icon. Clicking the icon displays the 'My Profile' and 'Logout' links. Clicking 'My Profile' takes the user to their profile page. Clicking 'Logout' takes the user to the logout page. | Signed in as Jim1. Clicked the icon. Clicked each of the links. | 'Jim1 appeared next to the profile icon'. Clicking the icon displayed the 'My Profile' and 'Logout' links. Taken to the profile page after clicking the 'My Profile' link. Taken to the logout page after clicking 'Logout'. |
 | Wishlist icon | Clicking the icon takes the user to their wishlist page. | Clicked the icon. | Taken to the wishlist page. |
+
+#### Header - Admin Member
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Profile icon | Clicking the icon displays the 'Product Management' and 'Logout' links. Clicking 'Product Management' takes the user to the Add a product page. | Clicked 'Product Management'. | Taken to the Add product page. |
 
 #### Footer
 | Feature | Expectation | Action | Result |
@@ -59,7 +64,9 @@
 #### Products page - Admin member
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
-
+| Edit and delete buttons | Shown on each of the product cards. Buttons change colour when hovered over. | Hovered over buttons. | Buttons shown on each product card. Buttons changed colour when hovered over. |
+| Edit product | Alert message appears informing the user that they are editing a product. Takes user to Edit a Product page. Clicking update will post the updated product and show its product detail page. Success message appears. | Clicked 'Edit'. Changed the price of the product. Clicked 'Update' | Alert message appeared. Taken to the Edit a Product page. Edited the price, then clicked 'Update'. Updated product product detail page was shown. Success message appeared. |
+| Delete product | Confirm deletion modal appears. Clicking 'Delete' deletes the product. Success message appears. | Clicked 'Delete'. | Confirm deletion modal appeared. Product was deleted after clicking 'Delete'. Success message appeared. | 
 
 #### Product detail page - General User
 | Feature | Expectation | Action | Result |
@@ -85,6 +92,48 @@
 | Delete review | Confirm deletion modal appears. Clicking 'Delete' deletes the review. Success message appears. | Clicked 'Delete'. | Confirm deletion modal appeared. Review was deleted after clicking 'Delete'. Success message appeared. | 
 
 #### Product detail page - Admin member
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Edit and delete buttons | Buttons appear on all product detail pages. Function the same as on the Products page. | Clicked on a product to view its product detail page. | Buttons appear below details. Buttons function the same as on the Products page. |
+| Delete review | Delete buttons appear on all reviews. Confirm deletion modal appears. Clicking 'Delete' deletes the review. Success message appears. | Clicked 'Delete'. | Delete buttons appeared on all reviews. Confirm deletion modal appeared. Review was deleted after clicking 'Delete'. Success message appeared. |
+
+#### Basket
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Empty basket | Message informing the user their basket is empty. Keep shopping buttons changes colour when hovered over. Takes the user to the Products page. | Went to the basket. Hovered over Keep Shopping button then clicked it. | 'Your basket is empty' message. Keep shopping button changed colour when hovered over. Taken to the Products page when button was clicked. |
+| Increment and decrement quantity buttons | Function the same as on the product detail page. | Increased and decreased the quantity (both within the allowed range and outside of the range). | Functioned the same as on the product detail page. |
+| Update and Remove links | Links underline when hovered over. Changing the quantity of the product then clicking Update changes the totals displayed in the basket page, changes the bag icon values and displays a success message. Clicking Remove removes the product from the basket, updates the bag icon values and displays a success message. | Hovered over the links then clicked them. Updated the quantity of the item in the basket. Then removed the item from the basket. | Links underlined when hovered over. Changing the quantity of the product then clicking Update changed the totals displayed in the basket page, changed the bag icon values and displayed a success message. Clicking Remove removed the product from the basket, updated the bag icon values and displayed a success message. |
+| Keep shopping and Secure Checkout buttons | Buttons change colour when hovered over. Clicking the Keep shopping button takes the user to the Products page. Clicking Secure Checkout takes the user to the checkout page. | Hovered over buttons then clicked them. | Buttons changed colour when hovered over. Clicking the Keep shopping button took the user to the Products page. Clicking the Secure Checkout button took the user to the checkout page. |
+
+#### Checkout - General User
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Checkout - Signed in User
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Wishlist page - Signed in User
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Sign in page
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Sign up page
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Logout page
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### My Profile page - Signed in User
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+
+#### Product Management page - Admin Member
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
 

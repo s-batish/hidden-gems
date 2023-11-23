@@ -33,7 +33,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="d-flex justify-content-center">
-                        <a href="{% url 'products' %}" class="buttons btn rounded mb-3 mx-1">Cancel</a>
+                        <a href="{% url 'product_detail' product.id %}" class="buttons btn rounded mb-3 mx-1">Cancel</a>
                         <button class="buttons btn rounded mb-3 mx-1" type="submit">Update Product</button>
                     </div>
                 </form>
