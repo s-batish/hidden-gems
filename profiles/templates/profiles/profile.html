@@ -38,6 +38,7 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <p>Order History</p>
+                    {% if orders.count > 0 %}
                     <div class="order-history table-responsive">
                         <table class="table table-sm table-borderless">
                             <thead>
@@ -73,6 +74,9 @@
                             </tbody>
                         </table>
                     </div>
+                    {% else %}
+                    <p class="font-weight-bold">You have no past orders yet.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
