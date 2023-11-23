@@ -266,7 +266,11 @@ EPIC: Administrative managing of the store
     - Result: Store owners can delete any item directly from the products page
 
 ## Responsiveness
+- The website has been tested on Chrome, Edge and Firefox as well as on an iPhone 11, iPhone 13 mini, Samsung Galaxy S22, and iPad 6th Generation in order to check the responsiveness on different devices and different browsers.
+- The responsiveness of each page of the website has also been tested using Chrome Developer tools to ensure that the website maintains a clear display across all screen sizes from 320px upwards.
+
 ## Browser Compatibility
+- The website has been tested on Chrome, Firefox, Edge and Safari to ensure that it functions on a range of browsers.
 ## Accessiblity
 ## Lighthouse Testing
 ### Desktop
