@@ -30,6 +30,10 @@ main {
     flex: 1 0 auto;
 }
 
+.text-main {
+    color: var(--dark-blue);
+}
+
 /* Buttons */
 .buttons, .decrement-quantity-btn, .increment-quantity-btn, .edit-btns:hover {
     color: var(--light-pink);
@@ -175,6 +179,10 @@ footer {
 .link:hover {
     color: var(--dark-blue);
     font-size: 17px;
+}
+
+.category:hover {
+    color: var(--dark-blue);
 }
 
 /* Products */
