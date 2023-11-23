@@ -7,8 +7,7 @@
     /* Colours */
     --off-white: #FAF9F6;
     --light-pink: #f6e8e8;
-    --light-purple: #d3c3c9;
-    --purple: #aea1ad;
+    --faded-purple: #ede7eb;
     --dark-purple: #858192;
     --dark-blue: #2f4858;
     --faded-dark-blue: #485A73;
@@ -19,7 +18,7 @@ html, body {
 }
 
 body {
-    background: #ede7eb;
+    background: var(--faded-purple);
     font-family: var(--main-font);
 }
 
@@ -32,7 +31,6 @@ main {
 }
 
 /* Buttons */
-
 .buttons, .decrement-quantity-btn, .increment-quantity-btn, .edit-btns:hover {
     color: var(--light-pink);
     border: solid 1px var(--dark-blue);
@@ -96,8 +94,6 @@ main {
 }
 
 .product-count {
-    /* right: 11px;
-    top: 32px; */
     position: absolute;
     font-family: var(--main-font);
     font-size: 16px;
@@ -170,7 +166,6 @@ footer {
 }
 
 /* Links */
-
 .link {
     color: var(--dark-blue);
     text-decoration: underline;
@@ -194,7 +189,7 @@ footer {
 
 .category-btn:hover {
     color: var(--dark-blue);
-    background-color: #ede7eb;
+    background-color: var(--faded-purple);
     border: solid 1px var(--dark-blue);
 }
 
@@ -308,7 +303,7 @@ footer {
     right: 25px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
+/* Convenience classes - colours copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -358,7 +353,7 @@ footer {
 }
 
 .card-header {
-    background-color: #ede7eb;
+    background-color: var(--faded-purple);
     border: 3px solid var(--dark-blue);
 }
 
@@ -376,7 +371,7 @@ footer {
 }
 
 .reviews > .card-body, .reviews-card-body, .reviews-div {
-    background-color: #ede7eb;
+    background-color: var(--faded-purple);
 }
 
 .accordion>.card>.card-header {
@@ -453,16 +448,12 @@ footer {
     .wishlist-count {
         top: 51px;
     }
-
-
 }
 
 @media (min-width:768px) {
     .card-img-top {
         max-width: 480px;
     }
-
-
 }
 
 @media (min-width: 992px) {
@@ -488,4 +479,3 @@ footer {
         width: 60%;
     }
 }
-
