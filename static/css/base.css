@@ -378,6 +378,11 @@ footer {
     border-radius: 5px;
 }
 
+.reviews-btn {
+    font-family: var(--headings);
+    font-size: 28px;
+}
+
 /* Mailchimp form */
 #mc_embed_signup .mc-field-group {
     padding-bottom: 0;
