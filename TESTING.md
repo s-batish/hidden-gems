@@ -119,7 +119,7 @@
 | Checkout form - card expiry date in the past | Clicking Complete Order will result in a message informing the user that their card's expiry date is in the past. | Inputted the card number 4242 4242 4242 4242 and the expiry date 11/01. | Message appeared stating that the card number's expiry date is in the past and the dat goes red. |
 | Checkout form - no card security code | Clicking Complete Order will result in a message informing the user that their card's security code is incomplete. | Inputted the card number 4242 4242 4242 4242, the expiry date 11/31 but no security code. | Message appeared stating that the card's security code is incomplete. |
 | Checkout form - no postal code | Clicking Complete Order will result in a message informing the user that their postal code is incomplete. | Inputted the card number 4242 4242 4242 4242, the expiry date 11/31, the security code 123 but no postal code. | Message appeared stating that the card's security code is incomplete. |
-| Create an account and login links | Link size increases when hovered over. Clicking create an account takes the user to the sign up page. Clicking login takes the user to the login page. |  |  |
+| Create an account and login links | Link size increases when hovered over. Clicking create an account takes the user to the sign up page. Clicking login takes the user to the login page. After signing up or logging in, the user is redirected back to the checkout page. |  |  |
 
 #### Checkout - Signed in User
 | Feature | Expectation | Action | Result |

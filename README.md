@@ -577,6 +577,7 @@ All testing information can be found in the [TESTING.md](TESTING.md) file.
 - [Stack Overflow](https://stackoverflow.com/questions/42336920/django-importing-a-view-from-another-app) for how to import and use a view from another app.
 - [Stack Overflow](https://stackoverflow.com/questions/71248375/filter-in-the-template-if-the-product-is-in-wishlist-or-no-django-ecommerce-web) for how to filter in the template whether an item is in the wishlist or not.
 - [Stack Overflow](https://stackoverflow.com/questions/63444550/how-to-delete-product-from-wishlist-in-django) for help with deleting a product from a wishlist.
+- [Stack Overflow](https://stackoverflow.com/questions/46863072/do-not-collect-zip-code-with-stripe) for how to remove the zip code requirement for Stripe payments.
 - [Very Academy](https://www.youtube.com/watch?v=H4QPHLmsZMU) for help in implementing the wishlist functionality.
 - [Code Institute's 'I think therefore I blog' walkthrough](https://www.youtube.com/watch?v=YH--VobIA8c) for help with adding the review functionality.
 - Code Institute's e-commerce site walkthrough for help in setting up the project.
