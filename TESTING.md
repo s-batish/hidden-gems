@@ -141,11 +141,19 @@
 | No password | Clicking Sign in will result in a message informing the user to fill in the password field. | Inputted a username but no password. | Message appeared informing the user to fill in the password field. |
 | Incorrect password | Clicking Sign in will result in a message informing the user that the username and/or password is not correct. | Inputted the incorrect password. | Message appeared informing the user that the username and/or password was not incorrect. |
 | Sign up link | Link size increases when hovered over. Clicking the link takes the user to the sign up page. | Hovered over the link then clicked it. | Link size increased when hovered over. Taken to the sign up page when clicked. |
-| Reset password link | Link size increases when hovered over. |  |  |
+| Reset password link | Link size increases when hovered over. Takes the user to the password reset page. | Hovered over the link then clicked it. | Link size increased when hovered over. Taken to the password reset page. |
 
 #### Sign up page
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| No inputs | Clicking Sign up will result in a message informing the user to fill in the email field. | Clicked Sign up. | Message appeared informing the user to fill in the email field. |
+| Incorrectly inputted email address | Clicking Sign up will result in a message informing the user to correctly input their email address. | Inputted the email of bob. | Message appeared informing the user to input their email address correctly with the @ symbol. |
+| Username less than 3 characters long | Clicking sign up with a username of less than 3 characters results in a message informing the user to enter a longer username. | Entered the username bob. | Message appeared informing the user to input a longer username. |
+| No password | Clicking Sign up will result in a message informing the user to fill in the password field. | Inputted a username and email address but no password. | Message appeared informing the user to fill in the password field. |
+| Insufficient password | Clicking Sign up will result in a message informing the user that their password needs to be changed to meet the specified requirements. | Inputted the password 123. | Message appeared informing the user that the password was too short, was too common and only had numeric values.|
+| Non-matching passwords | Clicking Sign up will result in a message informing the user that they must type the same password each time. | Inputted the password Password975 then the password Password987. | Message appeared informing the user that they must type the same password each time. |
+| Successful Sign Up | Clicking Sign up will take the user to the verify your email address page. After following the link provided, they are asked to confirm their email address. Clicking the confirm button takes them to the sign in page. | Clicked Sign up. | Taken to the verify your email address page. Confirmed email address after following the [link provided in the email](docs/testing/confirm-email.png). Taken to the sign in page after clicking the [confirm button](docs/testing/email-confirmation.png). |
+| Sign in link | Link size increases when hovered over. Clicking the link takes the user to the sign in page. | Hovered over the link then clicked it. | Link size increased when hovered over. Taken to the sign in page when clicked. |
 
 #### Logout page
 | Feature | Expectation | Action | Result |
@@ -155,10 +163,16 @@
 #### My Profile page - Signed in User
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| Update information button | Button changes colour when hovered over. If the details fields are edited, clicking this button updates the profile details to show the newly saved details and a success message appears. | Updated the profile details then clicked the button. | Button changed colour when hovered over. Default delivery details were updated with the newly saved details. Success message appeared. |
+| Order history | All previous orders appear here. If there are no orders a message will state that there have been no orders made yet. The order number link increases in size when hovered over. Clicking the link takes the user to the order confirmation for that order and an alert message appears. | Clicked the order number link. | The order number link increased in size when hovered over. Clicking the link took the user to the order confirmation for that order and an alert message appeared. For a user who has no orders, the message that there are no orders yet was present. |
 
 #### Product Management page - Admin Member
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| Adding a product - correct inputs | The product will be added to the products page when the Add Product button is clicked and the user is taken to that item's product detail page. | Added a product with all of the required fields completed. | The product was added to the products page and the user was taken to the product detail page. |
+| Adding a product - no inputs | Clicking Add Product results in a message below the first required field informing the user to fill in that field. | Clicked Add Product without filling in any of the required fields. | Instructed to fill in the first required field. |
+| Incorrect price - price too large | Adding a price outside the range results in an error message that the form is not valid and to ensure there are no more than 6 digits in total. | Added the price 123456789. | Error message appeared informing that the form was not valid and to ensure that there are no more than 6 digits in total. |
+| Incorrect price - more than 4 digits before the decimal point | An error message appears that the form is not valid and to ensure there are no more than 4 digits before the decimal point. | Added the price 123456 | An error message appeared that the form is not valid and to ensure there are no more than 4 digits before the decimal point. |
 
 ## Testing User Stories
 ## Responsiveness
