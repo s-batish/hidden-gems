@@ -39,7 +39,7 @@
 #### Home page
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
-| Shop Now button | Button changes colour when hovered over. Clicking it takes the user to the Products page. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it took the user to the Products page.
+| Shop Now button | Button changes colour when hovered over. Clicking it takes the user to the Products page. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it took the user to the Products page. |
 
 #### Products page - General User
 | Feature | Expectation | Action | Result |
@@ -118,20 +118,30 @@
 | Checkout form - no card expiry date | Clicking Complete Order will result in a message informing the user that their card's expiry date is incomplete. | Inputted the card number 4242 4242 4242 4242 but no expiry date. | Message appeared stating that the card number's expiry date is incomplete. |
 | Checkout form - card expiry date in the past | Clicking Complete Order will result in a message informing the user that their card's expiry date is in the past. | Inputted the card number 4242 4242 4242 4242 and the expiry date 11/01. | Message appeared stating that the card number's expiry date is in the past and the dat goes red. |
 | Checkout form - no card security code | Clicking Complete Order will result in a message informing the user that their card's security code is incomplete. | Inputted the card number 4242 4242 4242 4242, the expiry date 11/31 but no security code. | Message appeared stating that the card's security code is incomplete. |
-| Checkout form - no postal code | Clicking Complete Order will result in a message informing the user that their postal code is incomplete. | Inputted the card number 4242 4242 4242 4242, the expiry date 11/31, the security code 123 but no postal code. | Message appeared stating that the card's security code is incomplete. |
-| Create an account and login links | Link size increases when hovered over. Clicking create an account takes the user to the sign up page. Clicking login takes the user to the login page. After signing up or logging in, the user is redirected back to the checkout page. |  |  |
+| Create an account and login links | Link size increases when hovered over. Clicking create an account takes the user to the sign up page. Clicking login takes the user to the login page. After logging in, the user is redirected back to the checkout page. | Clicked create an account and created an account. Then clicked login. | Link size increased when hovered over. Taken to the sign up page after clicking create an account. Taken to the login page after clicking login. Then redirected back to the checkout page after logging in. |
+| Trying to access the checkout page with an empty basket | User is redirected to the products page and receives an error message that their basket is empty. | Added the '/checkout' to the end of the home page url. | Taken to the products page and presented with an error that the basket is empty. |
 
 #### Checkout - Signed in User
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| No profile information already saved | User's email address will automatically appear in the email address field. All other fields are empty but once the fields are completed, selecting the save delivery information checkbox will add these details to the user's profile page once they complete their order. | Completed all of the fields, ensured the checkbox was selected and clicked Complete Order. | Emaill address was already completed. After completing the order, the delivery details were saved to the My Profile page. |
+| Profile information already saved | All the user's details that are saved in their profile will appear in the checkout form when the user goes to the checkout. | Saved delivery details in the profile. Then added an item to the bag and went to the checkout page. | Details were prefilled in the checkout form. |
 
 #### Wishlist page - Signed in User
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| Empty wishlist | Message states that there are no items in the wishlist. There is a button to Keep Shopping which changes colour when hovered over and takes the user to the Products page. | Clicked on the wishlist icon. | Message stated that there were no items in the wishlist. There was a button to Keep Shopping which changed colour when hovered over and took the user to the Products page. |
+| Items in the wishlist | Clicking the product image displays the product detail page. Clicking the solid heart icon removes the item from the wishlist and a success message appears. | Added an item to the wishlist. Clicked the product image. Then returned to the wishlist and clicked the solid heart icon. | Taken to the product detail page. Then clicking the heart icon removed the item from the wishlist and displayed a success message. |
 
 #### Sign in page
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| Correct inputs for a valid user | Sign in button changes colour when hovered over. Clicking it takes the user to the home page after clicking it. | Entered the username and password for a valid user. | Sign in button changed colour when hovered over. Taken to the home page after clicking it. |
+| No inputs | Clicking Sign in will result in a message informing the user to fill in the username field. | Clicked Sign in. | Message appeared informing the user to fill in the username field. |
+| No password | Clicking Sign in will result in a message informing the user to fill in the password field. | Inputted a username but no password. | Message appeared informing the user to fill in the password field. |
+| Incorrect password | Clicking Sign in will result in a message informing the user that the username and/or password is not correct. | Inputted the incorrect password. | Message appeared informing the user that the username and/or password was not incorrect. |
+| Sign up link | Link size increases when hovered over. Clicking the link takes the user to the sign up page. | Hovered over the link then clicked it. | Link size increased when hovered over. Taken to the sign up page when clicked. |
+| Reset password link | Link size increases when hovered over. |  |  |
 
 #### Sign up page
 | Feature | Expectation | Action | Result |
@@ -140,6 +150,7 @@
 #### Logout page
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
+| Sign out button | Button changes colour when hovered over. Clicking it signs the user out, takes them to the home page and a success message appears. | Hovered over button then clicked it. | Button changed colour when hovered over. Clicking it signed the user out and took them to the home page. A success message appeared. |
 
 #### My Profile page - Signed in User
 | Feature | Expectation | Action | Result |
