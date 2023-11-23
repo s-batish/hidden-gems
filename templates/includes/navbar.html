@@ -4,11 +4,11 @@
     {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg navbar-light">
         <!-- Logo -->
-        <a class="navbar-brand mr-0" href="{% url 'home' %}"><img src="{{ MEDIA_URL}}logo.webp"
-                alt="Hidden Gems logo" class="logo"></a>
+        <a class="navbar-brand mr-0" href="{% url 'home' %}"><img src="{{ MEDIA_URL}}logo.webp" alt="Hidden Gems logo"
+                class="logo"></a>
 
         <!-- Icons for mobile view -->
-        <li class="list-inline-item navbar-nav px-1">
+        <div class="list-inline-item navbar-nav px-1">
             <a class="text-black nav-link d-block d-lg-none pb-0" href="#" id="mobile-search" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <div>
@@ -34,17 +34,17 @@
                     </form>
                 </div>
             </div>
-        </li>
-        <li class="list-inline-item navbar-nav pr-2">
+        </div>
+        <div class="list-inline-item navbar-nav pr-2">
             <a class="nav-link d-block d-lg-none pb-0" href="{% url 'wishlist' %}"><i
                     class="fa-regular fa-heart"></i><span
                     class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                 <span class="sr-only">Wishlist count</span></a>
             <p></p>
-        </li>
-        <li class="list-inline-item navbar-nav px-1">
-            <a class="nav-link d-block d-lg-none pb-0"
-                href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
+        </div>
+        <div class="list-inline-item navbar-nav px-1">
+            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'view_bag' %}"><i
+                    class="fa-solid fa-bag-shopping"></i><span
                     class="product-count badge rounded-circle">{{ product_count }}</span>
                 <span class="sr-only">Product count</span></a>
             <span class="total-price font-weight-bold d-block d-lg-none">
@@ -54,7 +54,7 @@
                 £0.00
                 {% endif %}
             </span>
-        </li>
+        </div>
 
         <!-- Hamburger menu -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -69,8 +69,7 @@
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         All
                     </a>
                     <div class="dropdown-menu">
@@ -81,8 +80,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         Earrings
                     </a>
                     <div class="dropdown-menu">
@@ -95,8 +93,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         Bracelets
                     </a>
                     <div class="dropdown-menu">
@@ -109,8 +106,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         Necklaces
                     </a>
                     <div class="dropdown-menu">
@@ -123,8 +119,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         Rings
                     </a>
                     <div class="dropdown-menu">
@@ -140,8 +135,8 @@
                 {% if request.user.is_staff %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle"
-                        href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
                     <div class="dropdown-menu login-dropdown">
@@ -153,8 +148,8 @@
                 {% elif request.user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle"
-                        href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
                     <div class="dropdown-menu login-dropdown dropdown-menu-left">
@@ -166,8 +161,8 @@
                 {% else %}
                 <li class="nav-item dropdown">
                     <p></p>
-                    <a class="nav-link dropdown-toggle"
-                        href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fa-solid fa-user"></i> {{user.username}}
                     </a>
                     <div class="dropdown-menu login-dropdown dropdown-menu-left">
@@ -178,14 +173,14 @@
                 {% endif %}
                 <li class="list-inline-item d-none d-lg-inline-block">
                     <p></p>
-                    <a class="text-black nav-link d-block" href="#" id="mobile-search" data-toggle="dropdown"
+                    <a class="text-black nav-link d-block" href="#" id="desktop-search" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <div>
                             <div><i class="fa-solid fa-magnifying-glass"></i></div>
                         </div>
                     </a>
                     <div class="d-flex flex-wrap align-content-end">
-                        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0 " aria-labelledby="mobile-search">
+                        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0 " aria-labelledby="desktop-search">
                             <form class="form" method="GET" action="{% url 'products' %}">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -206,27 +201,23 @@
                 </li>
                 <li class="nav-item d-none d-lg-inline-block pr-2">
                     <p></p>
-                    <a class="nav-link" href="{% url 'wishlist' %}"><i
-                            class="fa-regular fa-heart"></i><span
+                    <a class="nav-link" href="{% url 'wishlist' %}"><i class="fa-regular fa-heart"></i><span
                             class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                         <span class="sr-only">Wishlist count</span></a>
                 </li>
-                <div class="text-center">
-                    <li class="nav-item d-none d-lg-inline-block">
-                        <p></p>
-                        <a class="nav-link pb-0"
-                            href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
-                                class="product-count badge rounded-circle">{{ product_count }}</span>
-                            <span class="sr-only">Product count</span></a>
-                        <p class="total-price font-weight-bold">
-                            {% if grand_total %}
-                            £{{ grand_total|floatformat:2 }}
-                            {% else %}
-                            £0.00
-                            {% endif %}
-                        </p>
-                    </li>
-                </div>
+                <li class="nav-item d-none d-lg-inline-block text-center">
+                    <p></p>
+                    <a class="nav-link pb-0" href="{% url 'view_bag' %}"><i class="fa-solid fa-bag-shopping"></i><span
+                            class="product-count badge rounded-circle">{{ product_count }}</span>
+                        <span class="sr-only">Product count</span></a>
+                    <p class="total-price font-weight-bold">
+                        {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                        {% else %}
+                        £0.00
+                        {% endif %}
+                    </p>
+                </li>
             </ul>
         </div>
     </nav>
