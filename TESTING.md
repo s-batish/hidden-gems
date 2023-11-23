@@ -294,6 +294,9 @@ EPIC: Administrative managing of the store
         - ![Products JS](docs/testing/products-js-warning.png)
         - ![reviews_script](docs/testing/reviews-js-warnings.png)
 ### Python
+- All python files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#). 
+- The main errors that were reported were that there were no new lines at the end of some of the files and that some of the lines were too long but this was quickly amended.
+- The only remaining file with some lines that are too long is the settings.py file due to the AUTH_PASSWORD_VALIDATORS being too long.
 ## Bugs
 ### Solved Bugs
 ### Unsolved Bugs

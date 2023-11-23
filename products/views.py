@@ -21,9 +21,10 @@ def all_products(request):
     sort = None
     direction = None
 
-    # Code from https://stackoverflow.com/questions/71248375/filter-in-the-template-if-the-product-is-in-wishlist-or-no-django-ecommerce-web
+    # Code from https://stackoverflow.com/questions/71248375/filter-in-the-
+    # template-if-the-product-is-in-wishlist-or-no-django-ecommerce-web
     if request.user.is_authenticated:
-        user=request.user
+        user = request.user
         wishlist = Wishlist.objects.filter(user=user)
         wishedProductsList = []
         for i in wishlist:
@@ -88,22 +89,24 @@ def product_detail(request, product_id):
     template = 'products/product_detail.html'
 
     if request.user.is_authenticated:
-        wishlist = Wishlist.objects.filter(user=request.user, product=product).exists()
+        wishlist = Wishlist.objects.filter(user=request.user,
+                                           product=product).exists()
         context = {
-        'product': product,
-        'form': form,
-        'reviews': reviews,
-        'wishlist': wishlist,
+            'product': product,
+            'form': form,
+            'reviews': reviews,
+            'wishlist': wishlist,
         }
         return render(request, template, context)
 
     else:
         context = {
-        'product': product,
-        'form': form,
-        'reviews': reviews,
+            'product': product,
+            'form': form,
+            'reviews': reviews,
         }
         return render(request, template, context)
+
 
 @login_required
 def add_product(request):
@@ -119,16 +122,18 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure the \
+            form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -145,7 +150,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please \
+            ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -157,6 +163,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):

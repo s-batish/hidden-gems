@@ -7,7 +7,10 @@ from django.core.mail import send_mail
 
 
 def contact(request):
-    """View to show the contact us page and to create the functionality to send emails"""
+    """
+    View to show the contact us page and to create the functionality to send
+    emails
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
