@@ -29,7 +29,8 @@ def add_review(request, product_id):
 def delete_review(request, product_id, review_id):
     """Delete a review"""
     product = get_object_or_404(Product, pk=product_id)
-    review = Review.objects.filter(product=product).first()
+    # review = Review.objects.filter(product=product).first()
+    review = get_object_or_404(Review, pk=review_id)
 
     # Allows the authors of the review of staff members to delete
     if request.user == review.author or request.user.is_staff:
