@@ -15,7 +15,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col mt-3 text-center">
-            <h2>Products</h2>
+            <h1>Products</h1>
             {% for c in current_categories %}
             <a class="btn buttons category-btn w-20 mb-2"
                 href="{% url 'products' %}?category={{ c.name }}">{{ c.friendly_name }}</a>
@@ -97,7 +97,7 @@
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="mb-0 text-left font-weight-bold heading-small">£{{ product.price }}</p>
                                 </div>
                                 {% if product.category %}
                                 <div class="col">
@@ -170,7 +170,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteProductModalLabel">Delete Product?</h5>
+                <h2 class="modal-title heading-small" id="deleteProductModalLabel">Delete Product?</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

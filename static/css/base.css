@@ -34,6 +34,18 @@ main {
     color: var(--dark-blue);
 }
 
+.heading-smallest {
+    font-size: 16px;
+}
+
+.heading-small {
+    font-size: 20px;
+}
+
+.heading-medium {
+    font-size: 24px;
+}
+
 /* Buttons */
 .buttons, .decrement-quantity-btn, .increment-quantity-btn, .edit-btns:hover {
     color: var(--light-pink);
@@ -418,6 +430,13 @@ footer {
 
 #mc_embed_signup .foot {
     padding-top: 5px;
+}
+
+#mc_embed_signup h2 {
+    font-weight: normal;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 18px;
 }
 
 /* Media queries */

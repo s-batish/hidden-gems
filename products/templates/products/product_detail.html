@@ -27,7 +27,7 @@
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 px-xl-1">
             <div>
                 <div class="col d-flex justify-content-between px-0">
-                    <h4 class="mt-2">{{ product.name }}</h4>
+                    <h1 class="mt-2 heading-medium">{{ product.name }}</h1>
                     {% if wishlist %}
                     <div class="d-flex flex-wrap align-content-center">
                         <a href="{% url 'delete_wishlist' product.id %}" aria-label="Remove from wishlist button"><i
@@ -42,7 +42,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="lead font-weight-bold mb-0">£{{ product.price }}</p>
+                        <p class="font-weight-bold mb-0 heading-small">£{{ product.price }}</p>
                     </div>
                     <div class="col text-right">
                         {% if product.category %}
@@ -118,7 +118,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="confirmDeleteLabel">Delete Product?</h5>
+                <h2 class="modal-title heading-small" id="confirmDeleteLabel">Delete Product?</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

@@ -5,7 +5,7 @@
   <div class="card reviews mb-3">
     <div class="card-body px-2 d-block w-100">
       <div class="d-flex justify-content-start">
-        <h5 class="pr-2">{{ review.author }}</h5>
+        <h2 class="pr-2 heading-small">{{ review.author }}</h2>
         <small class="text-muted">{{ review.created_on|date:"d.m.y"}}</small>
       </div>
       <div id="review{{ review.id }}">
@@ -50,7 +50,7 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete Review?</h5>
+        <h2 class="modal-title heading-small" id="deleteModalLabel">Delete Review?</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

@@ -18,7 +18,7 @@
         <div class="col-12 col-xl-8 content-container shadow">
             <div class="row">
                 <div class="col mt-3 text-center">
-                    <h2>Your Basket</h2>
+                    <h1>Your Basket</h1>
                     <hr class="w-50 mb-3">
                 </div>
             </div>
@@ -82,9 +82,9 @@
                         </div>
                         <hr>
                         {% endfor %}
-                        <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                        <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                        <h3 class="heading-smallest"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h3>
+                        <h3 class="heading-smallest">Delivery: £{{ delivery|floatformat:2 }}</h3>
+                        <h2 class="mt-4 heading-medium"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h2>
                         {% if free_delivery_delta > 0 %}
                         <p class="mb-1 text-danger">
                             You could get free delivery by spending just
@@ -166,9 +166,9 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h3 class="heading-smallest"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h3>
+                                    <h3 class="heading-smallest">Delivery: £{{ delivery|floatformat:2 }}</h3>
+                                    <h2 class="mt-4 heading-medium"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h2>
                                     {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
                                         You could get free delivery by spending just
