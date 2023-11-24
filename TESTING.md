@@ -296,9 +296,10 @@ EPIC: Administrative managing of the store
 ## Unit Tests
 ## Code Validation
 ### HTML
-- All pages were passed through the [W3C HTML Validator](https://validator.w3.org/) and any errors that were found were corrected so none of the pages, apart from the Add a Product and Edit a Product pages, are showing any warnings or errors.
-- These two pages are showing the following errors:
+- All pages were passed through the [W3C HTML Validator](https://validator.w3.org/) and any errors that were found were corrected easily, apart from on the Add a Product and Edit a Product pages, which showed the following errors:
 ![HTML errors](docs/testing/html-errors.png)
+    - The second error was easy to solve by simply removing the strong tags used here in the products custom_clearable_file_input.html file and adding in the Bootstrap class "font-weight-bold".
+    - The second error was slightly more challenging to solve as I could not find a reference to the id="id_image" in my code. However, in the custom_clearable_file_input.html file there was an id there with the name "new-image" and this was what was allowing the JavaScript to work in the add_product.html and edit_product.html files. As there were two ids in this line, this is what was causing the error. Therefore, I removed the new-image id and amended the references made to it in the JavaScript by changing the id mentioned to "id_image. This fixed the error so there are now no errors on any of the HTML pages.
 - Because of Django's templating language, the files could not be copied and pasted into the validator. Instead, the code validation was checked by right clicking on the page, viewing the page source and copying this into the validator.
 ### CSS
 - The site was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.
@@ -315,8 +316,7 @@ EPIC: Administrative managing of the store
 - All python files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#). 
 - The main errors that were reported were that there were no new lines at the end of some of the files and that some of the lines were too long but this was quickly amended.
 - The only remaining file with some lines that are too long is the settings.py file due to the AUTH_PASSWORD_VALIDATORS being too long.
-## Bugs
-### Solved Bugs
+## Solved Bugs
 - The navbar was not sticky meaning that the toasts were not sticky either (kept moving down the page as I scrolled down)
     - Solution: I made the header have a fixed top but then needed to add in the header container div to add some padding. I then had to adjust this depending on the screen size.
 - The Checkout page was not rendering the checkout success page when clicking to place the order
@@ -332,10 +332,11 @@ EPIC: Administrative managing of the store
     - Solution: I had to change the url in the wishlist template to specify what the correct product id should be:
         - ```{% url 'delete_wishlist' product_id=product.product.id %}```
 - Wishlist items were not displaying in wishlist template when there was only 1 item in there
-    - Solution: I realsied that my if statement in the wishlist template was incorrect as it was stating ```{% if wishlist.count >1 %}``` instead of ```{% if wishlist.count >1 %}```
+    - Solution: I realsied that my if statement in the wishlist template was incorrect as it was stating ```{% if wishlist.count > 1 %}``` instead of ```{% if wishlist.count > 0 %}```
 - I was getting the following error when running the admin products page through the HTML validator:
     - ![Admin products page error](docs/testing/admin-products-error.png)
     - Solution: I found this solution on [Stack Overflow](https://stackoverflow.com/questions/18824009/attribute-href-not-allowed-on-element-button-at-this-point) which showed me that I had to add a data-* attribute to the start of the delete_id
     - I was getting the error that the remove id on the bag page was being duplicated. This is because there is functionality for both small devices and large ones on that page.
         - I had to change one of the ids without disrupting the functionality so I created a slightly different id on the larger screens which meant I had to amend the javascript for this so that it would still work.
-### Unsolved Bugs
+- I had an issue where anonymous users who made a purchase would receive a confirmation email from a previous project (Boutique Ado) alongside the confirmation email from Hidden Gems. This was particularly strange because thei only happened for users who made a purchase without signing in, and the costs listed on the incorrect email did not match the costs for the correct email and purchase.
+    - Solution: After a long discussion with my mentor and a tutor I realised that the issue arose from creating the webhooks for this project within the same Stripe account as I had used for the previous project, so after disabling the Boutique Ado webhooks and creating a separate account for that project, I was no longer seeing this issue anymore and all users were only receiving the one correct confirmation email from Hidden Gems.

@@ -107,7 +107,7 @@ The webiste will focus on the following target audiences:
     - Passion for jewellery
     - Those wanting to buy a gift for someone
     - Those wanting to buy jewellery for themselves
-    - Upscale but not expensive so accessible to most people
+    - Upmarket but not expensive so accessible to most people
 - **Psychographics:**
     - Personality & Attitudes:
         - Interest in jewellery
@@ -123,16 +123,16 @@ The webiste will focus on the following target audiences:
         - Likes to treat themselves or treat others to a thoughtful, unique gift
 
 The website needs to enable the **user** to:
-    - Register/login to account
-    - View the different items of jewellery by searching or using the categories provided
-    - Purchase an item of jewellery
-    - Edit/delete the items in their shopping bag
-    - Edit/delete their delivery information
-    - View their current and past orders
-    - Get in contact
-    - Leave reviews on products
-    - Add items to a wishlist
-    - Subscribe for newsletters/offers
+- Register/login to account
+- View the different items of jewellery by searching or using the categories provided
+- Purchase an item of jewellery
+- Edit/delete the items in their shopping bag
+- Edit/delete their delivery information
+- View their current and past orders
+- Get in contact
+- Leave reviews on products
+- Add items to a wishlist
+- Subscribe for newsletters/offers
 
 The website needs to enable the **client** to:
 - Login to admin account
@@ -294,10 +294,10 @@ This colour contrast grid shows how these colours could be paired together to en
 #### Keywords
  - Keyword research has been carried out to find the most relevant short-tail and long-tail keywords for this website.
  - First a list of all possible keywords were written down, then, using Google search, this list was refined to only include the words that had the most relevance and authority.
- - [Wordtracker](www.wordtracker.com) was then also used to ensure the chosen keywords had a high enough volume but not too much competition.
+ - [Wordtracker](https://www.wordtracker.com/) was then also used to ensure the chosen keywords had a high enough volume but not too much competition.
  - These keywords have been included in the keywords meta tag in the base.html template.
 #### Sitemap and robots.txt
-- A sitemap.xml file was created in the root directory using [xml-sitemaps.com](xml-sitemaps.com) to ensure that search engines will crawl every essential page on the site.
+- A sitemap.xml file was created in the root directory using [xml-sitemaps.com](https://www.xml-sitemaps.com/) to ensure that search engines will crawl every essential page on the site.
 - A robots.txt file was also created in the root directory to inform search engines where they are not permitted to go on the website, such as accounts, admin and profiles.
 ### Marketing
 #### Social Media Marketing
@@ -504,7 +504,7 @@ This colour contrast grid shows how these colours could be paired together to en
 </details>
 
 ### Features Left to Implement
-- I would like to implement a FAQ section which would display as an accordion, so when a user clicks on a question the answer will pop out below. I think this will add an extra layer of functionality to users, but the reason I did not add this feature in at the moment is because I thought a Contact Us section was more of a priority than the FAQ section, and because of time constraints I was able to implement both.
+- I would like to implement a FAQ section which would display as an accordion, so when a user clicks on a question the answer will pop out below. I think this will add an extra layer of functionality to users, but the reason I did not add this feature in at the moment is because I thought a Contact Us section was more of a priority than the FAQ section, and because of time constraints I was not able to implement both.
 ## Testing
 All testing information can be found in the [TESTING.md](TESTING.md) file.
 ## Deployment
