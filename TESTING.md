@@ -283,7 +283,7 @@ EPIC: Administrative managing of the store
 | Products page | 83 | 100 | 100 | 90 |
 | Product detail page | 97 | 100 | 100 | 100 |
 | Basket | 95 | 91 | 100 | 90 |
-| Checkout | 89 | 85 | 100 | 100 |
+| Checkout | 89 | 90 | 100 | 100 |
 | Checkout success page | 93 | 98 | 100 | 100 |
 | Contact Us page | 89 | 98 | 100 | 100 |
 | Sign in | 95 | 98 | 100 | 100 |

@@ -505,6 +505,7 @@ This colour contrast grid shows how these colours could be paired together to en
 
 ### Features Left to Implement
 - I would like to implement a FAQ section which would display as an accordion, so when a user clicks on a question the answer will pop out below. I think this will add an extra layer of functionality to users, but the reason I did not add this feature in at the moment is because I thought a Contact Us section was more of a priority than the FAQ section, and because of time constraints I was not able to implement both.
+- I would also like to implement a ratings system where logged in users can rate a product out of 5 stars and the average rating would appear for each product. I think this would help make the site even more realistic and interactive, as it would really show the value of customer feedback and would work nicely alongside the reviews.
 ## Testing
 All testing information can be found in the [TESTING.md](TESTING.md) file.
 ## Deployment
@@ -543,10 +544,6 @@ All testing information can be found in the [TESTING.md](TESTING.md) file.
     - Used to create the flowcharts
 - [AWS](https://aws.amazon.com/)
     - Used to store the static and media files used on the website
-- [Google Fonts](https://fonts.google.com/)
-    - Used to import fonts
-- [Font Awesome](https://fontawesome.com/icons)
-    - Used icons from this website for the social media icons
 - [Fontjoy](https://fontjoy.com/)
     - Used to create the font pairings used on the website
 - [TinyPNG](https://tinypng.com/)
@@ -558,8 +555,10 @@ All testing information can be found in the [TESTING.md](TESTING.md) file.
     - Used to implement main styling across the website
 - jQuery
     - Used to simplify the JavaScript code used in the project
-- Jinja
-    - Jinja templating language was used to connect the backend to the html templates
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import fonts
+- [Font Awesome](https://fontawesome.com/icons)
+    - Used icons from this website for the social media icons
 ### Main Packages
 - boto3==1.28.82
     - Used to connect to the AWS S3 bucket
@@ -569,6 +568,8 @@ All testing information can be found in the [TESTING.md](TESTING.md) file.
     - Used for site authentication for sign in, login and logout
 - django-countries==7.2.1
     - Used to display the countries dropdown in the checkout form and ensure the correct country codes are displayed
+- django-crispy-forms==1.14.0
+    - Used to render forms in the correct style
 - dj-database-url==0.5.0
     - Library needed for PostgreSQL
 - psycopg2==2.9.9
