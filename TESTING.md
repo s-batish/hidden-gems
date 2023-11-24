@@ -279,11 +279,11 @@ EPIC: Administrative managing of the store
 ### Desktop
 | Page | Performance | Accessibility | Best Practices | SEO |
 | ---| ---| ---| ---| ---|
-| Home page | 96 | 98 | 100 | 100 |
-| Products page | 78 | 98 | 100 | 90 |
-| Product detail page | 93 | 100 | 100 | 100 |
-| Basket | 94 | 79 | 100 | 90 |
-| Checkout | 84 | 84 | 100 | 100 |
+| Home page | 94 | 100 | 100 | 100 |
+| Products page | 83 | 100 | 100 | 90 |
+| Product detail page | 97 | 100 | 100 | 100 |
+| Basket | 95 | 91 | 100 | 90 |
+| Checkout | 89 | 85 | 100 | 100 |
 | Checkout success page | 93 | 98 | 100 | 100 |
 | Contact Us page | 89 | 98 | 100 | 100 |
 | Sign in | 95 | 98 | 100 | 100 |
