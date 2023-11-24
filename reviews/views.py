@@ -19,7 +19,7 @@ def add_review(request, product_id):
                     body=request.POST["body"],
                 )
             reviews = Review.objects.filter(product=product)
-            success(request, "Your review has been successfully added!")
+            messages.success(request, "Your review has been successfully added!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(request, "Your review has not been submitted.")
