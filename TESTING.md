@@ -274,6 +274,21 @@ EPIC: Administrative managing of the store
 ## Accessiblity
 ## Lighthouse Testing
 ### Desktop
+| Page | Performance | Accessibility | Best Practices | SEO |
+| ---| ---| ---| ---| ---|
+| Home page | 96 | 98 | 100 | 100 |
+| Products page | 78 | 98 | 100 | 90 |
+| Product detail page | 93 | 100 | 100 | 100 |
+| Basket | 94 | 79 | 100 | 90 |
+| Checkout | 84 | 84 | 100 | 100 |
+| Checkout success page | 93 | 98 | 100 | 100 |
+| Contact Us page | 89 | 98 | 100 | 100 |
+| Sign in | 95 | 98 | 100 | 100 |
+| Sign up | 94 | 98 | 100 | 100 |
+| Wishlist | 83 | 89 | 100 | 100 |
+| Product management | 94 | 94 | 100 | 100 |
+| My Profile | 95 | 95 | 100 | 100 |
+
 ### Mobile
 ## Unit Tests
 ## Code Validation

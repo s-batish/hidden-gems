@@ -31,7 +31,8 @@
                     </a>
                     {% else %}
                     <a href="{% url 'product_detail' product_id=product.product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL}}logo.webp" alt="{{ product.product.name }}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL}}logo.webp"
+                            alt="{{ product.product.name }}">
                     </a>
                     {% endif %}
                     <!-- Product Info -->
@@ -41,7 +42,8 @@
                                 <p class="mb-0">{{ product.product.name }}</p>
                             </div>
                             <div class="col-3 d-flex justify-content-end">
-                                <a href="{% url 'delete_wishlist' product_id=product.product.id %}"><i class="fa-solid fa-heart wishlist-icon"></i>
+                                <a href="{% url 'delete_wishlist' product_id=product.product.id %}"><i
+                                        class="fa-solid fa-heart wishlist-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -54,8 +56,7 @@
                             {% if product.product.category %}
                             <div class="col">
                                 <p class="small">
-                                    <a class="text-muted"
-                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <a href="{% url 'products' %}?category={{ product.category.name }}">
                                         <i class="fas fa-tag mr-1"></i>{{ product.product.category.friendly_name }}
                                     </a>
                                 </p>
