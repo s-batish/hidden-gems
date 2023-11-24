@@ -299,4 +299,25 @@ EPIC: Administrative managing of the store
 - The only remaining file with some lines that are too long is the settings.py file due to the AUTH_PASSWORD_VALIDATORS being too long.
 ## Bugs
 ### Solved Bugs
+- The navbar was not sticky meaning that the toasts were not sticky either (kept moving down the page as I scrolled down)
+    - Solution: I made the header have a fixed top but then needed to add in the header container div to add some padding. I then had to adjust this depending on the screen size.
+- The Checkout page was not rendering the checkout success page when clicking to place the order
+    - Solution: I realised that there was an unnecessary space when checking if we were using the post method:
+    - Before: ![Checkout page bug - before](docs/testing/checkout-page-bug-before.png)
+    - After: ![Checkout page bug - after](docs/testing/checkout-page-bug-after.png)
+- My webhooks were failing and I was getting a 400 error
+    - Solution: I realised that I had mistyped the Stripe Webhook secret key - in my settings.py file it was written as STRIPE_WH_SECRET but in my env.py it was written as STRIPE_WEBHOOK_SECRET.
+- I later received a webhook 404 error and had no mention of /checkout/wh in my gitpod terminal
+    - Solution: This was due to there being a reference to the deleted product in the bag which was accessed on every page due as a context, so I removed the session in the cookies then refreshed the page and it worked correctly.
+- The delete wishlist url on the wishlist page was not deleting items correctly
+    - I noticed that the product id was coming up as the id of the items that had been added to the wishlist instead of the id of the actual products on the products page (ie. the url was wishlist/delete_wishlist/1 for the first item added into the wishlist instead of having the correct id for the actual product so the success message was also stating the wrong product name because of this)
+    - Solution: I had to change the url in the wishlist template to specify what the correct product id should be:
+        - ```{% url 'delete_wishlist' product_id=product.product.id %}```
+- Wishlist items were not displaying in wishlist template when there was only 1 item in there
+    - Solution: I realsied that my if statement in the wishlist template was incorrect as it was stating ```{% if wishlist.count >1 %}``` instead of ```{% if wishlist.count >1 %}```
+- I was getting the following error when running the admin products page through the HTML validator:
+    - ![Admin products page error](docs/testing/admin-products-error.png)
+    - Solution: I found this solution on [Stack Overflow](https://stackoverflow.com/questions/18824009/attribute-href-not-allowed-on-element-button-at-this-point) which showed me that I had to add a data-* attribute to the start of the delete_id
+    - I was getting the error that the remove id on the bag page was being duplicated. This is because there is functionality for both small devices and large ones on that page.
+        - I had to change one of the ids without disrupting the functionality so I created a slightly different id on the larger screens which meant I had to amend the javascript for this so that it would still work.
 ### Unsolved Bugs
