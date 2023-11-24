@@ -272,6 +272,9 @@ EPIC: Administrative managing of the store
 ## Browser Compatibility
 - The website has been tested on Chrome, Firefox, Edge and Safari to ensure that it functions on a range of browsers.
 ## Accessiblity
+- The website has been passed through [WAVE](https://wave.webaim.org/) to check the accessibility of the site.
+- There were originally some errors to do with there not being sufficient labels on some of the buttons so I added aria-labels to amend this.
+- There were also some alerts about skipping heading levels, so I went back through all of my templates to ensure that all headings began with h1 and then continued sequentially without skipping any levels. I added custom css classes to these headings to ensure they maintained the style that they previously had, but that they were now semantically correct.
 ## Lighthouse Testing
 ### Desktop
 | Page | Performance | Accessibility | Best Practices | SEO |
