@@ -1,31 +1,31 @@
 <script>
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-var deleteButtons = document.getElementsByClassName("delete-btn");
-var editButtons = document.getElementsByClassName("edit-btn");
+    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+    var deleteButtons = document.getElementsByClassName("delete-btn");
+    var editButtons = document.getElementsByClassName("edit-btn");
 
-// Shows the delete modal when a delete review button is clicked
-for (let button of deleteButtons) {
-    button.addEventListener("click", (e) => {
-        let reviewId = e.target.getAttribute("review_id");
-      	let deleteConfirm = document.getElementById("deleteConfirm");
-        deleteConfirm.href = `delete_review/${reviewId}`;
-        deleteModal.show();
-    });
-}
+    // Shows the delete modal when a delete review button is clicked
+    for (let button of deleteButtons) {
+        button.addEventListener("click", (e) => {
+            let reviewId = e.target.getAttribute("review_id");
+            let deleteConfirm = document.getElementById("deleteConfirm");
+            deleteConfirm.href = `delete_review/${reviewId}`;
+            deleteModal.show();
+        });
+    }
 
-// Brings up the add review modal with the current review's text
-for (let button of editButtons) {
-    button.addEventListener("click", (e) => {
-        let reviewId = e.target.getAttribute("review_id");
-      	let commentText = document.getElementsByTagName("textarea")[0];
-		let reviewForm = document.getElementById("reviewForm");
-		let submitButton = document.getElementById("submitButton");
-		let addReviewLabel = document.getElementById("addReviewLabel");
-        let commentContent = document.getElementById(`review${reviewId}`).innerText;
-        commentText.value = commentContent;
-        submitButton.innerText = "Update";
-        addReviewLabel.innerText = "Edit your review";
-        reviewForm.setAttribute("action", `edit_review/${reviewId}`);
-    });
-}
+    // Brings up the add review modal with the current review's text
+    for (let button of editButtons) {
+        button.addEventListener("click", (e) => {
+            let reviewId = e.target.getAttribute("review_id");
+            let commentText = document.getElementsByTagName("textarea")[0];
+            let reviewForm = document.getElementById("reviewForm");
+            let submitButton = document.getElementById("submitButton");
+            let addReviewLabel = document.getElementById("addReviewLabel");
+            let commentContent = document.getElementById(`review${reviewId}`).innerText;
+            commentText.value = commentContent;
+            submitButton.innerText = "Update";
+            addReviewLabel.innerText = "Edit your review";
+            reviewForm.setAttribute("action", `edit_review/${reviewId}`);
+        });
+    }
 </script>

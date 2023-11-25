@@ -68,6 +68,7 @@ main {
 /* Navbar */
 .logo {
     width: 90px;
+    min-height: 85.141px;
 }
 
 .navbar {
