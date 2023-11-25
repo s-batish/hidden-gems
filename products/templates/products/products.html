@@ -190,18 +190,15 @@
 
 {% endblock %}
 
-
 {% block postloadjs %}
 {{ block.super }}
-<!-- JS for back to top button -->
 <script>
+    // JS for back to top button
     $('.back-to-top-link').click(function (e) {
         window.scrollTo(0, 0);
     });
-</script>
 
-<!-- JS for filter selector functionality -->
-<script>
+    //JS for filter selector functionality
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
@@ -213,19 +210,15 @@
 
             currentUrl.searchParams.set("sort", sort);
             currentUrl.searchParams.set("direction", direction);
-
             window.location.replace(currentUrl);
         } else {
             currentUrl.searchParams.delete("sort");
             currentUrl.searchParams.delete("direction");
-
             window.location.replace(currentUrl);
         }
     });
-</script>
 
-<!-- JS for confirm delete product modal -->
-<script>
+    // JS for confirm delete product modal
     const deleteProductModal = new bootstrap.Modal(document.getElementById("deleteProductModal"));
     var deleteButtons = document.getElementsByClassName("delete-button");
 
