@@ -509,24 +509,7 @@ This colour contrast grid shows how these colours could be paired together to en
 ## Testing
 All testing information can be found in the [TESTING.md](TESTING.md) file.
 ## Deployment
-### Prerequisites
-### Forking the Project
-- Follow the steps below to fork this project,:
-    - Locate the hidden-gems repository: https://github.com/s-batish/hidden-gems.
-    - Click the 'Fork' button at the top right of the page.
-    - You should now have a copy of the repository in your own GitHub account.
-### Cloning the Project
-- Follow the steps below to clone this project:
-    - Locate the hidden-gems repository: https://github.com/s-batish/hidden-gems
-    - Click the green 'Code' button.
-    - Copy the URL for the repository.
-    - Open the repository and open a new terminal.
-    - Change the current directory to the location that you want the cloned directory to be.
-    - Type 'git clone' and paste the copied URL.
-    - Press 'enter' to create the clone.
-### Heroku Deployment
-### AWS Bucket Creation
-### Stripe Configuration
+All deployment information can be found in the [DEPLOYMENT.md](DEPLOYMENT.md) file.
 ## Technologies Used
 ### Languages
 - HTML
