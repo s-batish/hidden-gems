@@ -294,6 +294,13 @@ EPIC: Administrative managing of the store
 
 ### Mobile
 ## Unit Tests
+- Unit test were carried out to check the basic functionality of the home, bag, products, reviews and wishlist views.
+- These tests check that the correct templates are rendered and also check what happens for logged in vs non-logged in users.
+- To perform these tests enter the following command into the terminal:
+```python3 manage.py test --settings=hidden_gems.settings_test```
+- The results can be seen below:
+![Unit test results](docs/testing/unit-tests.png)
+
 ## Code Validation
 ### HTML
 - All pages were passed through the [W3C HTML Validator](https://validator.w3.org/) and any errors that were found were corrected easily, apart from on the Add a Product and Edit a Product pages, which showed the following errors:

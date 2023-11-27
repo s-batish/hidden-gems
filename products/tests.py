@@ -1,4 +1,4 @@
-from django.test import TestCase, Client
+from django.test import TestCase
 from .models import Product, Category
 
 
@@ -37,21 +37,17 @@ class TestProductDetailPage(TestCase):
         self.assertTemplateUsed(response, 'products/product_detail.html')
 
 
-# class TestAddProduct(TestCase):
-#     def setUp(self):
-#         # Create the category
-#         self.category = Category.objects.create(
-#             name='test_category',
-#             friendly_name='Test Category'
-#         )
+class TestRedirectViews(TestCase):
+    # Tests when a user is not logged in
 
-#         # Create the product
-#         self.product = Product.objects.create(
-#             category=self.category,
-#             sku='12345',
-#             name='Test Product',
-#             description='Test description',
-#             materials='Test materials',
-#             price='12.34',
-#             id='1'
-#         )
+    def test_add_product(self):
+        response = self.client.get('/products/add/')
+        self.assertEqual(response.status_code, 302)
+
+    def test_edit_product(self):
+        response = self.client.get('/products/edit/1/')
+        self.assertEqual(response.status_code, 302)
+
+    def test_delete_lesson(self):
+        response = self.client.get('/products/delete/1/')
+        self.assertEqual(response.status_code, 302)
