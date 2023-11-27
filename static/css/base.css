@@ -241,7 +241,7 @@ footer {
     background-color: var(--faded-dark-blue);
 }
 
-.update-link, .remove-item {
+.update-link, .remove-item, .remove-item-large {
     cursor: pointer;
 }
 
