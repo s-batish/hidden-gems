@@ -34,10 +34,11 @@ class TestAddReview(TestCase):
     def test_add_review(self):
         # Add a review
         self.client.login(username='test', password='password123')
-        response = self.client.post(reverse('product_detail', args=[self.product.id]), {
-            'author':self.user.username,
-            'product':self.product,
-            'created_on':date.today,
-            'body':'Great product'
+        response = self.client.post(reverse(
+            'product_detail', args=[self.product.id]), {
+            'author': self.user.username,
+            'product': self.product,
+            'created_on': date.today,
+            'body': 'Great product'
         })
         self.assertEqual(response.status_code, 200)

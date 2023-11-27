@@ -51,9 +51,9 @@ class TestAddToWishlist(TestCase):
         # Add to wishlist
         self.client.login(username='test', password='password123')
         response = self.client.post(reverse('wishlist'), {
-            'user':self.user.username,
-            'product':self.product,
-            'date_added':date.today,
+            'user': self.user.username,
+            'product': self.product,
+            'date_added': date.today,
         })
         self.assertEqual(response.status_code, 200)
 
