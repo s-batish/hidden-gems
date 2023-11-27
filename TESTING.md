@@ -276,7 +276,6 @@ EPIC: Administrative managing of the store
 - There were originally some errors to do with there not being sufficient labels on some of the buttons so I added aria-labels to amend this.
 - There were also some alerts about skipping heading levels, so I went back through all of my templates to ensure that all headings began with h1 and then continued sequentially without skipping any levels. I added custom css classes to these headings to ensure they maintained the style that they previously had, but that they were now semantically correct.
 ## Lighthouse Testing
-### Desktop
 | Page | Performance | Accessibility | Best Practices | SEO |
 | ---| ---| ---| ---| ---|
 | Home page | 94 | 100 | 100 | 100 |
@@ -292,7 +291,14 @@ EPIC: Administrative managing of the store
 | Product management | 94 | 94 | 100 | 100 |
 | My Profile | 95 | 95 | 100 | 100 |
 
-### Mobile
+### Fixes
+- In order to improve the accessibility scores I added aria-labelledby labels to the wishlist and basket icons. This is because I was receiving the message that "Elements with visitble text labels do not have matching accessible names". By adding aria-labelledby labels this seems to have improved this issue.
+- In order to improve the performance scores I have tried a lot of things but some of the issues raised by Lighthouse I was not confident about how to improve even after researching the issues and testing possible solutions out.
+    - For instance I repeatedly got the message to "Reduce unused JavaScript". After researching a bit about ways to do this, one thing I tried was to move the JS links in the base.html file to the bottom instead of being in the head. While this did slightly improve the performance score, I then noticed that the Reviews were not working as intended and after spending a while trying to ammend this, I found that putting the JS links back into the head of the base.html file seemed to fix it. Therefore, I have left them there so as not to risk any more JS files not working as intended.
+    - Other errors that I was unsure about how to fix were to "Eliminate render-blocking resources" and to "Serve static assets with an efficient cache policy". I did spend a while researching what these errors meant and how to fix them but my attempts at finding a solution were not fruitful for my level of knowledge at this time.
+    - I was also receiving the message that "Image elements do not have explicit width and height". While this did seem like something I could easily achieve, after adjusting the the dimensions of the images, this ended up not having the desired result for my website because, as it is a fully responsive site, I want the pictures to be able to adjust to the screen size, meaning that the dimensions will constantly be changing. This is particularly key on the products and product details pages where the product images have many varying sizes depending on the screen size. Therefore, it did not seem appropriate for this website to have fixed widths and heights as this would reduce the user experience with the site.
+- I did, however, resize most of the images to make their file sizes smaller to help with the performance score. This involved redownloading the images into a smaller format, ensuring that all images were in webp format, and then repeatedly passing them through tinypng.com to get their sizes as small as possible. This helped a lot to reduce the file sizes, however, for a few of the images I chose to not download them in their smallest size, because, although this would aid the performance score, I found that they were actually slightly blurring which I thought would worsen the user experience more than by having a slightly lower performance score.
+
 ## Unit Tests
 - Unit test were carried out to check the basic functionality of the home, bag, products, reviews and wishlist views.
 - These tests check that the correct templates are rendered and also check what happens for logged in vs non-logged in users.
