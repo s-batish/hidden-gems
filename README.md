@@ -6,7 +6,6 @@ Hidden Gems is an e-commerce site for an online boutique jewellery store offerin
 
 ## Table of Contents
 1. [UX](#ux)
-    - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
     - [Development Planes](#development-planes)
         - [Strategy Plane](#strategy-plane)
@@ -15,6 +14,7 @@ Hidden Gems is an e-commerce site for an online boutique jewellery store offerin
         - [Skeleton Plane](#skeleton-plane)
         - [Surface Plane](#surface-plane)
 2. [Business Model](#business-model)
+    - [Project Goals](#project-goals)
     - [SEO](#seo)
     - [Marketing](#marketing)
 3. [Features](#features)
@@ -35,8 +35,6 @@ Hidden Gems is an e-commerce site for an online boutique jewellery store offerin
 7. [Credits](#credits)
 
 ## UX
-### Project Goals
-The main aim of this project is to allow users to buy affordable jewellery from this online boutique jewellery store. Users can purchase items anonymously (without signing in and creating an account) or buy creating an account first, with added benefits for those who create an account, such as having the ability to save their delivery details, create wishlists and leave reviews.
 ### User Stories
 User stories for this project were broken down into the following epics:
 
@@ -292,6 +290,8 @@ This colour contrast grid shows how these colours could be paired together to en
     - The hero image and the product images were all sourced from the free image sites 'Unsplash' and 'Pexels'.
 
 ## Business Model
+### Project Goals
+The main aim of this B2C website is to allow users to buy affordable jewellery from this online boutique jewellery store. Users can purchase items anonymously (without signing in and creating an account) or buy creating an account first, with added benefits for those who create an account, such as having the ability to save their delivery details, create wishlists and leave reviews. As mentioned above in the Development Planes section, this website has been designed to target individuals looking to purchase attractive, but not necessarily expensive, jewellery, either for themselves or as a gift for others, and the following SEO and Marketing techniques listed below help the site to reach its target audience.
 ### SEO
 #### Keywords
  - Keyword research has been carried out to find the most relevant short-tail and long-tail keywords for this website.
