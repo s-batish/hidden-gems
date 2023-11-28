@@ -183,7 +183,8 @@ The Structure Plane demonstrates how the information on the site will be structu
 - The following flowchart illustrates the information architecture for a registered user navigating the site:
 ![Flowchart for registered user](docs/images/registered_user_flowchart.png)
 - The following flowchart illustrates the information architecture for an admin member adding, editing and deleting products:
-![Flowchart for an admin member](docs/images/admin_flowchart.png)
+
+    ![Flowchart for an admin member](docs/images/admin_flowchart.png)
 
 #### Skeleton Plane
 The Skeleton Plane shows what the site will look like. Balsamic wireframes have been used to demonstrate this.
@@ -260,7 +261,7 @@ The Skeleton Plane shows what the site will look like. Balsamic wireframes have 
 An Entity Relationship Diagram has been created with Lucidchart to show the various models created for this website and how they are connected.
 - The two principle models used throughout this site are the User Profile model and the Products model as they connect to almost all of the other models through primary/foreign key relationships.
 - The User Profile model uses Django All-Auth to create personalised user profile areas and is used whenever a user signs in to use the site.
-    - The User Profile model allows connects to the order model, the wishlist model and the reviews model to allow signed in users to save their delivery details in their profiles (through the Order model), add items to their personal wishlist (through the Wishlist model), and add and edit reviews (through the Reviews model).
+    - The User Profile model connects to the order model, the wishlist model and the reviews model to allow signed in users to save their delivery details in their profiles (through the Order model), add items to their personal wishlist (through the Wishlist model), and add and edit reviews (through the Reviews model).
 - The Product Model is used for the creation of products on the site and is connected to the Wishlist model, so that users can add a specific product to their wishlist, the Order Line Item model, so that users can place orders for specific products, and the Reviews model, so that users can leave reviews for specific products.
 - The Category model is used within the Product model to determine which category a product is in.
 - The Contact model and the FAQ model are two stand alone models that do not have foreign keys to any other models as a user does not need to be a signed in user to use these features.
@@ -277,6 +278,7 @@ The colour scheme for this project is as follows:
 It is based on a pastel pink and purple colour scheme and has been chosen because they are gentle welcoming colours that correspond with the imagery associated with a jewellery store.
 
 ![Colour contrast grid](docs/images/colour_contrast.png)
+
 This colour contrast grid shows how these colours could be paired together to ensure there are no contrast issues.
 
 - **Typography**
@@ -553,7 +555,7 @@ All deployment information can be found in the [DEPLOYMENT.md](DEPLOYMENT.md) fi
 - [Google Fonts](https://fonts.google.com/)
     - Used to import fonts
 - [Font Awesome](https://fontawesome.com/icons)
-    - Used icons from this website for the social media icons
+    - Used icons from this website for the heading icons and the social media icons
 ### Main Packages
 - boto3==1.28.82
     - Used to connect to the AWS S3 bucket
