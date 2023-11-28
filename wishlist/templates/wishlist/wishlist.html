@@ -58,7 +58,7 @@
                             {% if product.product.category %}
                             <div class="col">
                                 <p class="small text-right">
-                                    <a class="text-main" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <a class="text-main category" href="{% url 'products' %}?category={{ product.product.category.name }}">
                                         <i class="fas fa-tag mr-1"></i>{{ product.product.category.friendly_name }}
                                     </a>
                                 </p>
