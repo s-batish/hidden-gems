@@ -36,14 +36,14 @@
             </div>
         </div>
         <div class="list-inline-item navbar-nav pr-2">
-            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'wishlist' %}" aria-labelledby="Wishlist button and wishlist count"><i
+            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'wishlist' %}" aria-label="Wishlist button and wishlist count"><i
                     class="fa-regular fa-heart"></i><span
                     class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                 <span class="sr-only">Wishlist count</span></a>
             <p></p>
         </div>
         <div class="list-inline-item navbar-nav px-1">
-            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'view_bag' %}" aria-labelledby="Basket button and product count"><i
+            <a class="nav-link d-block d-lg-none pb-0" href="{% url 'view_bag' %}" aria-label="Basket button and product count"><i
                     class="fa-solid fa-bag-shopping"></i><span
                     class="product-count badge rounded-circle">{{ product_count }}</span>
                 <span class="sr-only">Product count</span></a>
@@ -201,13 +201,13 @@
                 </li>
                 <li class="nav-item d-none d-lg-inline-block pr-2">
                     <p></p>
-                    <a class="nav-link" href="{% url 'wishlist' %}" aria-labelledby="Wishlist button and wishlist count"><i class="fa-regular fa-heart"></i><span
+                    <a class="nav-link" href="{% url 'wishlist' %}" aria-label="Wishlist button and wishlist count"><i class="fa-regular fa-heart"></i><span
                             class="wishlist-count badge rounded-circle">{{ wishlist_count }}</span>
                         <span class="sr-only">Wishlist count</span></a>
                 </li>
                 <li class="nav-item d-none d-lg-inline-block text-center">
                     <p></p>
-                    <a class="nav-link pb-0" href="{% url 'view_bag' %}" aria-labelledby="Basket button and product count"><i class="fa-solid fa-bag-shopping"></i><span
+                    <a class="nav-link pb-0" href="{% url 'view_bag' %}" aria-label="Basket button and product count"><i class="fa-solid fa-bag-shopping"></i><span
                             class="product-count badge rounded-circle">{{ product_count }}</span>
                         <span class="sr-only">Product count</span></a>
                     <p class="total-price font-weight-bold">

@@ -187,7 +187,7 @@ EPIC: Navigating through the website
 - As a shopper, I want to be greeted with a clearly structured interface, so that I can navigate through the website with ease
     - Result: Shoppers can navigate easily through all of the navbar links to find what they are looking for
 - As a shopper, I want the website to be responsive, so that I can access it on a range of devices
-    - Result: The website is responsive and so can be accessed on mobile devices, tablets, laptops and desktops
+    - Result: The website is responsive from 320px upwards and so can be accessed on mobile devices, tablets, laptops and desktops
 - As a shopper, I want to view a list of products, so that I can browse the store to know what to buy
     - Result: The Products page displays all of the products that can be purchased on the site
 - As a shopper, I want to view details about an individual product, so that I can see the product description, price, image, reviews, and be able to purchase the item
@@ -300,12 +300,12 @@ EPIC: Administrative managing of the store
 | My Profile | 95 | 95 | 100 | 100 |
 
 ### Fixes
-- In order to improve the accessibility scores I added aria-labelledby labels to the wishlist and basket icons. This is because I was receiving the message that "Elements with visitble text labels do not have matching accessible names". By adding aria-labelledby labels this seems to have improved this issue.
+- In order to improve the accessibility scores I initially added aria-labelledby labels to the wishlist and basket icons. This is because I was receiving the message that "Elements with visitble text labels do not have matching accessible names". By adding aria-labelledby labels this seemed to improve this issue. However, upon re-testing the site in Wave, I was receiving the error message that there were broken aria references and when I edited these labels back to aria-labels this ammended the issue. Therefore, I have chosen to leave these as aria-labels because there is no visible text in these icons so aria-labels seem more appropriate that aria-labelledby labels. Moreover, as there are no issues reported in Wave, I trust that the accessibility of the site should be adequate.
 - In order to improve the performance scores I have tried a lot of things but some of the issues raised by Lighthouse I was not confident about how to improve even after researching the issues and testing possible solutions out.
-    - For instance I repeatedly got the message to "Reduce unused JavaScript". After researching a bit about ways to do this, one thing I tried was to move the JS links in the base.html file to the bottom instead of being in the head. While this did slightly improve the performance score, I then noticed that the Reviews were not working as intended and after spending a while trying to ammend this, I found that putting the JS links back into the head of the base.html file seemed to fix it. Therefore, I have left them there so as not to risk any more JS files not working as intended.
+    - For instance, I repeatedly got the message to "Reduce unused JavaScript". After researching a bit about ways to do this, one thing I tried was to move the JS links in the base.html file to the bottom instead of being in the head. While this did slightly improve the performance score, I then noticed that the Reviews were not working as intended and after spending a while trying to ammend this, I found that putting the JS links back into the head of the base.html file seemed to fix it. Therefore, I have left them there so as not to risk any more JS files not working as intended.
     - Other errors that I was unsure about how to fix were to "Eliminate render-blocking resources" and to "Serve static assets with an efficient cache policy". I did spend a while researching what these errors meant and how to fix them but my attempts at finding a solution were not fruitful for my level of knowledge at this time.
     - I was also receiving the message that "Image elements do not have explicit width and height". While this did seem like something I could easily achieve, after adjusting the the dimensions of the images, this ended up not having the desired result for my website because, as it is a fully responsive site, I want the pictures to be able to adjust to the screen size, meaning that the dimensions will constantly be changing. This is particularly key on the products and product details pages where the product images have many varying sizes depending on the screen size. Therefore, it did not seem appropriate for this website to have fixed widths and heights as this would reduce the user experience with the site.
-- I did, however, resize most of the images to make their file sizes smaller to help with the performance score. This involved redownloading the images into a smaller format, ensuring that all images were in webp format, and then repeatedly passing them through tinypng.com to get their sizes as small as possible. This helped a lot to reduce the file sizes, however, for a few of the images I chose to not download them in their smallest size, because, although this would aid the performance score, I found that they were actually slightly blurring which I thought would worsen the user experience more than by having a slightly lower performance score.
+- I did, however, resize most of the images to make their file sizes smaller to help with the performance score. This involved redownloading the images into a smaller format, ensuring that all images were in webp format, and then repeatedly passing them through tinypng.com to get their sizes as small as possible. This helped a lot to reduce the file sizes, however, for a few of the images I chose to not download them in their smallest size, because, although this would aid the performance score, I found that they were actually slightly blurry which I thought would worsen the user experience more than by having a slightly lower performance score.
 
 ## Unit Tests
 - Unit test were carried out to check the basic functionality of the home, bag, products, reviews and wishlist views.
@@ -313,6 +313,7 @@ EPIC: Administrative managing of the store
 - To perform these tests enter the following command into the terminal:
 ```python3 manage.py test --settings=hidden_gems.settings_test```
 - The results can be seen below:
+
 ![Unit test results](docs/testing/unit-tests.png)
 
 ## Code Validation
@@ -321,6 +322,7 @@ EPIC: Administrative managing of the store
 ![HTML errors](docs/testing/html-errors.png)
     - The second error was easy to solve by simply removing the strong tags used here in the products custom_clearable_file_input.html file and adding in the Bootstrap class "font-weight-bold".
     - The second error was slightly more challenging to solve as I could not find a reference to the id="id_image" in my code. However, in the custom_clearable_file_input.html file there was an id there with the name "new-image" and this was what was allowing the JavaScript to work in the add_product.html and edit_product.html files. As there were two ids in this line, this is what was causing the error. Therefore, I removed the new-image id and amended the references made to it in the JavaScript by changing the id mentioned to "id_image. This fixed the error so there are now no errors on any of the HTML pages.
+- After ammending these issues there were no more issues reported on any of the pages.
 - Because of Django's templating language, the files could not be copied and pasted into the validator. Instead, the code validation was checked by right clicking on the page, viewing the page source and copying this into the validator.
 ### CSS
 - The site was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.
@@ -338,7 +340,7 @@ EPIC: Administrative managing of the store
 - The main errors that were reported were that there were no new lines at the end of some of the files and that some of the lines were too long but this was quickly amended.
 - The only remaining file with some lines that are too long is the settings.py file due to the AUTH_PASSWORD_VALIDATORS being too long.
 ## Solved Bugs
-- The navbar was not sticky meaning that the toasts were not sticky either (kept moving down the page as I scrolled down)
+- The navbar was not sticky meaning that the toasts were not sticky either (so they kept moving down the page as I scrolled down)
     - Solution: I made the header have a fixed top but then needed to add in the header container div to add some padding. I then had to adjust this depending on the screen size.
 - The Checkout page was not rendering the checkout success page when clicking to place the order
     - Solution: I realised that there was an unnecessary space when checking if we were using the post method:
@@ -347,6 +349,8 @@ EPIC: Administrative managing of the store
 - My webhooks were failing and I was getting a 400 error
     - Solution: I realised that I had mistyped the Stripe Webhook secret key - in my settings.py file it was written as STRIPE_WH_SECRET but in my env.py it was written as STRIPE_WEBHOOK_SECRET.
 - I later received a webhook 404 error and had no mention of /checkout/wh in my gitpod terminal
+    -Solution: The Gitpod url for the site had updated so, whilst I had changed this in the allowed hosts in the settings.py file, I hadn't updated this on the endpoint url settings in the Stripe dashboard.
+- I was receiving a 404 error - "No Product mathces the given query" after deleting a product in the admin
     - Solution: This was due to there being a reference to the deleted product in the bag which was accessed on every page due as a context, so I removed the session in the cookies then refreshed the page and it worked correctly.
 - The delete wishlist url on the wishlist page was not deleting items correctly
     - I noticed that the product id was coming up as the id of the items that had been added to the wishlist instead of the id of the actual products on the products page (ie. the url was wishlist/delete_wishlist/1 for the first item added into the wishlist instead of having the correct id for the actual product so the success message was also stating the wrong product name because of this)
@@ -357,7 +361,7 @@ EPIC: Administrative managing of the store
 - I was getting the following error when running the admin products page through the HTML validator:
     - ![Admin products page error](docs/testing/admin-products-error.png)
     - Solution: I found this solution on [Stack Overflow](https://stackoverflow.com/questions/18824009/attribute-href-not-allowed-on-element-button-at-this-point) which showed me that I had to add a data-* attribute to the start of the delete_id
-    - I was getting the error that the remove id on the bag page was being duplicated. This is because there is functionality for both small devices and large ones on that page.
-        - I had to change one of the ids without disrupting the functionality so I created a slightly different id on the larger screens which meant I had to amend the javascript for this so that it would still work.
-- I had an issue where anonymous users who made a purchase would receive a confirmation email from a previous project (Boutique Ado) alongside the confirmation email from Hidden Gems. This was particularly strange because thei only happened for users who made a purchase without signing in, and the costs listed on the incorrect email did not match the costs for the correct email and purchase.
+- Another error I received when running the bag page through the HTML validator was that the remove id on the bag page was being duplicated. This is because there is functionality for both small devices and large ones on that page.
+    - Solution: I had to change one of the ids without disrupting the functionality so I created a slightly different id on the larger screens which meant I had to amend the javascript for this so that it would still work.
+- I had an issue where anonymous users who made a purchase would receive a confirmation email from a previous project (Boutique Ado) alongside the confirmation email from Hidden Gems. This was particularly strange because this only happened for users who made a purchase without signing in, and the costs listed on the incorrect email did not match the costs for the correct email and purchase.
     - Solution: After a long discussion with my mentor and a tutor I realised that the issue arose from creating the webhooks for this project within the same Stripe account as I had used for the previous project, so after disabling the Boutique Ado webhooks and creating a separate account for that project, I was no longer seeing this issue anymore and all users were only receiving the one correct confirmation email from Hidden Gems.
