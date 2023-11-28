@@ -118,7 +118,6 @@ main {
     background-color: var(--off-white);
 }
 
-
 /* Hero image */
 .overlay {
     background: url('/media/hero-image.webp') no-repeat center center fixed;
